@@ -1,0 +1,54 @@
+﻿@model IEnumerable<MercDevs_ej2.Models.Servicio>
+
+@{
+    ViewData["Title"] = "Servicios";
+}
+
+<h1>Servicios de Mercy Developers</h1>
+
+<p>
+    <a asp-action="Create"><button type="button" class="btn btn-success">Agregar Servicio</button></a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sku)
+            </th>
+            <th>
+                Creado Por
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sku)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioIdUsuarioNavigation.Nombre)
+            </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdServicio"><button type="button" class="btn btn-primary">Editar</button></a>
+                    <a asp-action="Details" asp-route-id="@item.IdServicio"><button type="button" class="btn btn-info">Detalles</button></a>
+                    <a asp-action="Delete" asp-route-id="@item.IdServicio"><button type="button" class="btn btn-danger">Borrar</button></a>
+                    <a asp-action="Verdescripcion" asp-route-id="@item.IdServicio"><button type="button" class="btn btn-warning">Ver Descripcion</button></a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

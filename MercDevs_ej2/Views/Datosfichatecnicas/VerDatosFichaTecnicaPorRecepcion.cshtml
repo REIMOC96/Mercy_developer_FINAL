@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MercDevs_ej2.Models.Datosfichatecnica>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Datos Ficha Tecnica</h1>
+
+<p>
+    
+    <a asp-action="Create" asp-route-id="@ViewData["IdRecepcionEquipo"]"><button type="button" class="btn btn-success">Crear Ficha Tecnica</button></a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID Ficha
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaFinalizacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecepcionEquipo)
+            </th>
+            <th>
+                Acciones
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdDatosFichaTecnica)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaInicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaFinalizacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RecepcionEquipo.MarcaPc)
+                </td>
+                <td>
+                    <a asp-action="FichaTecnica" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-warning">Ver Ficha</button></a>
+                    <a asp-action="Edit" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-outline-primary">Editar</button></a>
+                    <a asp-action="Details" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-outline-warning">Detalles</button></a>
+                    <a asp-action="Delete" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-outline-danger">Borrar</button></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MercDevs_ej2.Models.Descripcionservicio>
+
+@{
+    ViewData["Title"] = "Ver Descripcion Servicio";
+}
+
+<h1>Descripcion del Servicio: @ViewBag.servicio.Nombre </h1>
+
+<p>
+    <a asp-controller="Descripcionservicios" asp-action="Create" asp-route-id="@ViewBag.servicio.IdServicio"><button type="button" class="btn btn-success">Agregar Descripcion Servicio</button></a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                Nombre Servicio
+            </th>
+            <th>
+                Precio
+            </th>
+            <th>
+                SKU
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ServicioIdServicioNavigation.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ServicioIdServicioNavigation.Precio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ServicioIdServicioNavigation.Sku)
+                </td>
+
+                <td>
+                    <a asp-controller="Descripcionservicios" asp-action="Edit" asp-route-id="@item.IdDescServ"><button type="button" class="btn btn-primary">Editar</button></a> |
+                    <a asp-controller="Descripcionservicios" asp-action="Details" asp-route-id="@item.IdDescServ"><button type="button" class="btn btn-info">Detalles</button></a> |
+                    <a asp-controller="Descripcionservicios" asp-action="Delete" asp-route-id="@item.IdDescServ"><button type="button" class="btn btn-danger">Borrar</button></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+
+
+

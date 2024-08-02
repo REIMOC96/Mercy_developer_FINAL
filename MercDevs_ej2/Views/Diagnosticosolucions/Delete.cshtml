@@ -1,0 +1,39 @@
+﻿@model MercDevs_ej2.Models.Diagnosticosolucion
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Borrar</h1>
+
+<h3>Estas seguro de borrar esto?</h3>
+<div>
+    <h4>Diagnostico-Solucion</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Descripcion
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DescripcionDiagnostico)
+        </dd>
+        <dt class = "col-sm-2">
+            Solucion
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DescripcionSolucion)
+        </dd>
+        <dt class = "col-sm-2">
+            Id Ficha Tecnica
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DatosFichaTecnica.IdDatosFichaTecnica)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdDiagnosticoSolucion" />
+        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+        <a asp-action="Index"><button type="button" class="btn btn-secondary">Volver atras</button></a>
+    </form>
+</div>

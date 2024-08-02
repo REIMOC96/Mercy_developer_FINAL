@@ -1,0 +1,72 @@
+﻿@model MercDevs_ej2.Models.Datosfichatecnica
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Datos ficha tecnica</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaInicio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaInicio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaFinalizacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaFinalizacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PobservacionesRecomendaciones)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PobservacionesRecomendaciones)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Soinstalado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Soinstalado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SuiteOfficeInstalada)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SuiteOfficeInstalada)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LectorPdfinstalado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LectorPdfinstalado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NavegadorWebInstalado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NavegadorWebInstalado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AntivirusInstalado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AntivirusInstalado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RecepcionEquipo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RecepcionEquipo.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IdDatosFichaTecnica">Editar</a> |
+    <button class="btn btn-secondary" onclick="window.history.back();">Volver a la lista</button>
+</div>

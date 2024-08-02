@@ -1,0 +1,224 @@
+﻿@model MercDevs_ej2.Models.Recepcionequipo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles de Recepcion</h1>
+<h2>
+    Cliente: @Model.IdClienteNavigation.Nombre @Model.IdClienteNavigation.Apellido
+</h2>
+<div>
+
+    <hr />
+    <dl class="row ">
+        <dt class = "col-sm-2">
+            Fecha:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+        <hr style="background-color:black"/>
+        <dt class = "col-sm-2">
+            Tipo de PC
+        </dt>
+        <dd class = "col-sm-10">
+            @{
+                string tipoEquipo = "";
+                switch (Model.TipoPc)
+                {
+                    case 0:
+                        tipoEquipo = "PC Torre";
+                        break;
+                    case 1:
+                        tipoEquipo = "Notebook";
+                        break;
+                    case 2:
+                        tipoEquipo = "All-In-One";
+                        break;
+                    default:
+                        tipoEquipo = "Desconocido";
+                        break;
+                }
+                @tipoEquipo
+            }
+        </dd>
+        <hr style="background-color:black" />
+
+        <dt class = "col-sm-2">
+           AccesoriosS
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Accesorio)
+        </dd>
+        <hr style="background-color:black" />
+
+
+        <dt class = "col-sm-2">
+            Marca de Pc
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MarcaPc)
+        </dd>
+        <hr style="background-color:black" />
+
+
+        <dt class = "col-sm-2">
+            modelo de Pc
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ModeloPc)
+        </dd>
+        <hr style="background-color:black" />
+
+
+        <dt class = "col-sm-2">
+            N° Serie
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nserie)
+        </dd>
+        <hr style="background-color:black" />
+
+
+        <dt class = "col-sm-2">
+            Capacidad de Ram
+        </dt>
+        <dd class = "col-sm-10">
+            @{
+                string memoriaRam = "";
+                switch (Model.CapacidadRam)
+                {
+                    case 0:
+                        memoriaRam = "4 GB";
+                        break;
+                    case 1:
+                        memoriaRam = "6 GB";
+                        break;
+                    case 2:
+                        memoriaRam = "8 GB";
+                        break;
+                    case 3:
+                        memoriaRam = "16 GB";
+                        break;
+                    case 4:
+                        memoriaRam = "Otro";
+                        break;
+                }
+                @memoriaRam
+            }
+
+        </dd>
+        <hr style="background-color:black" />
+
+
+        <dt class = "col-sm-2">
+            Tipo almacenamiento
+        </dt>
+        <dd class = "col-sm-10">
+            @{
+                string almacenamiento = "";
+                switch (Model.TipoAlmacenamiento)
+                {
+                    case 0:
+                        almacenamiento = "HDD";
+                        break;
+                    case 1:
+                        almacenamiento = "SDD Sata";
+                        break;
+                    case 2:
+                        almacenamiento = "SDD M.2";
+                        break;
+                    case 3:
+                        almacenamiento = "SSD NVM M.2";
+                        break;
+                }
+                @almacenamiento
+            }
+        </dd>
+        <hr style="background-color:black" />
+
+
+        <dt class = "col-sm-2">
+            Cap Almacenamiento
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CapacidadAlmacenamiento)
+        </dd>
+        <hr style="background-color:black" />
+
+
+        <dt class = "col-sm-2">
+            Tipo Gpu
+        </dt>
+        <dd class = "col-sm-10">
+            @{
+                string gpu = Model.TipoGpu switch
+                {
+                    0 => "Chip Integrado",
+                    1 => "Tarjeta",
+                    2 => "Otro",
+                    _ => "Desconocido",
+                };
+                @gpu
+            }
+        </dd>
+        <hr style="background-color:black" />
+
+
+        <dt class = "col-sm-2">
+            Graficos
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Grafico)
+        </dd>
+        <hr style="background-color:black" />
+
+        <dt class="col-sm-2">
+            Estado
+        </dt>
+        <dd class="col-sm-10">
+            @{
+                string estado = "";
+                switch (Model.Estado)
+                {
+                    case 0:
+                        estado = "Recepcion Completada";
+                        break;
+                    case 1:
+                        estado = "Recepcion en curso";
+                        break;
+
+                }
+                @estado
+            }
+        </dd>
+        <hr style="background-color:black" />
+
+        <dt class = "col-sm-2">
+           Nombre Del Cliente
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdClienteNavigation.Nombre)
+        </dd>
+        <hr style="background-color:black"/>
+
+
+        <dt class = "col-sm-2">
+            Nombre del Servicio
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdServicioNavigation.Nombre)
+        </dd>
+        <hr style="background-color:black" />
+
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id"><button class="btn btn-warning">editar</button></a>
+    <a asp-action="Index"><button class="btn btn-secondary">volver a listado</button></a>
+    <form method="post" asp-action="Finalizar" asp-route-id="@Model?.Id">
+        <button type="submit" class="btn btn-info">Finalizar Recepción</button>
+    </form>
+</div>

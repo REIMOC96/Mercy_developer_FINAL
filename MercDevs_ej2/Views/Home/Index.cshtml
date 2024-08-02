@@ -1,0 +1,73 @@
+﻿@using System.Security.Claims;
+
+@{
+    ViewData["Title"] = "Página de Inicio";
+}
+
+@if (User.Identity!.IsAuthenticated)
+{
+    <div class="text-center">
+        <h1 class="display-4">Bienvenido al sistema Soporte Hardware/Software y S.O</h1>
+    </div>
+
+    <form>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Nombre" value="@User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value" disabled>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Correo" value="@User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value" disabled>
+            </div>
+        </div>
+    </form>
+
+    <hr />
+
+    <div class="text-center">
+        <h1 class="display-4"> Fichas Tecnicas Activas</h1>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre y Apellido del Cliente</th>
+                <th>Correo Electrónico del Cliente</th>
+                <th>Fecha Recepción de Equipo</th>
+                <th>Fecha Finalizacion</th>
+                <th>Marca de PC</th>
+                <th>Modelo PC</th>
+                <th>Nombre del Servicio</th>
+                <th>Ver Recepcion </th>
+                <th>Ir a Ficha Tecnica</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var recepcion in Model)
+            {
+                <tr>
+                    <td>
+                        <a asp-controller="Clientes" asp-action="Details" asp-route-id="@recepcion.RecepcionEquipo.IdCliente">
+                            @recepcion.RecepcionEquipo.IdClienteNavigation.Nombre @recepcion.RecepcionEquipo.IdClienteNavigation.Apellido
+                        </a>
+                    </td>
+                    <td>@recepcion.RecepcionEquipo.IdClienteNavigation.Correo</td>
+                    <td>@recepcion.FechaInicio.ToString("dd/MM/yyyy")</td>
+                    <td>@recepcion.FechaFinalizacion.ToString("dd/MM/yyyy")</td>
+                    <td>@recepcion.RecepcionEquipo.MarcaPc</td>
+                    <td>@recepcion.RecepcionEquipo.ModeloPc</td>
+                    <td>
+                        <a asp-controller="Servicios" asp-action="Details" asp-route-id="@recepcion.RecepcionEquipo.IdServicio">
+                            @recepcion.RecepcionEquipo.IdServicioNavigation.Nombre
+                        </a>
+                    </td>
+                    <td>
+                        <a asp-controller="Recepcionequipoes" asp-action="DetailsId" asp-route-id="@recepcion.RecepcionEquipo.Id">Ver Recepción Equipo</a>
+                    </td>
+                    <td>
+                        <a asp-controller="Datosfichatecnicas" asp-action ="Index" asp-route-id="@recepcion.RecepcionEquipo.Id"> Ir a FIcha Tecnica</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

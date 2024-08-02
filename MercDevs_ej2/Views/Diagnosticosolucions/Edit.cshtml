@@ -1,0 +1,44 @@
+﻿@model MercDevs_ej2.Models.Diagnosticosolucion
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<h4>Diagnostico-Solucion</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdDiagnosticoSolucion" />
+            <div class="form-group">
+                <label asp-for="DescripcionDiagnostico" class="control-label">Diagnostico</label>
+                <input asp-for="DescripcionDiagnostico" class="form-control" />
+                <span asp-validation-for="DescripcionDiagnostico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescripcionSolucion" class="control-label">Solucion</label>
+                <input asp-for="DescripcionSolucion" class="form-control" />
+                <span asp-validation-for="DescripcionSolucion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatosFichaTecnicaId" class="control-label">Id Ficha Tecnica</label>
+                <select asp-for="DatosFichaTecnicaId" class="form-control" asp-items="ViewBag.DatosFichaTecnicaId"></select>
+                <span asp-validation-for="DatosFichaTecnicaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index"><button type="button" class="btn btn-secondary">Volver atras</button></a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

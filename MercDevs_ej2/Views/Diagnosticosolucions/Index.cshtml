@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MercDevs_ej2.Models.Diagnosticosolucion>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create"><button type="button" class="btn btn-success">Crear Diagnostico-Solucion</button></a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Descripcion Diagnostico
+            </th>
+            <th>
+                Descripcion Solucion
+            </th>
+            <th>
+                Id Ficha Tecnica
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionDiagnostico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionSolucion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatosFichaTecnica.IdDatosFichaTecnica)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdDiagnosticoSolucion"><button type="button" class="btn btn-primary">Editar</button></a> |
+                    <a asp-action="Details" asp-route-id="@item.IdDiagnosticoSolucion"><button type="button" class="btn btn-info">Detalles</button></a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdDiagnosticoSolucion"><button type="button" class="btn btn-danger">Borrar</button></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

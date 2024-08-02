@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MercDevs_ej2.props" />
+</Project>
