@@ -6625,23 +6625,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\usuario\\.nuget\\packages\\": {},
+    "C:\\Users\\X2026Beast\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\usuario\\Desktop\\Mercy_developer_FINAL\\MercDevs_ej2\\MercDevs_ej2.csproj",
+      "projectUniqueName": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\MercDevs_ej2.csproj",
       "projectName": "MercDevs_ej2",
-      "projectPath": "C:\\Users\\usuario\\Desktop\\Mercy_developer_FINAL\\MercDevs_ej2\\MercDevs_ej2.csproj",
-      "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\usuario\\Desktop\\Mercy_developer_FINAL\\MercDevs_ej2\\obj\\",
+      "projectPath": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\MercDevs_ej2.csproj",
+      "packagesPath": "C:\\Users\\X2026Beast\\.nuget\\packages\\",
+      "outputPath": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\X2026Beast\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -6650,7 +6650,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6720,7 +6719,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

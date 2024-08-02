@@ -155,6 +155,36 @@ namespace MercDevs_ej2.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // GET: Diagnosticosolucions/CrearPorDatos/5
+        public IActionResult CrearPorDatos(int id)
+        {
+            ViewBag.DatosFichaTecnicaId = id;
+            return View();
+        }
+
+        // POST: Diagnosticosolucions/PostCrearPorDatos
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> PostCrearPorDatos(Diagnosticosolucion diagnosticosolucion)
+        {
+            if (diagnosticosolucion.DescripcionSolucion != null)
+            {
+                _context.Add(diagnosticosolucion);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("DyS", new { id = diagnosticosolucion.DatosFichaTecnicaId });
+            }
+            ViewBag.DatosFichaTecnicaId = diagnosticosolucion.DatosFichaTecnicaId;
+            return View(diagnosticosolucion);
+        }
+
+        // GET: Diagnosticosolucions/DyS/5
+        public async Task<IActionResult> DyS(int id)
+        {
+            ViewBag.DatosFichaTecnicaId = id;
+            var diagnosticosolucions =await _context.Diagnosticosolucions.Where(x => x.DatosFichaTecnicaId == id).ToListAsync();
+            return View(diagnosticosolucions);
+        }
+
         private bool DiagnosticosolucionExists(int id)
         {
             return _context.Diagnosticosolucions.Any(e => e.IdDiagnosticoSolucion == id);

@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\usuario\\Desktop\\Etapa-8-Mercy-developers-main\\",
+  "WorkspaceRootPath": "A:\\REIMOC96\\Mercy_developer_FINAL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\usuario\\desktop\\etapa-8-mercy-developers-main\\mercdevs_ej2\\controllers\\servicioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\controllers\\servicioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\datosfichatecnicas\\datosporrecep.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\datosfichatecnicas\\datosporrecep.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,12 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -30,10 +26,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
@@ -41,23 +33,19 @@
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServiciosController.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\Etapa-8-Mercy-developers-main\\MercDevs_ej2\\Controllers\\ServiciosController.cs",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Controllers\\ServiciosController.cs",
-              "ToolTip": "C:\\Users\\usuario\\Desktop\\Etapa-8-Mercy-developers-main\\MercDevs_ej2\\Controllers\\ServiciosController.cs",
-              "RelativeToolTip": "MercDevs_ej2\\Controllers\\ServiciosController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwBUAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T03:12:49.759Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         },
         {
-          "DockedWidth": 200,
+          "DockedWidth": 216,
           "SelectedChildIndex": -1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -65,6 +53,25 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 273,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatosPorRecep.cshtml",
+              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\DatosPorRecep.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Datosfichatecnicas\\DatosPorRecep.cshtml",
+              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\DatosPorRecep.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Datosfichatecnicas\\DatosPorRecep.cshtml",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAAAK8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-02T20:42:56.203Z",
+              "EditorCaption": ""
             }
           ]
         }

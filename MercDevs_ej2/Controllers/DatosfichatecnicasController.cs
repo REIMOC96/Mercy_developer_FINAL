@@ -350,6 +350,10 @@ public async Task<IActionResult> EnviarPdf(int id, string email)
 
 
 
+
+
+
+
         private bool DatosfichatecnicaExists(int id)
         {
             return _context.Datosfichatecnicas.Any(e => e.IdDatosFichaTecnica == id);

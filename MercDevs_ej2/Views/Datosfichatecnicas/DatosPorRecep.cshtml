@@ -16,13 +16,13 @@
                 ID Ficha
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FechaInicio)
+                Fecha de Inicio
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FechaFinalizacion)
+                Fecha de Termino
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PobservacionesRecomendaciones)
+                Observaciones || Recomendaciones
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Soinstalado)
@@ -40,8 +40,12 @@
                 @Html.DisplayNameFor(model => model.AntivirusInstalado)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.RecepcionEquipo)
+                Id Recepcion
             </th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>N° Serie</th>
+            <th>Estado</th>
             <th>
                 Acciones
             </th>
@@ -64,16 +68,79 @@
                     @Html.DisplayFor(modelItem => item.PobservacionesRecomendaciones)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Soinstalado)
+                    @{
+                        string soinstalado = "";
+                        switch (item.Soinstalado)
+                        {
+                            case 0:
+                                soinstalado = "Windows 10";
+                                break;
+                            case 1:
+                                soinstalado = "Windows 11";
+                                break;
+                            case 2:
+                                soinstalado = "Linux";
+                                break;
+                        }
+                        @soinstalado
+                    }
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.SuiteOfficeInstalada)
+                    @{
+                        string suiteofficeinstalada = "";
+                        switch (item.SuiteOfficeInstalada)
+                        {
+                            case 0:
+                                suiteofficeinstalada = "Microsoft Office 2013";
+                                break;
+                            case 1:
+                                suiteofficeinstalada = "Microsoft Office 2019";
+                                break;
+                            case 2:
+                                suiteofficeinstalada = "Microsoft Office 365";
+                                break;
+                            case 3:
+                                suiteofficeinstalada = "OpenOffice";
+                                break;
+                        }
+                        @suiteofficeinstalada
+                    }
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.LectorPdfinstalado)
+                    @{
+                        string lectorpdfinstalado = "";
+                        switch (item.LectorPdfinstalado)
+                        {
+                            case 0:
+                                lectorpdfinstalado = "Adobe Acrobat";
+                                break;
+                            case 1:
+                                lectorpdfinstalado = "Foxit Reader";
+                                break;
+                            case 2:
+                                lectorpdfinstalado = "Sumatra PDF";
+                                break;
+                        }
+                        @lectorpdfinstalado
+                    }
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.NavegadorWebInstalado)
+                    @{
+                        string navegadorwebinstalado = "";
+                        switch (item.NavegadorWebInstalado)
+                        {
+                            case 0:
+                                navegadorwebinstalado = "No Instalado";
+                                break;
+                            case 1:
+                                navegadorwebinstalado = "Chrome";
+                                break;
+                            case 2:
+                                navegadorwebinstalado = "Chrome y Firefox";
+                                break;
+                        }
+                        @navegadorwebinstalado
+                    }
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.AntivirusInstalado)
@@ -82,10 +149,26 @@
                     @Html.DisplayFor(modelItem => item.RecepcionEquipo.Id)
                 </td>
                 <td>
-                    <a asp-action="Diagnosticosolucionpordatosficha" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-warning">Ver Diagnostico</button></a>
+                    @Html.DisplayFor(modelItem => item.RecepcionEquipo.MarcaPc)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RecepcionEquipo.ModeloPc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RecepcionEquipo.Nserie)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(ModelItem => item.Estado)
+                </td>
+                <td>
+                    <a asp-action="Diagnosticosolucionpordatosficha" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-warning">Ver&nbsp;Diagnostico</button></a>
                     <a asp-action="Edit" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-outline-primary">Editar</button></a>
                     <a asp-action="Details" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-outline-warning">Detalles</button></a>
                     <a asp-action="Delete" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-outline-danger">Borrar</button></a>
+                    <a asp-action="DyS" asp-controller="Diagnosticosolucions" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-outline-info">D&nbsp;y&nbsp;Solucion</button></a>
+
                 </td>
             </tr>
         }

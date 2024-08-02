@@ -69,9 +69,10 @@
                     <td>
 
                         <div class="d-flex justify-content-around">
-                            <button class="btn btn-info">
-                                @Html.ActionLink("Ficha Técnica", "Index", "Datosfichatecnicas", new { id = item.Id }, null)
-                            </button>
+
+                            <a asp-action="Index" asp-controller="Datosfichatecnicas" asp-route-id="@item.Id">
+                                <button type="button" class="btn btn-outline-primary" style="width:100%">Ficha Tecnica</button>
+                            </a>
 
                             <a asp-action="DatosPorRecep" asp-controller="Datosfichatecnicas" asp-route-id="@item.Id">
                                 <button type="button" class="btn btn-primary" style="width:100%">Datos Por Recepcion</button>

@@ -11,55 +11,118 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaInicio)
+            FechaInicio
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.FechaInicio)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaFinalizacion)
+            Fecha Termino
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.FechaFinalizacion)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PobservacionesRecomendaciones)
+            Observaciones || Recomendaciones
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.PobservacionesRecomendaciones)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Soinstalado)
+            Sistema Operativo
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Soinstalado)
+            @{
+                string soinstalado = "";
+                switch (Model.Soinstalado)
+                {
+                    case 0:
+                        soinstalado = "Windows 10";
+                        break;
+                    case 1:
+                        soinstalado = "Windows 11";
+                        break;
+                    case 2:
+                        soinstalado = "Linux";
+                        break;
+                }
+                @soinstalado
+            }
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SuiteOfficeInstalada)
+            Sistema Office instalado
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SuiteOfficeInstalada)
+            @{
+                string suiteofficeinstalada = "";
+                switch (Model.Soinstalado)
+                {
+                    case 0:
+                        suiteofficeinstalada = "Microsoft Office 2013";
+                        break;
+                    case 1:
+                        suiteofficeinstalada = "Microsoft Office 2019";
+                        break;
+                    case 2:
+                        suiteofficeinstalada = "Microsoft Office 365";
+                        break;
+                    case 3:
+                        suiteofficeinstalada = "OpenOffice";
+                        break;
+                }
+                @suiteofficeinstalada
+            }
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LectorPdfinstalado)
+            Lector PDF
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LectorPdfinstalado)
+            @{
+                string lectorpdfinstalado = "";
+                switch (Model.Soinstalado)
+                {
+                    case 0:
+                        lectorpdfinstalado = "No Instalado";
+                        break;
+                    case 1:
+                        lectorpdfinstalado = "Instalado";
+                        break;
+                    case 2:
+                        lectorpdfinstalado = "No Aplica";
+                        break;
+                }
+                @lectorpdfinstalado
+            }
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NavegadorWebInstalado)
+           Navegador Web
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NavegadorWebInstalado)
+            @{
+                string navegadorwebinstalado = "";
+                switch (Model.NavegadorWebInstalado)
+                {
+                    case 0:
+                        navegadorwebinstalado = "No Instalado";
+                        break;
+                    case 1:
+                        navegadorwebinstalado = "Chrome";
+                        break;
+                    case 2:
+                        navegadorwebinstalado = "Chrome y Firefox";
+                        break;
+                }
+                @navegadorwebinstalado
+            }
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AntivirusInstalado)
+        Antivirus
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.AntivirusInstalado)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.RecepcionEquipo)
+           Id Recepcion De equipo
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.RecepcionEquipo.Id)
