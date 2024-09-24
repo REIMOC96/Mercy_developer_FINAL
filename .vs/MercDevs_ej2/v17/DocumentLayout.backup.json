@@ -29,7 +29,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 458,
+          "DockedWidth": 200,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -59,7 +59,7 @@
           ]
         },
         {
-          "DockedWidth": 15,
+          "DockedWidth": 273,
           "SelectedChildIndex": 2,
           "Children": [
             {
@@ -78,7 +78,7 @@
               "RelativeDocumentMoniker": "MercDevs_ej2\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\HomeController.cs",
               "RelativeToolTip": "MercDevs_ej2\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T01:21:37.832Z",
               "EditorCaption": ""
