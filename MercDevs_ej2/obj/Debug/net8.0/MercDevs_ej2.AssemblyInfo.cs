@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MercDevs_ej2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+483817bd48fd784b6a7da60fe07bb8e5159e02d8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f93e27c560a9b9aa7705fe0c2592d1b4b7d0cb53")]
 [assembly: System.Reflection.AssemblyProductAttribute("MercDevs_ej2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MercDevs_ej2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
