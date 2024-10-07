@@ -1,0 +1,9 @@
+ECHO est� activado.
+# Ignorar carpeta obj
+obj/
+
+# Ignorar archivos de configuración específicos de Visual Studio
+.vs/
+*.user
+*.suo
+*.sln.docstates
