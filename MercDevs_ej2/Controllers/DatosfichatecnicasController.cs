@@ -285,6 +285,9 @@ namespace MercDevs_ej2.Controllers
         }
 
         [HttpPost]
+
+        //tuve que refactorizar esta funcion para evitar ciertos detalles ademas de eliminar el apartado de 
+        //ingresar el email del usuario, ahora lo envia directamente.
         public async Task<JsonResult> EnviarPdf(int id)
         {
             var fichaTecnica = await _context.Datosfichatecnicas
@@ -307,19 +310,21 @@ namespace MercDevs_ej2.Controllers
 
             try
             {
-                // Asegúrate de que SendEmailWithAttachmentAsync devuelva un Task<bool>
+                // Esta funcion debe devolver una respuesta tipo bool - ajax trabaja junto a un script en la vista de la ficha
+                // Para entender bien como se define el correo electronico, ir a EmailService.cs funcion de SendEmailWithAttatchmentAsync 
+                //require 5 parametros respectivamente
                 bool emailResult = await _emailService.SendEmailWithAttachmentAsync(
                     fichaTecnica.RecepcionEquipo.IdClienteNavigation.Correo,
                     "Ficha Técnica Mercy Developer",
-                    "Hola, buenos días. Adjunto la ficha técnica solicitada por el servicio. Gracias por preferir Mercy Developers.",
+                    "Hola junto con saludarle, Adjunto la ficha técnica solicitada por el servicio. Gracias por preferir Mercy Developers.",
                     pdfBytes,
-                    "FichaTecnica.pdf");
+                    "FichaTecnicaMercyDeveloper.pdf");
 
                 return Json(new { success = emailResult });
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
+                // Manejo de errores
                 return Json(new { success = false, message = "Error al enviar el correo: " + ex.Message });
             }
         }

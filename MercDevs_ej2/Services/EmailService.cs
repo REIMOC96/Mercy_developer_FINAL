@@ -47,6 +47,10 @@ namespace MercDevs_ej2.Services
                     EnableSsl = true,
                 };
 
+                //definimos formato del email, usando la configuracion de smtp para usarlas como direccion de origen del servicio
+                //luego decimos el tema principal, seguido por el cuerpo del correo ademas de usar un formato similar a html para darle un formato mas de pagina
+                //por ultimo usamos mail.message.to.add(to) para pasarle el parametro de destinatario del correo, esto nos permite pasarle cualquier correo de cliente 
+                //y adjuntar la informacion mas el pdf en cuestion.
                 var mailMessage = new MailMessage
                 {
                     From = new MailAddress(_smtpSettings.Username),

@@ -413,9 +413,10 @@
     <script>
         $(document).ready(function () {
             $("#btnEnviar").click(function (e) {
-                e.preventDefault(); // Previene el comportamiento predeterminado del botón
+                e.preventDefault(); // Previene el comportamiento predeterminado del botón, asi evito que redireccione a una pagina 
 
-                var fichaId = @Model.IdDatosFichaTecnica; // Asegúrate de que el modelo tenga el ID disponible
+                var fichaId = @Model.IdDatosFichaTecnica; //se hace una ejecucion ajax para manejar el comportamiento del boton ademas de enviar un aviso de correo enviado
+
 
                 $.ajax({
                     url: '@Url.Action("EnviarPdf", "Datosfichatecnicas")',
