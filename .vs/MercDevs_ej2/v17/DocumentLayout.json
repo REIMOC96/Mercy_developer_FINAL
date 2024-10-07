@@ -1,42 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\",
+  "WorkspaceRootPath": "A:\\REIMOC96\\Mercy_developer_FINAL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\source\\repos\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\descripcionservicios\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\descripcionservicios\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\controllers\\datosfichatecnicascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\controllers\\datosfichatecnicascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\source\\repos\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\descripcionservicios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\descripcionservicios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\source\\repos\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\controllers\\descripcionservicioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\controllers\\descripcionservicioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\source\\repos\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\models\\descripcionservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\models\\descripcionservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\source\\repos\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\source\\repos\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\source\\repos\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\mercdevs_ej2.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\mercdevs_ej2.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\source\\repos\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\source\\repos\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\datosfichatecnicas\\datosporrecep.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\datosfichatecnicas\\datosporrecep.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\datosfichatecnicas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\datosfichatecnicas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,8 +21,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 458,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,13 +42,56 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Services\\EmailService.cs",
+              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Services\\EmailService.cs",
+              "RelativeToolTip": "MercDevs_ej2\\Services\\EmailService.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAiwEEAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T02:33:39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatosfichatecnicasController.cs",
+              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
+              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
+              "RelativeToolTip": "MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
+              "ViewState": "AQIAAB4BAAAAAAAAAAAmwCUBAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T01:32:07.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
+              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
+              "ViewState": "AQIAAJABAAAAAAAAAAAmwKsBAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T01:31:13.176Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 15,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -81,118 +100,16 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Descripcionservicios\\Details.cshtml",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Descripcionservicios\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Descripcionservicios\\Details.cshtml",
-              "RelativeToolTip": "MercDevs_ej2\\Views\\Descripcionservicios\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-01T02:29:29.181Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Descripcionservicios\\Index.cshtml",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Descripcionservicios\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Descripcionservicios\\Index.cshtml",
-              "RelativeToolTip": "MercDevs_ej2\\Views\\Descripcionservicios\\Index.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-01T02:29:12.021Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DescripcionserviciosController.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\DescripcionserviciosController.cs",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Controllers\\DescripcionserviciosController.cs",
-              "ToolTip": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\DescripcionserviciosController.cs",
-              "RelativeToolTip": "MercDevs_ej2\\Controllers\\DescripcionserviciosController.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAmwFgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T02:26:03.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Descripcionservicio.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Models\\Descripcionservicio.cs",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Models\\Descripcionservicio.cs",
-              "ToolTip": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Models\\Descripcionservicio.cs",
-              "RelativeToolTip": "MercDevs_ej2\\Models\\Descripcionservicio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T02:24:01.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "MercDevs_ej2\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T01:21:37.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Properties\\launchSettings.json",
-              "RelativeToolTip": "MercDevs_ej2\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-24T01:19:33.815Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MercDevs_ej2",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Source\\Repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\MercDevs_ej2.csproj",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\MercDevs_ej2.csproj",
-              "ToolTip": "C:\\Users\\Alumno\\Source\\Repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\MercDevs_ej2.csproj",
-              "RelativeToolTip": "MercDevs_ej2\\MercDevs_ej2.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-09-24T01:19:30.335Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\appsettings.json",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\appsettings.json",
-              "ToolTip": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\appsettings.json",
-              "RelativeToolTip": "MercDevs_ej2\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-24T01:17:18.645Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DatosPorRecep.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\DatosPorRecep.cshtml",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Datosfichatecnicas\\DatosPorRecep.cshtml",
-              "ToolTip": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\DatosPorRecep.cshtml",
-              "RelativeToolTip": "MercDevs_ej2\\Views\\Datosfichatecnicas\\DatosPorRecep.cshtml",
-              "ViewState": "AgIAAFIAAAAAAAAAAADwv3kAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-02T20:42:56.203Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }

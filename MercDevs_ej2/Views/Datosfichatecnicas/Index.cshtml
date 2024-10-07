@@ -13,19 +13,22 @@
       
     </button>
 </a>
+<!-- Formulario para enviar el PDF -->
 <form asp-action="EnviarPdf" method="post" class="mt-3">
+    <!-- Campo oculto que contiene el ID de la ficha técnica -->
     <input type="hidden" name="id" value="@Model.IdDatosFichaTecnica" />
     <div class="input-group">
-       
-        <button type="submit" class="btn btn-outline-success">
+        <!-- Botón de enviar -->
+        <button type="submit" id="btnEnviar" class="btn btn-outline-success">
             Enviar PDF a Email
+            <!-- Icono de sobre -->
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                 <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
             </svg>
         </button>
-        <input type="email" name="email" class="form-control" placeholder="Ingrese correo para enviar la ficha tecnica" required />
     </div>
 </form>
+
 
 <h1 style="text-align:center">Ficha Tecnica</h1>
 
@@ -405,6 +408,36 @@
         </tr>
     </tbody>
 </table>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#btnEnviar").click(function (e) {
+                e.preventDefault(); // Previene el comportamiento predeterminado del botón
+
+                var fichaId = @Model.IdDatosFichaTecnica; // Asegúrate de que el modelo tenga el ID disponible
+
+                $.ajax({
+                    url: '@Url.Action("EnviarPdf", "Datosfichatecnicas")',
+                    type: 'POST',
+                    data: { id: fichaId },
+                    success: function (response) {
+                        if (response.success) {
+                            alert("El correo se ha enviado correctamente.");
+                        } else {
+                            alert("Error: " + response.message);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        // Proporciona información más detallada en caso de error
+                        alert("Error al enviar la ficha técnica: " + xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+}
+
 
 <a asp-action="Edit" asp-route-id="@Model.IdDatosFichaTecnica"><button type="button" class="btn btn-primary">Editar</button></a>
 <button class="btn btn-secondary" onclick="window.history.back();">Volver a la lista</button>

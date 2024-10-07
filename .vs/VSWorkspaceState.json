@@ -4,8 +4,9 @@
     "\\MercDevs_ej2",
     "\\MercDevs_ej2\\Models",
     "\\MercDevs_ej2\\Views",
-    "\\MercDevs_ej2\\Views\\Datosfichatecnicas"
+    "\\MercDevs_ej2\\Views\\Datosfichatecnicas",
+    "\\MercDevs_ej2\\Views\\Descripcionservicios"
   ],
-  "SelectedNode": "\\MercDevs_ej2\\Views\\Datosfichatecnicas\\DatosPorRecep.cshtml",
+  "SelectedNode": "\\MercDevs_ej2\\Views\\Descripcionservicios\\Details.cshtml",
   "PreviewInSolutionExplorer": false
 }

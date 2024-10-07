@@ -17,227 +17,227 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MercDevs_ej2
 build_property.RootNamespace = MercDevs_ej2
-build_property.ProjectDir = C:\Users\Alumno\Source\Repos\REIMOC96\Mercy_developer_FINAL\MercDevs_ej2\
+build_property.ProjectDir = A:\REIMOC96\Mercy_developer_FINAL\MercDevs_ej2\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Alumno\Source\Repos\REIMOC96\Mercy_developer_FINAL\MercDevs_ej2
+build_property.MSBuildProjectDirectory = A:\REIMOC96\Mercy_developer_FINAL\MercDevs_ej2
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Clientes/Create.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Clientes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Clientes/Delete.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Clientes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Clientes/Details.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Clientes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Clientes/Edit.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Clientes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Clientes/Index.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Clientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/Create.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0b3NmaWNoYXRlY25pY2FzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/DatosPorRecep.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/DatosPorRecep.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0b3NmaWNoYXRlY25pY2FzXERhdG9zUG9yUmVjZXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/Delete.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0b3NmaWNoYXRlY25pY2FzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/Details.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0b3NmaWNoYXRlY25pY2FzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/Diagnosticosolucionpordatosficha.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/Diagnosticosolucionpordatosficha.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0b3NmaWNoYXRlY25pY2FzXERpYWdub3N0aWNvc29sdWNpb25wb3JkYXRvc2ZpY2hhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/Edit.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0b3NmaWNoYXRlY25pY2FzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/FichaToPdf.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/FichaToPdf.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0b3NmaWNoYXRlY25pY2FzXEZpY2hhVG9QZGYuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/Index.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0b3NmaWNoYXRlY25pY2FzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/Inicio.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/Inicio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0b3NmaWNoYXRlY25pY2FzXEluaWNpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/VerDatosFichaTecnicaPorRecepcion.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/VerDatosFichaTecnicaPorRecepcion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0b3NmaWNoYXRlY25pY2FzXFZlckRhdG9zRmljaGFUZWNuaWNhUG9yUmVjZXBjaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/_LayoutPdf.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Datosfichatecnicas/_LayoutPdf.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0b3NmaWNoYXRlY25pY2FzXF9MYXlvdXRQZGYuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Descripcionservicios/Create.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Descripcionservicios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzY3JpcGNpb25zZXJ2aWNpb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Descripcionservicios/Delete.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Descripcionservicios/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzY3JpcGNpb25zZXJ2aWNpb3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Descripcionservicios/Details.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Descripcionservicios/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzY3JpcGNpb25zZXJ2aWNpb3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Descripcionservicios/Edit.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Descripcionservicios/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzY3JpcGNpb25zZXJ2aWNpb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Descripcionservicios/Index.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Descripcionservicios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzY3JpcGNpb25zZXJ2aWNpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Diagnosticosolucions/CrearPorDatos.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Diagnosticosolucions/CrearPorDatos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhZ25vc3RpY29zb2x1Y2lvbnNcQ3JlYXJQb3JEYXRvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Diagnosticosolucions/Create.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Diagnosticosolucions/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhZ25vc3RpY29zb2x1Y2lvbnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Diagnosticosolucions/Delete.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Diagnosticosolucions/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhZ25vc3RpY29zb2x1Y2lvbnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Diagnosticosolucions/Details.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Diagnosticosolucions/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhZ25vc3RpY29zb2x1Y2lvbnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Diagnosticosolucions/DyS.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Diagnosticosolucions/DyS.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhZ25vc3RpY29zb2x1Y2lvbnNcRHlTLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Diagnosticosolucions/Edit.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Diagnosticosolucions/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhZ25vc3RpY29zb2x1Y2lvbnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Diagnosticosolucions/Index.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Diagnosticosolucions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhZ25vc3RpY29zb2x1Y2lvbnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Home/Index.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Home/Privacy.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Login/Ingresar.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Login/Ingresar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5ncmVzYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Recepcionequipoes/Create.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Recepcionequipoes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uZXF1aXBvZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Recepcionequipoes/Delete.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Recepcionequipoes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uZXF1aXBvZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Recepcionequipoes/Details.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Recepcionequipoes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uZXF1aXBvZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Recepcionequipoes/DetailsId.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Recepcionequipoes/DetailsId.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uZXF1aXBvZXNcRGV0YWlsc0lkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Recepcionequipoes/Edit.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Recepcionequipoes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uZXF1aXBvZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Recepcionequipoes/Index.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Recepcionequipoes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uZXF1aXBvZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Recepcionequipoes/IndexId.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Recepcionequipoes/IndexId.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uZXF1aXBvZXNcSW5kZXhJZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Servicios/Create.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Servicios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Servicios/Delete.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Servicios/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Servicios/Details.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Servicios/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Servicios/Edit.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Servicios/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Servicios/Index.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Servicios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Servicios/Verdescripcion.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Servicios/Verdescripcion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXFZlcmRlc2NyaXBjaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Shared/Error.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Shared/_ValidationScriptsPartial.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Usuarios/Create.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Usuarios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Usuarios/Delete.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Usuarios/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Usuarios/Details.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Usuarios/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Usuarios/Edit.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Usuarios/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Usuarios/Index.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Usuarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/_ViewImports.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/_ViewStart.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Source/Repos/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Shared/_Layout.cshtml]
+[A:/REIMOC96/Mercy_developer_FINAL/MercDevs_ej2/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-jm1pdi16lm
