@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "StRuEcMI4oo=",
+  "dgSpecHash": "pMNcd6M6/kI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alumno\\source\\repos\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\MercDevs_ej2.csproj",
+  "projectFilePath": "C:\\Users\\Alumno\\source\\repos\\Mercy_developer_FINAL\\MercDevs_ej2\\MercDevs_ej2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alumno\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Alumno\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",

@@ -43,7 +43,77 @@
             @Html.DisplayNameFor(model => model.Estado)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estado)
+            
+                @{
+
+
+
+                    string Estado = "";
+
+                    switch (Model.Estado)
+
+                    {
+
+                        case 0:
+
+
+
+
+
+
+
+                        Estado = "Inactivo";
+
+
+
+
+
+
+
+                        break;
+
+                        case 1:
+
+
+
+
+
+
+
+                        Estado = "Activo";
+
+
+
+
+
+
+
+                        break;
+
+                        case 2:
+
+
+
+
+
+
+
+                        Estado = "En espera";
+
+
+
+
+
+
+
+                        break;
+
+
+
+                    }
+                @Estado
+                }
+            
         </dd>
     </dl>
 </div>

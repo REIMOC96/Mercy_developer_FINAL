@@ -7,10 +7,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MercDevs_ej2.Models;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace MercDevs_ej2.Controllers
 {
+    [Authorize]
+
     public class ClientesController : Controller
     {
         private readonly MercyDeveloperContext _context;
@@ -61,12 +64,29 @@ namespace MercDevs_ej2.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(cliente);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                // consultamos a la bbdd por el correo del cliente, y comparamos el correo entregado del cliente hacia la bbbd
+                //como es tipo bool, el resultado del contenido de la variante es true o false, eso me permite hacer el if..
+                bool emailExists = await _context.Clientes.AnyAsync(c => c.Correo == cliente.Correo);
+
+                if (emailExists)
+                {
+                    // si esta en l bbdd agregas error al modelo hacia el apartado de correo
+                    ModelState.AddModelError("Correo", "El correo electrónico ya está registrado.");
+                }
+                else
+                {
+                    // Si no está registrado, agregar el cliente a la base de datos
+                    _context.Add(cliente);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
             }
+
+            // Si algo sale mal o el correo ya existe, volver la vista y mostrar los errores
             return View(cliente);
         }
+
+
 
         // GET: Clientes/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -142,15 +162,33 @@ namespace MercDevs_ej2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            // Buscar el cliente por su ID
             var cliente = await _context.Clientes.FindAsync(id);
-            if (cliente != null)
+
+            if (cliente == null)
             {
-                _context.Clientes.Remove(cliente);
+                return NotFound();
             }
 
+            // Verificar si el cliente tiene registros relacionados en RecepcionEquipos
+            bool tieneForanea = await _context.Recepcionequipos.AnyAsync(r => r.IdCliente == id);
+
+            if (tieneForanea)
+            {
+                // Agregar el error al ModelState
+                ModelState.AddModelError("", "No se puede borrar el cliente, ya que tiene una recepción de equipo registrada.");
+
+                // Devolver la vista con el objeto cliente para evitar NullReferenceException
+                return View(cliente);
+            }
+
+            // Si no hay registros relacionados, eliminar el cliente
+            _context.Clientes.Remove(cliente);
             await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
+
 
         private bool ClienteExists(int id)
         {

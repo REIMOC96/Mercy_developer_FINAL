@@ -115,7 +115,7 @@ Este proyecto está bajo la Licencia _FREE_ - mira el archivo [LICENSE.md](LICEN
 * Da las gracias públicamente 🤓.
 
 
-
+## Fixes && coments & moar.
 
 
 

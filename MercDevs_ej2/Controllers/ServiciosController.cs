@@ -6,9 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MercDevs_ej2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MercDevs_ej2.Controllers
 {
+    [Authorize]
+
     public class ServiciosController : Controller
     {
         private readonly MercyDeveloperContext _context;
@@ -90,7 +93,6 @@ namespace MercDevs_ej2.Controllers
             ViewData["UsuarioIdUsuario"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", servicio.UsuarioIdUsuario);
             return View(servicio);
         }
-
         // GET: Servicios/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -99,14 +101,23 @@ namespace MercDevs_ej2.Controllers
                 return NotFound();
             }
 
-            var servicio = await _context.Servicios.FindAsync(id);
+            var servicio = await _context.Servicios
+                .Include(s => s.UsuarioIdUsuarioNavigation)  // Incluye la entidad Usuario
+                .Where(s => s.IdServicio == id)
+                .FirstOrDefaultAsync(); // Obtener un solo objeto, no una lista
+
             if (servicio == null)
             {
                 return NotFound();
             }
-            ViewData["UsuarioIdUsuario"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", servicio.UsuarioIdUsuario);
+
+            // Llenar el ViewData con una lista de usuarios para seleccionar en la vista (opcional)
+            ViewData["UsuarioIdUsuario"] = new SelectList(_context.Usuarios, "IdUsuario", "Nombre", servicio.UsuarioIdUsuario);
+            // Ahora puedes mostrar el nombre del usuario en la vista usando servicio.Usuario.Nombre
+
             return View(servicio);
         }
+
 
         // POST: Servicios/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.

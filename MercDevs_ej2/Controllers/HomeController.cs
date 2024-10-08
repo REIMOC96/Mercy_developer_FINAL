@@ -37,7 +37,6 @@ namespace MercDevs_ej2.Controllers
             return View(recepciones);
         }
 
-
         public IActionResult Privacy()
         {
             return View();
