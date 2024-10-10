@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "pMNcd6M6/kI=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Alumno\\source\\repos\\Mercy_developer_FINAL\\MercDevs_ej2\\MercDevs_ej2.csproj",
-=======
   "dgSpecHash": "CejEVAH8IDY=",
   "success": true,
   "projectFilePath": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\MercDevs_ej2.csproj",
->>>>>>> origin/udapte-1.1-mercy-developer
   "expectedPackageFiles": [
     "C:\\Users\\X2026Beast\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\X2026Beast\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",

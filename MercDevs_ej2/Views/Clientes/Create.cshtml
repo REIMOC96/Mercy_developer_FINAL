@@ -11,35 +11,46 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            @* Grupo de validación y entrada de Nombre *@
             <div class="form-group">
                 <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
+                <input asp-for="Nombre" class="form-control" placeholder="Ingrese Nombre" />
                 <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
+
+            @* Grupo de validación y entrada de Apellido *@
             <div class="form-group">
                 <label asp-for="Apellido" class="control-label"></label>
-                <input asp-for="Apellido" class="form-control" />
+                <input asp-for="Apellido" class="form-control" placeholder="Ingrese Apellido" />
                 <span asp-validation-for="Apellido" class="text-danger"></span>
             </div>
+
+            @* Grupo de validación y entrada de Correo *@
             <div class="form-group">
                 <label asp-for="Correo" class="control-label"></label>
-                <input asp-for="Correo" class="form-control" />
+                <input asp-for="Correo" class="form-control" placeholder="Ingrese correo electronico" />
                 <span asp-validation-for="Correo" class="text-danger"></span>
             </div>
+
+            @* Grupo de validación y entrada de Teléfono *@
             <div class="form-group">
                 <label asp-for="Telefono" class="control-label"></label>
-                <input asp-for="Telefono" class="form-control" />
+                <input asp-for="Telefono" maxlength="10" placeholder="Maximo de 10 N°" class="form-control" />
                 <span asp-validation-for="Telefono" class="text-danger"></span>
             </div>
+
+            @* Grupo de validación y entrada de Dirección *@
             <div class="form-group">
                 <label asp-for="Direccion" class="control-label"></label>
-                <input asp-for="Direccion" class="form-control" />
+                <input asp-for="Direccion" class="form-control" placeholder="Ingrese Direcion" />
                 <span asp-validation-for="Direccion" class="text-danger"></span>
             </div>
+
+            @* Grupo de validación y selección de Estado *@
             <div class="form-group">
                 <label asp-for="Estado" class="control-label"></label>
                 <select asp-for="Estado" class="form-control">
-
                     <option value="" disabled selected>-- Seleccione Un estado --</option>
                     <option value="0">Inactivo</option>
                     <option value="1">Activo</option>
@@ -48,8 +59,9 @@
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
 
+            @* Botón de envío *@
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-success" />
+                <input type="submit" value="Agregar" class="btn btn-success" />
             </div>
         </form>
     </div>
@@ -60,8 +72,10 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
-
