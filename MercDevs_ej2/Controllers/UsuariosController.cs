@@ -8,7 +8,10 @@ using Microsoft.EntityFrameworkCore;
 using MercDevs_ej2.Models;
 using BCrypt.Net;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Authorization;
+=======
+>>>>>>> origin/udapte-1.1-mercy-developer
 
 namespace MercDevs_ej2.Controllers
 {

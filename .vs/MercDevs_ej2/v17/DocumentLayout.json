@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\Alumno\\source\\repos\\Mercy_developer_FINAL\\",
   "Documents": [
     {
@@ -41,6 +42,29 @@
     {
       "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\source\\repos\\mercy_developer_final\\mercdevs_ej2\\views\\datosfichatecnicas\\datosporrecep.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\datosfichatecnicas\\datosporrecep.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+=======
+  "WorkspaceRootPath": "A:\\REIMOC96\\Mercy_developer_FINAL\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\servicios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\servicios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\controllers\\servicioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\controllers\\servicioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\datosfichatecnicas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\datosfichatecnicas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\controllers\\datosfichatecnicascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\controllers\\datosfichatecnicascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> origin/udapte-1.1-mercy-developer
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +74,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": -1,
+=======
+          "SelectedChildIndex": 5,
+>>>>>>> origin/udapte-1.1-mercy-developer
           "Children": [
             {
               "$type": "Bookmark",
@@ -71,12 +99,81 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Servicios\\Edit.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Servicios\\Edit.cshtml",
+              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Servicios\\Edit.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Servicios\\Edit.cshtml",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAUwCMAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T19:42:44.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiciosController.cs",
+              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\ServiciosController.cs",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Controllers\\ServiciosController.cs",
+              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\ServiciosController.cs",
+              "RelativeToolTip": "MercDevs_ej2\\Controllers\\ServiciosController.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAgwFwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T19:37:22.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Services\\EmailService.cs",
+              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Services\\EmailService.cs",
+              "RelativeToolTip": "MercDevs_ej2\\Services\\EmailService.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAiwCYAAACNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T02:33:39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DatosfichatecnicasController.cs",
+              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
+              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
+              "RelativeToolTip": "MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
+              "ViewState": "AQIAAPAAAAAAAAAAAAAcwD4BAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T01:32:07.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
+              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
+              "ViewState": "AQIAAHgBAAAAAAAAAAAmwKIBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T01:31:13.176Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 2,
+=======
+          "SelectedChildIndex": -1,
+>>>>>>> origin/udapte-1.1-mercy-developer
           "Children": [
             {
               "$type": "Bookmark",
@@ -85,8 +182,15 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
             {
+<<<<<<< HEAD
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Edit.cshtml",
@@ -206,6 +310,10 @@
               "ViewState": "AgIAAFIAAAAAAAAAAADwv3kAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-02T20:42:56.203Z"
+=======
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+>>>>>>> origin/udapte-1.1-mercy-developer
             }
           ]
         }
