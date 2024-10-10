@@ -1,18 +1,10 @@
 {
   "ExpandedNodes": [
-<<<<<<< HEAD
-    ""
-  ],
-=======
     "",
     "\\MercDevs_ej2",
-    "\\MercDevs_ej2\\Controllers",
-    "\\MercDevs_ej2\\Models",
     "\\MercDevs_ej2\\Views",
-    "\\MercDevs_ej2\\Views\\Datosfichatecnicas",
-    "\\MercDevs_ej2\\Views\\Descripcionservicios"
+    "\\MercDevs_ej2\\Views\\Servicios"
   ],
-  "SelectedNode": "\\README.md",
->>>>>>> origin/udapte-1.1-mercy-developer
+  "SelectedNode": "\\MercDevs_ej2\\Views\\Servicios\\Edit.cshtml",
   "PreviewInSolutionExplorer": false
 }
