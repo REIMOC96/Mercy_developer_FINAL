@@ -83,11 +83,19 @@
                     }
             </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.IdCliente"><button type="button" class="btn btn-primary">Editar</button></a>
-                    <a asp-action="Details" asp-route-id="@item.IdCliente"><button type="button" class="btn btn-info">Ver</button></a>
-                    <a asp-action="Delete" asp-route-id="@item.IdCliente"><button type="button" class="btn btn-danger">Borrar</button></a>
-                    <a asp-controller="Recepcionequipoes" asp-action="IndexId" asp-route-id="@item.IdCliente"><button type="button" class="btn btn-secondary">R. de Equipo</button></a>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Acciones
+                        </button>
+                        <div class="dropdown-menu">
+                            <a asp-action="Edit" asp-route-id="@item.IdCliente" class="dropdown-item">Editar</a>
+                            <a asp-action="Details" asp-route-id="@item.IdCliente" class="dropdown-item"> Detalles</a>
+                            <a asp-action="Delete" asp-route-id="@item.IdCliente" class="dropdown-item">Borrar</a>
+                            <a asp-controller="Recepcionequipoes" asp-action="IndexId" asp-route-id="@item.IdCliente" class="dropdown-item">R. de Equipo</a>
+                        </div>
+                    </div>
                 </td>
+
         </tr>
 }
     </tbody>
