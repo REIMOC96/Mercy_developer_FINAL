@@ -7,9 +7,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MercDevs_ej2.Models;
 using BCrypt.Net;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MercDevs_ej2.Controllers
 {
+    [Authorize]
+
     public class UsuariosController : Controller
     {
         private readonly MercyDeveloperContext _context;
@@ -52,12 +56,20 @@ namespace MercDevs_ej2.Controllers
         // POST: Usuarios/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Usuarios/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdUsuario,Nombre,Apellido,Correo,Password")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("IdUsuario,Nombre,Apellido,Correo,Password,ConfirmPassword")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
+                // Verifica que las contraseñas coincidan
+                if (usuario.Password != usuario.ConfirmPassword)
+                {
+                    ModelState.AddModelError("ConfirmPassword", "Las contraseñas no coinciden.");
+                    return View(usuario);
+                }
+
                 usuario.Password = BCrypt.Net.BCrypt.HashPassword(usuario.Password); // Encripta la contraseña
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
@@ -65,6 +77,7 @@ namespace MercDevs_ej2.Controllers
             }
             return View(usuario);
         }
+
 
         // GET: Usuarios/Edit/5
         public async Task<IActionResult> Edit(int? id)

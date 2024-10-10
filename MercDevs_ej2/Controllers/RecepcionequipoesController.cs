@@ -8,9 +8,12 @@ using Microsoft.EntityFrameworkCore;
 using MercDevs_ej2.Models;
 using Microsoft.CodeAnalysis;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MercDevs_ej2.Controllers
 {
+    [Authorize]
+
     public class RecepcionequipoesController : Controller
     {
         private readonly MercyDeveloperContext _context;

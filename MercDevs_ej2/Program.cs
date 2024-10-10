@@ -2,8 +2,6 @@ using MercDevs_ej2.Models;
 using MercDevs_ej2.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using Rotativa.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +16,12 @@ builder.Services.AddDbContext<MercyDeveloperContext>(options =>
 
 // Configure SMTP settings
 builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("Smtp"));
+
+var smtpSettings = builder.Configuration.GetSection("Smtp").Get<SmtpSettings>();
+if (smtpSettings == null)
+{
+    throw new Exception("Error: Configuración de SMTP no encontrada.");
+}
 
 // Register the email service
 builder.Services.AddTransient<EmailService>();

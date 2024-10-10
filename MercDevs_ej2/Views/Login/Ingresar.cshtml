@@ -1,9 +1,9 @@
 ﻿@model MercDevs_ej2.Models.UsuarioLogin
 @{
-    ViewData["Title"] = "Ingresar al Sistema";
+    ViewData["Title"] = "Ingresar a Mercy developer";
 }
 
-<h1>Inicio de sesión al Sistema Mercy Developer Clientes</h1>
+<h1>Inicio de sesión al Sistema Mercy Developer Usuario</h1>
 
 
 <hr />
@@ -27,8 +27,8 @@
                         <input asp-for="Correo" class="form-control" />
                     </div>
                     <div>
-                        <label asp-for="Password" class="control-label">Contraseña</label>
-                        <input asp-for="Password" class="form-control" />
+                        <label asp-for="Password" class="control-label password">Contraseña</label>
+                        <input asp-for="Password" type="password" class="form-control" />
                     </div>
                     <br />
                     <div class="d-grid gap-2 mb-3">
