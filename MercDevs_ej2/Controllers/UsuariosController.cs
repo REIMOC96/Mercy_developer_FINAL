@@ -123,17 +123,20 @@ namespace MercDevs_ej2.Controllers
                 {
                     if (!UsuarioExists(usuario.IdUsuario))
                     {
-                        return NotFound();
+                        return NotFound(); // console log aqui
                     }
                     else
                     {
                         throw;
+    // hacer console log aqui 
                     }
                 }
                 return RedirectToAction(nameof(Index));
             }
             return View(usuario);
         }
+
+
 
         // GET: Usuarios/Delete/5
         public async Task<IActionResult> Delete(int? id)
