@@ -9,6 +9,7 @@ using MercDevs_ej2.Models;
 using BCrypt.Net;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.AspNetCore.Authorization;
+using System.Linq.Expressions;
 
 namespace MercDevs_ej2.Controllers
 {
@@ -100,7 +101,7 @@ namespace MercDevs_ej2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdUsuario,Nombre,Apellido,Correo,Password")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("IdUsuario,Nombre,Apellido,Correo,Password,CurrentPassword")] Usuario usuario)
         {
             if (id != usuario.IdUsuario)
             {
@@ -109,14 +110,23 @@ namespace MercDevs_ej2.Controllers
 
             if (ModelState.IsValid)
             {
+                var existingUser = await _context.Usuarios.FindAsync(id);
+
+                // Verificar la contraseña actual
+                if (!BCrypt.Net.BCrypt.Verify(usuario.CurrentPassword, existingUser.Password))
+                {
+                    ModelState.AddModelError("CurrentPassword", "Contraseña incorrecta.");
+                    return View(usuario);
+                }
+
+                // No se cambia la contraseña en este formulario, solo los otros campos
+                existingUser.Nombre = usuario.Nombre;
+                existingUser.Apellido = usuario.Apellido;
+                existingUser.Correo = usuario.Correo;
+
                 try
                 {
-                    // Encripta la contraseña solo si se ha cambiado
-                    if (!string.IsNullOrEmpty(usuario.Password))
-                    {
-                        usuario.Password = BCrypt.Net.BCrypt.HashPassword(usuario.Password);
-                    }
-                    _context.Update(usuario);
+                    _context.Update(existingUser);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -135,8 +145,6 @@ namespace MercDevs_ej2.Controllers
             }
             return View(usuario);
         }
-
-
 
         // GET: Usuarios/Delete/5
         public async Task<IActionResult> Delete(int? id)
