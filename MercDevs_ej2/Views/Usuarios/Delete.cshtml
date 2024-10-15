@@ -6,35 +6,40 @@
 
 <h1>Borrar Usuario</h1>
 
-<h3>¿estas seguro de que quieres eliminar esto?</h3>
+<h3>¿Estás seguro de que quieres eliminar esto?</h3>
 <div>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Apellido)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Apellido)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Correo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Correo)
-        </dd>
+    <table class="table">
+        <thead>
+            <h5>Recuerde leer detenidamente antes de eliminar algo.</h5>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.Nombre)</td>
+                <td>@Html.DisplayFor(model => model.Nombre)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.Apellido)</td>
+                <td>@Html.DisplayFor(model => model.Apellido)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.Correo)</td>
+                <td>@Html.DisplayFor(model => model.Correo)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br />
+<div class="form-group">
+    <label asp-for="CurrentPassword" class="control-label">Ingrese la contraseña del usuario para confirmar</label>
+    <input asp-for="CurrentPassword" type="password" class="form-control" placeholder="Ingrese contraseña" />
+    <span asp-validation-for="CurrentPassword" class="text-danger"></span>
+</div>
 
-    </dl>
-    
-    <form asp-action="Delete">
+<div>
+    <form asp-action="Delete" method="post">
         <input type="hidden" asp-for="IdUsuario" />
         <input type="submit" value="Borrar" class="btn btn-danger" />
-      
-    </form> 
+    </form>
     <a asp-action="Index"><button class="btn btn-secondary">volver a la lista</button></a>
 </div>

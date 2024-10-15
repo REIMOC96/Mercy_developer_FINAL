@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<MercDevs_ej2.Models.Usuario>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Usuarios";
 }
 
 <h1>Usuarios del Sistema Mercy Developers</h1>
@@ -23,7 +23,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Correo)
             </th>
-            <th></th>
+            <th>
+                Acciones
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -39,9 +41,16 @@
                 @Html.DisplayFor(modelItem => item.Correo)
             </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.IdUsuario"><button type="button" class="btn btn-primary">Editar</button></a>
-                    <a asp-action="Details" asp-route-id="@item.IdUsuario"><button type="button" class="btn btn-info">Detalles</button></a>
-                    <a asp-action="Delete" asp-route-id="@item.IdUsuario"><button type="button" class="btn btn-danger">Borrar</button></a>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Acciones
+                        </button>
+                        <div class="dropdown-menu">
+                            <a asp-action="Edit" asp-route-id="@item.IdUsuario" class="dropdown-item">Editar</a>
+                            <a asp-action="Details" asp-route-id="@item.IdUsuario" class="dropdown-item"> Detalles</a>
+                            <a asp-action="Delete" asp-route-id="@item.IdUsuario" class="dropdown-item">Borrar</a>
+                        </div>
+                    </div>
                 </td>
 
         </tr>

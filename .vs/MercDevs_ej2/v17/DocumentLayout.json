@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "A:\\REIMOC96\\Mercy_developer_FINAL\\",
+  "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\usuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\usuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercdevs_ej2\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercdevs_ej2\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercdevs_ej2\\views\\usuarios\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\usuarios\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,8 +21,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 473,
-          "SelectedChildIndex": 6,
+          "DockedWidth": 307,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,55 +42,51 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Usuarios\\Edit.cshtml",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Usuarios\\Edit.cshtml",
-              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Usuarios\\Edit.cshtml",
-              "RelativeToolTip": "MercDevs_ej2\\Views\\Usuarios\\Edit.cshtml",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAqwCAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-11T04:13:05.716Z",
-              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 315,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 281,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Usuario.cs",
-              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Models\\Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "MercDevs_ej2\\Models\\Usuario.cs",
-              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Models\\Usuario.cs",
               "RelativeToolTip": "MercDevs_ej2\\Models\\Usuario.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAowDMAAAAAAAAA",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwDIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T06:33:58.065Z",
+              "WhenOpened": "2024-10-15T01:52:39.49Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "UsuariosController.cs",
-              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "MercDevs_ej2\\Controllers\\UsuariosController.cs",
-              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\UsuariosController.cs",
               "RelativeToolTip": "MercDevs_ej2\\Controllers\\UsuariosController.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAowIUAAAA6AAAA",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAIwMAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T06:02:37.544Z",
+              "WhenOpened": "2024-10-15T01:49:05.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Usuarios\\Delete.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Usuarios\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Usuarios\\Delete.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Usuarios\\Delete.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-15T01:29:41.57Z",
               "EditorCaption": ""
             }
           ]
@@ -106,16 +102,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }

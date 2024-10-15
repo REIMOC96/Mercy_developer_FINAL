@@ -10,6 +10,7 @@ using BCrypt.Net;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.AspNetCore.Authorization;
 using System.Linq.Expressions;
+using Microsoft.AspNetCore.Identity;
 
 namespace MercDevs_ej2.Controllers
 {
@@ -62,7 +63,7 @@ namespace MercDevs_ej2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdUsuario,Nombre,Apellido,Correo,Password,ConfirmPassword")] Usuario usuario)
         {
-            if (ModelState.IsValid)
+            if (usuario.Nombre != null && usuario.Apellido !=null && usuario.Correo !=null)
             {
                 // Verifica que las contraseñas coincidan
                 if (usuario.Password != usuario.ConfirmPassword)
@@ -108,7 +109,7 @@ namespace MercDevs_ej2.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (usuario.Nombre !=null && usuario.Apellido !=null && usuario.Correo != null)
             {
                 var existingUser = await _context.Usuarios.FindAsync(id);
 
@@ -120,6 +121,7 @@ namespace MercDevs_ej2.Controllers
                 }
 
                 // No se cambia la contraseña en este formulario, solo los otros campos
+                // se plantea la idea de ina vista aparte para modificar la contraseña del usuario requerira la contraseña de mercy Root
                 existingUser.Nombre = usuario.Nombre;
                 existingUser.Apellido = usuario.Apellido;
                 existingUser.Correo = usuario.Correo;
@@ -167,17 +169,44 @@ namespace MercDevs_ej2.Controllers
         // POST: Usuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id, string CurrentPassword)
         {
+            // Buscar el usuario en la base de datos
             var usuario = await _context.Usuarios.FindAsync(id);
-            if (usuario != null)
+
+            if (usuario == null)
             {
-                _context.Usuarios.Remove(usuario);
+                // El usuario no existe
+                return NotFound();
             }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            // Comparar la contraseña ingresada con la almacenada
+            if (BCrypt.Net.BCrypt.Verify(CurrentPassword, usuario.Password))
+            {
+                _context.Usuarios.Remove(usuario);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                // La contraseña no coincide, se devuelve un mensaje de error
+                ModelState.AddModelError(string.Empty, "Contraseña incorrecta.");
+                // Opcional: Redirigir a la vista de confirmación con el usuario
+                return RedirectToAction("ConfirmDelete", new { id });
+            }
         }
+
+        // Método adicional para confirmar la eliminación
+        public IActionResult ConfirmDelete(int id)
+        {
+            var usuario = _context.Usuarios.Find(id);
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+            return View(usuario); // Deberías tener una vista de confirmación de eliminación
+        }
+
 
         private bool UsuarioExists(int id)
         {
