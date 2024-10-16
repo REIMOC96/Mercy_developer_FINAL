@@ -106,7 +106,7 @@ namespace MercDevs_ej2.Controllers
             return View(servicio);
         }
 
-
+        //Agregar metodo Get: de editar
 
         // POST: Servicios/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
