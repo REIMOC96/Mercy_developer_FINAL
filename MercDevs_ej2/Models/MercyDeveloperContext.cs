@@ -191,7 +191,7 @@ public partial class MercyDeveloperContext : DbContext
                 .HasColumnName("NSerie");
             entity.Property(e => e.TipoAlmacenamiento).HasColumnType("int(11)");
             entity.Property(e => e.TipoGpu).HasColumnType("int(11)");
-            entity.Property(e => e.TipoPc).HasColumnType("int(11)");
+            entity.Property(e => e.TipoPc).HasColumnType("int(11)").HasComment("0: Intel ; 1: Amd; 2: Otros;");
 
             entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Recepcionequipos)
                 .HasForeignKey(d => d.IdCliente)
