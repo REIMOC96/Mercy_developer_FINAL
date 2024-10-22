@@ -12,11 +12,9 @@
     <table class="table">
         <thead td style="white-space: nowrap;">
             <tr>
+
                 <th>
-                    @Html.DisplayNameFor(model => model.Id)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Fecha)
+                    Fecha De Recepcion
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.TipoPc)
@@ -42,13 +40,28 @@
             {
                 <tr>
                     <td style="white-space: nowrap;">
-                        @Html.DisplayFor(modelItem => item.Id)
-                    </td>
-                    <td style="white-space: nowrap;">
                         @Html.DisplayFor(modelItem => item.Fecha)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.TipoPc)
+                        @{
+                            string tipoEquipo = "";
+                            switch (item.TipoPc)
+                            {
+                                case 0:
+                                    tipoEquipo = "PC Torre";
+                                    break;
+                                case 1:
+                                    tipoEquipo = "Notebook";
+                                    break;
+                                case 2:
+                                    tipoEquipo = "All-In-One";
+                                    break;
+                                default:
+                                    tipoEquipo = "Desconocido";
+                                    break;
+                            }
+                            @tipoEquipo
+                        }
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.MarcaPc)
@@ -59,7 +72,6 @@
 
                     <td>
                         @Html.DisplayFor(modelItem => item.Grafico)
-                    </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.IdClienteNavigation.Nombre)
                     </td>
@@ -68,31 +80,24 @@
                     </td>
                     <td>
 
-                        <div class="d-flex justify-content-around">
-
-                            <a asp-action="Index" asp-controller="Datosfichatecnicas" asp-route-id="@item.Id">
-                                <button type="button" class="btn btn-outline-primary" style="width:100%">Ficha Tecnica</button>
-                            </a>
-
-                            <a asp-action="DatosPorRecep" asp-controller="Datosfichatecnicas" asp-route-id="@item.Id">
-                                <button type="button" class="btn btn-primary" style="width:100%">Datos Por Recepcion</button>
-                            </a>
-                            <a asp-action="Edit" asp-route-id="@item.Id">
-                                <button type="button" class="btn btn-primary" style="width:100%">Editar</button>
-                            </a>
-
-                            <a asp-action="Details" asp-route-id="@item.Id">
-                                <button type="button" class="btn btn-info" style="width:100%">Detalles</button>
-                            </a>
-
-                            <a asp-action="Delete" asp-route-id="@item.Id">
-                                <button type="button" class="btn btn-danger" style="width:100%">Borrar</button>
-                            </a>
-                            <form method="post" asp-action="Finalizar" asp-route-id="@item?.Id">
-                                <button type="submit" class="btn btn-warning">Finalizar Recepción</button>
-                            </form>
+                    <td>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Acciones
+                            </button>
+                            <div class="dropdown-menu">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="dropdown-item">Editar</a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="dropdown-item"> Detalles</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="dropdown-item">Borrar</a>
+                                <a asp-controller="Datosfichatecnicas" asp-action="Index" asp-route-id="@item.Id" class="dropdown-item">Ficha tecnica</a>
+                                <a asp-controller="Datosfichatecnicas" asp-action="DatosPorRecep" asp-route-id="@item.Id" class="dropdown-item">Datos de R.</a>
+                                <a method="post" asp-action="Finalizar" asp-route-id="@item.Id" class="dropdown-item">Finalizar R.</a>
+                                
+                            </div>
                         </div>
                     </td>
+                       
+                    
                 </tr>
             }
         </tbody>

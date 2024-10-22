@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -82,10 +81,12 @@ namespace MercDevs_ej2.Controllers
         // GET: Recepcionequipoes/Create
         public IActionResult Create()
         {
-            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente");
-            ViewData["IdServicio"] = new SelectList(_context.Servicios, "IdServicio", "IdServicio");
+            ViewBag.IdCliente = new SelectList(_context.Clientes, "IdCliente", "Nombre");
+            ViewBag.IdServicio = new SelectList(_context.Servicios, "IdServicio", "Nombre");
+
             return View();
         }
+
 
         // POST: Recepcionequipoes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -99,13 +100,14 @@ namespace MercDevs_ej2.Controllers
 
         public async Task<IActionResult> Create([Bind("Id,IdCliente,IdServicio,Fecha,TipoPc,Accesorio,MarcaPc,ModeloPc,Nserie,CapacidadRam,TipoAlmacenamiento,CapacidadAlmacenamiento,TipoGpu,Grafico,Estado")] Recepcionequipo recepcionequipo)
         {
-            // primero quise hacer un if para validar los dato propios de la tabla, pero era muy largo
-            //le pregunte a gpt-san como podia factorizar mejor el codigo y me explico que podia hacer un diccionario y recorrerlo
-            //con el foreach se hizo rapido, entendi bastante con esto, puedo hacer filtros generales con el if y 
-            //aplicarlo a un monton de datos usando diccionarios y foreach, esto acomoda mucho las cosas ojito O.O
+            // Asignar la fecha actual si no se ha proporcionado una
+            if (recepcionequipo.Fecha == default(DateTime))
+            {
+                recepcionequipo.Fecha = DateTime.Now;
+            }
 
+            // Diccionario con los datos de la tabla
             var tablaDato = new Dictionary<string, object?>
-            //llamo al nombre del valor que quiero atribuir, y luego llamo al mismo valor, asi lo asigno a mi diccionario
     {
         { nameof(recepcionequipo.MarcaPc), recepcionequipo.MarcaPc  },
         { nameof(recepcionequipo.Fecha), recepcionequipo.Fecha },
@@ -117,29 +119,36 @@ namespace MercDevs_ej2.Controllers
         { nameof(recepcionequipo.TipoAlmacenamiento), recepcionequipo.TipoAlmacenamiento },
         { nameof(recepcionequipo.CapacidadAlmacenamiento), recepcionequipo.CapacidadAlmacenamiento },
         { nameof(recepcionequipo.TipoGpu), recepcionequipo.TipoGpu },
-        { nameof(recepcionequipo.Grafico), recepcionequipo.Grafico },
-        //{ nameof(recepcionequipo.Estado), recepcionequipo.Estado }
+        { nameof(recepcionequipo.Grafico), recepcionequipo.Grafico }
     };
 
-            // Verificar si alguna de las propiedades es nula o en el caso de int, si es igual a 0
-            //quiero ver tambien si puedo validar una fecha, eso sera interesante :}
-            //o quiza lo mejor sea agregar la fecha desde el sistema del pc, seria lo mas acertado 
+            // Validación de cada dato
             foreach (var dato in tablaDato)
             {
                 if (dato.Value == null || (dato.Value is int intValue && intValue == 0))
                 {
-                    // Si cualquier valor no cumple con los requisitos, se configura ViewData y se retorna la vista
-                    ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente", recepcionequipo.IdCliente);
-                    ViewData["IdServicio"] = new SelectList(_context.Servicios, "IdServicio", "IdServicio", recepcionequipo.IdServicio);
+                    // Si un valor es nulo o cero, devolver la vista con los select lists nuevamente
+                    ViewData["IdCliente"] = new SelectList(await _context.Clientes.ToListAsync(), "IdCliente", "Nombre", recepcionequipo.IdCliente);
+                    ViewData["IdServicio"] = new SelectList(await _context.Servicios.ToListAsync(), "IdServicio", "Nombre", recepcionequipo.IdServicio);
+                    return View(recepcionequipo);
+                }
+
+                // Validar si la fecha es anterior a hoy
+                if (dato.Key == nameof(recepcionequipo.Fecha) && recepcionequipo.Fecha < DateTime.Today)
+                {
+                    ModelState.AddModelError(nameof(recepcionequipo.Fecha), "La fecha no puede ser anterior a la fecha actual.");
+                    ViewData["IdCliente"] = new SelectList(await _context.Clientes.ToListAsync(), "IdCliente", "Nombre", recepcionequipo.IdCliente);
+                    ViewData["IdServicio"] = new SelectList(await _context.Servicios.ToListAsync(), "IdServicio", "Nombre", recepcionequipo.IdServicio);
                     return View(recepcionequipo);
                 }
             }
 
-            // Si todas las propiedades cumplen con los requisitos, se guarda en la base de datos
+            // Si todas las validaciones son correctas, añadir el equipo y guardar
             _context.Add(recepcionequipo);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
 
 
 

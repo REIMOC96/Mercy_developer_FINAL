@@ -115,8 +115,26 @@ Este proyecto está bajo la Licencia _FREE_ - mira el archivo [LICENSE.md](LICEN
 * Da las gracias públicamente 🤓.
 
 
-## Fixes && coments & moar.
+## Fixes && coments & moar. 📋📋
+_21- 10- 2024:_
+  # modulos y fixeos de modulos.
+  
+  # Recepcion de equipos. 
+  *  M:
+    - Agregar validadores de datos.📌
+  *  V: 
+    -  Se arreglo la vista de index.
+    -  Se agrego la lista de navegacion de Recepcion x Cliente.
+    -  falta arreglar C R U D. 📌
+     - - Create mejorado, faltan cosas....
 
+  *  C:
+    - Revisar ejecuciones de crud despues de crear los Validadores.📌
+    - Agregar comentarios.📌
+  # Servicios.
+  # Datos Ficha tecnica.
+  # Descripcion de servicio
+  # Diganostico & solucion.
 
 
 
