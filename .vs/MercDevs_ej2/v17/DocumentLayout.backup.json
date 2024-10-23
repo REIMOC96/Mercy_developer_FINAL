@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\recepcionequipoes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercdevs_ej2\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercdevs_ej2\\controllers\\recepcionequipoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\controllers\\recepcionequipoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,34 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 229,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RecepcionequipoesController.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\RecepcionequipoesController.cs",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Controllers\\RecepcionequipoesController.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\RecepcionequipoesController.cs",
-              "RelativeToolTip": "MercDevs_ej2\\Controllers\\RecepcionequipoesController.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAcwFMAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T00:53:10.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Create.cshtml",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Recepcionequipoes\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Create.cshtml",
-              "RelativeToolTip": "MercDevs_ej2\\Views\\Recepcionequipoes\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-22T00:51:49.095Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -57,6 +35,43 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Clientes\\Create.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Clientes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Clientes\\Create.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Clientes\\Create.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAC8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-22T01:48:11.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RecepcionequipoesController.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\RecepcionequipoesController.cs",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Controllers\\RecepcionequipoesController.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\RecepcionequipoesController.cs",
+              "RelativeToolTip": "MercDevs_ej2\\Controllers\\RecepcionequipoesController.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAcwFMAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T00:53:10.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Create.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Recepcionequipoes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Create.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Recepcionequipoes\\Create.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAAmwF8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-22T00:51:49.095Z",
+              "EditorCaption": ""
             }
           ]
         },

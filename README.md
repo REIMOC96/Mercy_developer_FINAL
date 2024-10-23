@@ -131,11 +131,9 @@ _21- 10- 2024:_
   *  C:
     - Revisar ejecuciones de crud despues de crear los Validadores.📌
     - Agregar comentarios.📌
-  # Servicios.
+  # Servicios. 
   # Datos Ficha tecnica.
   # Descripcion de servicio
   # Diganostico & solucion.
-
-
 
 
