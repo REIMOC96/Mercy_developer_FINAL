@@ -12,9 +12,7 @@
     <table class="table">
         <thead td style="white-space: nowrap;">
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Id)
-                </th>
+
                 <th>
                     @Html.DisplayNameFor(model => model.Fecha)
                 </th>
@@ -41,9 +39,7 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td style="white-space: nowrap;">
-                        @Html.DisplayFor(modelItem => item.Id)
-                    </td>
+
                     <td style="white-space: nowrap;">
                         @Html.DisplayFor(modelItem => item.Fecha)
                     </td>
@@ -83,11 +79,33 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.IdServicioNavigation.Nombre)
                     </td>
-                    <td>
-                        <div class="d-flex justify-content-around">
+
+
+                        
+                <td>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Acciones
+                        </button>
+                        <div class="dropdown-menu">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="dropdown-item">Editar</a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="dropdown-item"> Detalles</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="dropdown-item">Borrar</a>
+                                <a asp-action="IndexId" asp-route-id="@item.Id" class="dropdown-item">R. de Equipo</a>
+                                <a asp-controller="Datosfichatecnicas" asp-action="Index" asp-route-id="@item.Id" class="dropdown-item">Ficha tecnica</a>
+                                <form method="post" asp-action="Finalizar" asp-route-id="@item?.Id">
+                                    <a asp-action="Finalizar" class="dropdown-item">Finalizar recepcion</a>
+                                </form>
+                        
+                            </div>
+                    </div>
+                </td>
+
+                    @*  <div class="d-flex justify-content-around">
                             <button class="btn btn-info">
                                 @Html.ActionLink("Ficha Técnica", "Index", "Datosfichatecnicas", new { id = item.Id }, null)
-                            </button>
+                            
+                            </button
                             <a asp-action="Edit" asp-route-id="@item.Id">
                                 <button type="button" class="btn btn-primary" style="width:100%">Editar</button>
                             </a>
@@ -101,8 +119,9 @@
                                 <button type="submit" class="btn btn-warning">Finalizar Recepción</button>
                             </form>
                         </div>
-                    </td>
-                </tr>
+               
+                    </td>*@
+                </tr> 
             }
         </tbody>
     </table>
