@@ -82,41 +82,30 @@ namespace MercDevs_ej2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdServicio,Nombre,Precio,Sku,UsuarioIdUsuario")] Servicio servicio)
+        public async Task<IActionResult> Create([Bind("IdServicio,Nombre,Precio,Sku")] Servicio servicio)
         {
-            if (servicio.Nombre !=null && servicio.Precio !=0)
+            // Obtén el ID del usuario autenticado desde las claims
+            var userId = User.FindFirst("Id")?.Value;
+
+            // Verifica que el ID no sea nulo
+            if (!string.IsNullOrEmpty(userId))
             {
+                // Asigna el ID del usuario autenticado al modelo
+                servicio.UsuarioIdUsuario = int.Parse(userId);
+            }
+
+            if (servicio.Nombre != null && servicio.Precio != 0)
+            {
+                // Agrega el servicio al contexto y guarda
                 _context.Servicios.Add(servicio);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["UsuarioIdUsuario"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", servicio.UsuarioIdUsuario);
             return View(servicio);
         }
-        // GET: Servicios/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
 
-            var servicio = await _context.Servicios
-                .Include(s => s.UsuarioIdUsuarioNavigation)  // Incluye la entidad Usuario
-                .Where(s => s.IdServicio == id)
-                .FirstOrDefaultAsync(); // Obtener un solo objeto, no una lista
-
-            if (servicio == null)
-            {
-                return NotFound();
-            }
-
-            // Llenar el ViewData con una lista de usuarios para seleccionar en la vista (opcional)
-            ViewData["UsuarioIdUsuario"] = new SelectList(_context.Usuarios, "IdUsuario", "Nombre", servicio.UsuarioIdUsuario);
-            // Ahora puedes mostrar el nombre del usuario en la vista usando servicio.Usuario.Nombre
-
-            return View(servicio);
-        }
 
 
         // POST: Servicios/Edit/5

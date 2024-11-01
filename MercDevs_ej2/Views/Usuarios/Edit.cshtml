@@ -1,7 +1,7 @@
 ﻿@model MercDevs_ej2.Models.Usuario
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Usuario";
 }
 
 <h1>Editar Usuario</h1>
@@ -12,37 +12,52 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdUsuario" />
+
             <div class="form-group">
                 <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
+                <input asp-for="Nombre" class="form-control" placeholder="Ingrese su nombre" />
                 <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Apellido" class="control-label"></label>
-                <input asp-for="Apellido" class="form-control" />
+                <input asp-for="Apellido" class="form-control" placeholder="Ingrese su apellido" />
                 <span asp-validation-for="Apellido" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Correo" class="control-label"></label>
-                <input asp-for="Correo" class="form-control" />
+                <input asp-for="Correo" class="form-control" placeholder="Ingrese su correo" />
                 <span asp-validation-for="Correo" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Password" class="control-label">contraseña</label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
+                <label asp-for="CurrentPassword" class="control-label">Ingrese su contraseña para confirmar</label>
+                <input asp-for="CurrentPassword" type="password" class="form-control" placeholder="Contraseña Ingrese su contraseña" />
+                <span asp-validation-for="CurrentPassword" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Guardar" class="btn btn-warning" />
             </div>
         </form>
+
+        <!-- Área para mensajes de éxito o error -->
+        @if (ViewData["Message"] != null)
+        {
+            <div class="alert alert-info">@ViewData["Message"]</div>
+        }
     </div>
 </div>
 
 <div>
-    <a asp-action="Index"><button class="btn btn-secondary">volver a la lista</button></a>
+    <a asp-action="Index">
+        <button class="btn btn-secondary">Volver a la lista</button>
+    </a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
 }
