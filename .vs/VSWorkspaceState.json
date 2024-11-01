@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\MercDevs_ej2",
-    "\\MercDevs_ej2\\Models",
-    "\\MercDevs_ej2\\Views"
+    "\\MercDevs_ej2\\Views",
+    "\\MercDevs_ej2\\Views\\Servicios"
   ],
-  "SelectedNode": "\\MercDevs_ej2\\Models\\Recepcionequipo.cs",
+  "SelectedNode": "\\MercDevs_ej2\\Views\\Servicios\\Edit.cshtml",
   "PreviewInSolutionExplorer": false
 }
