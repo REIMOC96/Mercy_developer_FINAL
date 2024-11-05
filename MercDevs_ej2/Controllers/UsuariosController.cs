@@ -28,7 +28,12 @@ namespace MercDevs_ej2.Controllers
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Usuarios.ToListAsync());
+            var usuarios = await _context.Usuarios.ToListAsync();
+
+            // Imprimir el conteo de usuarios en la consola para verificar
+            Console.WriteLine($"Número de usuarios recuperados: {usuarios.Count}");
+
+            return View(usuarios);
         }
 
         // GET: Usuarios/Details/5
@@ -166,46 +171,30 @@ namespace MercDevs_ej2.Controllers
             return View(usuario);
         }
 
-        // POST: Usuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id, string CurrentPassword)
+        public async Task<IActionResult> DeleteConfirmed(int id, [Bind("CurrentPassword")] Usuario usuario)
         {
             // Buscar el usuario en la base de datos
-            var usuario = await _context.Usuarios.FindAsync(id);
+            var ExistUser = await _context.Usuarios.FindAsync(id);
 
-            if (usuario == null)
+            if (ExistUser != null && BCrypt.Net.BCrypt.Verify(usuario.CurrentPassword, ExistUser.Password))
             {
-                // El usuario no existe
-                return NotFound();
-            }
-
-            // Comparar la contraseña ingresada con la almacenada
-            if (BCrypt.Net.BCrypt.Verify(CurrentPassword, usuario.Password))
-            {
-                _context.Usuarios.Remove(usuario);
+                // Eliminar el usuario si la contraseña coincide
+                _context.Usuarios.Remove(ExistUser);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             else
             {
-                // La contraseña no coincide, se devuelve un mensaje de error
+                // La contraseña no coincide o el usuario no existe
                 ModelState.AddModelError(string.Empty, "Contraseña incorrecta.");
-                // Opcional: Redirigir a la vista de confirmación con el usuario
-                return RedirectToAction("ConfirmDelete", new { id });
+                Console.WriteLine("NO FUNCA");
+                // Volver a la vista Delete sin redireccionar, mostrando el mensaje de error
+                return View();
             }
         }
 
-        // Método adicional para confirmar la eliminación
-        public IActionResult ConfirmDelete(int id)
-        {
-            var usuario = _context.Usuarios.Find(id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-            return View(usuario); // Deberías tener una vista de confirmación de eliminación
-        }
 
 
         private bool UsuarioExists(int id)
