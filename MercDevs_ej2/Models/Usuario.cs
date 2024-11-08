@@ -41,9 +41,10 @@ public partial class Usuario
     public string ConfirmPassword { get; set; } = null!;
 
     // Contraseña actual
+    [Required(ErrorMessage = "Se debe confirmar con la contraseña.")]
     [DataType(DataType.Password)]
+    [Compare("Password", ErrorMessage = "Contrseña incorrecta")]
     [NotMapped]
-    [Required(ErrorMessage = "Se requiere que ingrese su contraseña para completar esta acción.")]
     public string CurrentPassword { get; set; } = null!;
 
     public virtual ICollection<Servicio> Servicios { get; set; } = new List<Servicio>();

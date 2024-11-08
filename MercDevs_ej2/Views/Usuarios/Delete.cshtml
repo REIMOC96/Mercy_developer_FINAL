@@ -30,16 +30,21 @@
     </table>
 </div>
 <br />
-<div class="form-group">
-    <label asp-for="CurrentPassword" class="control-label">Ingrese la contraseña del usuario para confirmar</label>
-    <input asp-for="CurrentPassword" type="password" class="form-control" placeholder="Ingrese contraseña" />
-    <span asp-validation-for="CurrentPassword" class="text-danger"></span>
-</div>
+
 
 <div>
-    <form asp-action="Delete" method="post">
-        <input type="hidden" asp-for="IdUsuario" />
-        <input type="submit" value="Borrar" class="btn btn-danger" />
-    </form>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="IdUsuario" />
+    
+    <div class="form-group">
+        <label asp-for="CurrentPassword">Ingrese su contraseña para confirmar</label>
+        <input asp-for="CurrentPassword" class="form-control" type="password" />
+        <span asp-validation-for="CurrentPassword" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-danger">Eliminar Usuario</button>
+</form>
+
     <a asp-action="Index"><button class="btn btn-secondary">volver a la lista</button></a>
 </div>

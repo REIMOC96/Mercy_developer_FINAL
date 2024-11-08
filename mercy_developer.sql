@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-10-2024 a las 04:08:50
+-- Tiempo de generación: 05-11-2024 a las 03:25:53
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -43,7 +43,8 @@ CREATE TABLE `cliente` (
 
 INSERT INTO `cliente` (`idCliente`, `Nombre`, `Apellido`, `Correo`, `Telefono`, `Direccion`, `Estado`) VALUES
 (1, 'bastian', 'guardas', 'bastian.guarda.morales@cftmail.cl', '9188787890', 'Acacias 999', 1),
-(2, 'Lucho', 'Beliga', 'lucho@gmail.com', '234242424', 'Bolonegsi', 1);
+(2, 'Lucho', 'Beliga', 'lucho@gmail.com', '234242424', 'Bolonegsi', 1),
+(7, 'facu', 'a', 'facundo.marin.moscol@cftmail.cl', '9846516549', 'aydg a1 ', 1);
 
 -- --------------------------------------------------------
 
@@ -70,7 +71,8 @@ CREATE TABLE `datosfichatecnica` (
 --
 
 INSERT INTO `datosfichatecnica` (`idDatosFichaTecnica`, `FechaInicio`, `FechaFinalizacion`, `PObservacionesRecomendaciones`, `SOInstalado`, `SuiteOfficeInstalada`, `LectorPDFInstalado`, `NavegadorWebInstalado`, `Antivirus Instalado`, `RecepcionEquipoId`, `Estado`) VALUES
-(5, '2024-10-15 22:42:00', '2024-10-15 22:42:00', '1', 1, 1, 1, 1, '1', 7, 1);
+(5, '2024-10-15 22:42:00', '2024-10-15 22:42:00', '1', 1, 1, 1, 1, '1', 7, 1),
+(6, '2024-11-30 23:03:00', '2024-11-30 23:03:00', '1', 1, 1, 1, 1, '1', 17, 1);
 
 -- --------------------------------------------------------
 
@@ -117,14 +119,14 @@ CREATE TABLE `recepcionequipo` (
   `Fecha` datetime DEFAULT NULL,
   `TipoPc` int(11) DEFAULT NULL COMMENT '0: PC torre; 1: Notebook ; 2: all-in-one; 3: Desconocido;',
   `Accesorio` varchar(45) DEFAULT NULL,
-  `MarcaPc` varchar(45) DEFAULT NULL,
-  `ModeloPc` varchar(45) DEFAULT NULL,
-  `NSerie` varchar(45) DEFAULT NULL,
+  `MarcaPc` varchar(45) DEFAULT NULL COMMENT 'is String',
+  `ModeloPc` varchar(45) DEFAULT NULL COMMENT 'is String',
+  `NSerie` varchar(45) DEFAULT NULL COMMENT 'is string',
   `CapacidadRam` int(11) DEFAULT NULL COMMENT '0: 4Gb; 1: 6Gb; 2: 8Gb; 3: 16Gb; 4:32Gb ;5: 64Gb; 6: 128Gb;',
   `TipoAlmacenamiento` int(11) DEFAULT NULL COMMENT '0: HDD; 1: SSD ; 2: SSD M.2 ; SSD NVM M.2;',
-  `CapacidadAlmacenamiento` varchar(45) DEFAULT NULL,
+  `CapacidadAlmacenamiento` varchar(45) DEFAULT NULL COMMENT 'is String',
   `TipoGpu` int(11) DEFAULT NULL COMMENT '0: Chip Integrado; 1: Tarjeta dedicada; 2: Otro;',
-  `Grafico` varchar(45) DEFAULT NULL,
+  `Grafico` varchar(45) DEFAULT NULL COMMENT 'Es String',
   `Estado` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -133,7 +135,10 @@ CREATE TABLE `recepcionequipo` (
 --
 
 INSERT INTO `recepcionequipo` (`id`, `IdCliente`, `IdServicio`, `Fecha`, `TipoPc`, `Accesorio`, `MarcaPc`, `ModeloPc`, `NSerie`, `CapacidadRam`, `TipoAlmacenamiento`, `CapacidadAlmacenamiento`, `TipoGpu`, `Grafico`, `Estado`) VALUES
-(7, 1, 8, '2024-10-03 22:42:00', 1, '1', '1', '1', '1', 1, 1, '1', 1, '1', 1);
+(7, 1, 8, '2024-10-03 22:42:00', 1, '1', '1', '1', '1', 1, 1, '1', 1, '1', 1),
+(8, 1, 8, '2024-11-06 20:09:00', 1, '1', '1', '1', '1', 1, 1, '1', 1, '1', 1),
+(16, 2, 8, '2024-10-21 22:39:00', 1, '1', '1', '1', '1', 1, 1, '1', 1, '1', 1),
+(17, 7, 8, '2024-12-21 23:02:00', 1, 'teclado', 'lenovo', 'cq43', '4235423423523', 1, 1, '1', 1, '1', 1);
 
 -- --------------------------------------------------------
 
@@ -175,9 +180,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idUsuario`, `Nombre`, `Apellido`, `Correo`, `password`) VALUES
-(5, 'Bastia', 'Guardañ', 'bastian.guarda.morales@cftmail.cl', '$2a$11$BfEc1eG84YIPq7EwDdmSKOIXitwqCH0hgzoODnvGDjezvaWMtuDcC'),
 (12, 'Reinaldo', 'Ordoñez', 'el.papayas15@gmail.cl', '$2a$11$06VYZTLp8AE0zNwfro0vruBdyFuGHj1ppkdhvNJFNJ4nxehC6Ta3a'),
-(13, 'Mercy', 'Root', 'mercy.Developer@gmail.cl', '$2a$11$r/snF7Tvpa4mikB92qeYTuUeFuGQd4ALB52Vn/V8ssO.6J6rFz.Sm');
+(21, 'Mercy', 'Root', 'mercy.Developer@mail.cl', '$2a$11$hn3hdQm/WxOLH5E3NPKt5uFOvJVAWQ04DTdc5pqlTl78J6BknhI6.');
 
 --
 -- Índices para tablas volcadas
@@ -239,13 +243,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `datosfichatecnica`
 --
 ALTER TABLE `datosfichatecnica`
-  MODIFY `idDatosFichaTecnica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idDatosFichaTecnica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `descripcionservicio`
@@ -263,7 +267,7 @@ ALTER TABLE `diagnosticosolucion`
 -- AUTO_INCREMENT de la tabla `recepcionequipo`
 --
 ALTER TABLE `recepcionequipo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `servicio`
@@ -275,7 +279,7 @@ ALTER TABLE `servicio`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Restricciones para tablas volcadas
