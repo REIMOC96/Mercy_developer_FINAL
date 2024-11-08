@@ -4,9 +4,10 @@
     "\\MercDevs_ej2",
     "\\MercDevs_ej2\\Models",
     "\\MercDevs_ej2\\Views",
+    "\\MercDevs_ej2\\Views\\Recepcionequipoes",
     "\\MercDevs_ej2\\Views\\Servicios",
     "\\MercDevs_ej2\\Views\\Usuarios"
   ],
-  "SelectedNode": "\\MercDevs_ej2\\Views\\Usuarios\\Edit.cshtml",
+  "SelectedNode": "\\MercDevs_ej2\\Views\\Recepcionequipoes\\IndexId.cshtml",
   "PreviewInSolutionExplorer": false
 }

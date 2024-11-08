@@ -102,7 +102,7 @@ namespace MercDevs_ej2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdUsuario,Nombre,Apellido,Correo,Password,CurrentPassword")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id,string CurrentPassword, [Bind("IdUsuario,Nombre,Apellido,Correo,Password,CurrentPassword")] Usuario? usuario)
         {
             if (id != usuario.IdUsuario)
             {
@@ -111,24 +111,32 @@ namespace MercDevs_ej2.Controllers
 
             if (usuario.Nombre !=null && usuario.Apellido !=null && usuario.Correo != null)
             {
-                var existingUser = await _context.Usuarios.FindAsync(id);
 
-                // Verificar la contraseña actual
-                if (!BCrypt.Net.BCrypt.Verify(usuario.CurrentPassword, existingUser.Password))
+                var userExists = await _context.Usuarios.FindAsync(id);
+
+                if (userExists != null)
                 {
-                    ModelState.AddModelError("CurrentPassword", "Contraseña incorrecta.");
-                    return View(usuario);
-                }
 
+                    // Verificar la contraseña actual
+                    if (BCrypt.Net.BCrypt.Verify(currentPassword, userExists.Password))
+                    {
+                        ModelState.AddModelError("CurrentPassword", "Contraseña incorrecta.");
+                        return View(usuario);
+                    }
+                }
+                else {
+                    Console.WriteLine("no se encontro el registro en la bdd");
+                        return NotFound();
+                }
                 // No se cambia la contraseña en este formulario, solo los otros campos
-                // se plantea la idea de ina vista aparte para modificar la contraseña del usuario requerira la contraseña de mercy Root
-                existingUser.Nombre = usuario.Nombre;
-                existingUser.Apellido = usuario.Apellido;
-                existingUser.Correo = usuario.Correo;
+                // se plantea la idea de ina vista aparte para modificar la contraseña del usuario requerira la contraseña de mercy Root                if ()
+                usuario.Nombre = usuario.Nombre ;
+                usuario.Apellido = usuario.Apellido;
+                usuario.Correo = usuario.Correo;
 
                 try
                 {
-                    _context.Update(existingUser);
+                    _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)

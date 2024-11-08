@@ -31,7 +31,7 @@ public partial class Usuario
     [RegularExpression(@"^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$",
     ErrorMessage = "La contraseña debe tener al menos 6 caracteres, incluyendo una mayúscula, un número y un carácter especial.")]
     [DataType(DataType.Password)]
-    public string Password { get; set; } = null!;
+    public string? Password { get; set; } = null!;
 
     // Confirmar Password
     [Required(ErrorMessage = "Se debe confirmar la contraseña.")]
