@@ -107,9 +107,11 @@ namespace MercDevs_ej2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id,string CurrentPassword, [Bind("IdUsuario,Nombre,Apellido,Correo,Password,CurrentPassword")] Usuario? usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("IdUsuario,Nombre,Apellido,Correo,Password,CurrentPassword")] Usuario? usuario)
         {
-            if (id != usuario.IdUsuario)
+
+
+            if (usuario == null && id != usuario.IdUsuario )
             {
                 return NotFound();
             }
@@ -123,7 +125,7 @@ namespace MercDevs_ej2.Controllers
                 {
 
                     // Verificar la contraseña actual
-                    if (BCrypt.Net.BCrypt.Verify(currentPassword, userExists.Password))
+                    if (BCrypt.Net.BCrypt.Verify(usuario.CurrentPassword, userExists.Password))
                     {
                         ModelState.AddModelError("CurrentPassword", "Contraseña incorrecta.");
                         return View(usuario);
