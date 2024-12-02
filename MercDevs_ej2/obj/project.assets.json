@@ -6466,11 +6466,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\MercDevs_ej2.csproj",
+      "projectUniqueName": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\MercDevs_ej2.csproj",
       "projectName": "MercDevs_ej2",
-      "projectPath": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\MercDevs_ej2.csproj",
+      "projectPath": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\MercDevs_ej2.csproj",
       "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\obj\\",
+      "outputPath": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

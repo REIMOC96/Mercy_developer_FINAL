@@ -1,59 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\",
+  "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\datosfichatecnicas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\datosfichatecnicas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\datosfichatecnicas\\fichatopdf.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\datosfichatecnicas\\fichatopdf.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\datosfichatecnicas\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\datosfichatecnicas\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\recepcionequipoes\\indexid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\recepcionequipoes\\indexid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\recepcionequipoes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\recepcionequipoes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\recepcionequipoes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\recepcionequipoes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\models\\recepcionequipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\models\\recepcionequipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\recepcionequipoes\\detailsid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\recepcionequipoes\\detailsid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\recepcionequipoes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\recepcionequipoes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\controllers\\datosfichatecnicascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\controllers\\datosfichatecnicascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercdevs_ej2\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercy_developer_final\\mercdevs_ej2\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercdevs_ej2\\views\\usuarios\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\usuarios\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercy_developer_final\\mercdevs_ej2\\views\\datosfichatecnicas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\datosfichatecnicas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercdevs_ej2\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> 3817443c6be41757f8bdd9417253d5e58af15849
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercy_developer_final\\mercdevs_ej2\\views\\datosfichatecnicas\\fichatopdf.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\datosfichatecnicas\\fichatopdf.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercy_developer_final\\mercdevs_ej2\\views\\datosfichatecnicas\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\datosfichatecnicas\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercy_developer_final\\mercdevs_ej2\\views\\recepcionequipoes\\indexid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\recepcionequipoes\\indexid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercy_developer_final\\mercdevs_ej2\\views\\recepcionequipoes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\recepcionequipoes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercy_developer_final\\mercdevs_ej2\\views\\recepcionequipoes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\recepcionequipoes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercy_developer_final\\mercdevs_ej2\\models\\recepcionequipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\models\\recepcionequipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercy_developer_final\\mercdevs_ej2\\views\\recepcionequipoes\\detailsid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\recepcionequipoes\\detailsid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercy_developer_final\\mercdevs_ej2\\views\\recepcionequipoes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\recepcionequipoes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercy_developer_final\\mercdevs_ej2\\controllers\\datosfichatecnicascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\controllers\\datosfichatecnicascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,143 +54,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 473,
-<<<<<<< HEAD
-          "SelectedChildIndex": 1,
-=======
-          "SelectedChildIndex": 3,
->>>>>>> 3817443c6be41757f8bdd9417253d5e58af15849
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DatosfichatecnicasController.cs",
-              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
-              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
-              "RelativeToolTip": "MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAqwEcAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T00:48:24.875Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
-              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
-              "RelativeToolTip": "MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAEwHkAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T21:17:06.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FichaToPdf.cshtml",
-              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\FichaToPdf.cshtml",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Datosfichatecnicas\\FichaToPdf.cshtml",
-              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\FichaToPdf.cshtml",
-              "RelativeToolTip": "MercDevs_ej2\\Views\\Datosfichatecnicas\\FichaToPdf.cshtml",
-              "ViewState": "AQIAAH0AAAAAAAAAAAAEwJAAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T21:14:04.113Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Edit.cshtml",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Datosfichatecnicas\\Edit.cshtml",
-              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Edit.cshtml",
-              "RelativeToolTip": "MercDevs_ej2\\Views\\Datosfichatecnicas\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T21:14:02.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IndexId.cshtml",
-              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\IndexId.cshtml",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Recepcionequipoes\\IndexId.cshtml",
-              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\IndexId.cshtml",
-              "RelativeToolTip": "MercDevs_ej2\\Views\\Recepcionequipoes\\IndexId.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAADgAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T21:12:01.01Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Index.cshtml",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Recepcionequipoes\\Index.cshtml",
-              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Index.cshtml",
-              "RelativeToolTip": "MercDevs_ej2\\Views\\Recepcionequipoes\\Index.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T21:11:57.15Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Recepcionequipo.cs",
-              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Models\\Recepcionequipo.cs",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Models\\Recepcionequipo.cs",
-              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Models\\Recepcionequipo.cs",
-              "RelativeToolTip": "MercDevs_ej2\\Models\\Recepcionequipo.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T21:08:46.287Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Edit.cshtml",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Recepcionequipoes\\Edit.cshtml",
-              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Edit.cshtml",
-              "RelativeToolTip": "MercDevs_ej2\\Views\\Recepcionequipoes\\Edit.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAEsAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T21:07:50.205Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Details.cshtml",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Recepcionequipoes\\Details.cshtml",
-              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Details.cshtml",
-              "RelativeToolTip": "MercDevs_ej2\\Views\\Recepcionequipoes\\Details.cshtml",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAUwJYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T21:06:25.178Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DetailsId.cshtml",
-              "DocumentMoniker": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\DetailsId.cshtml",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Recepcionequipoes\\DetailsId.cshtml",
-              "ToolTip": "A:\\REIMOC96\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\DetailsId.cshtml",
-              "RelativeToolTip": "MercDevs_ej2\\Views\\Recepcionequipoes\\DetailsId.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAJYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T21:02:10.005Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -209,61 +65,142 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-<<<<<<< HEAD
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-=======
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "MercDevs_ej2\\Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\UsuariosController.cs",
               "RelativeToolTip": "MercDevs_ej2\\Controllers\\UsuariosController.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAuwHIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAswH4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T00:26:54.97Z",
+              "WhenOpened": "2024-12-02T22:48:46.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DatosfichatecnicasController.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
+              "RelativeToolTip": "MercDevs_ej2\\Controllers\\DatosfichatecnicasController.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAqwEcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T22:24:17.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAEwHkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-02T22:24:17.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Models\\Usuario.cs",
-              "RelativeToolTip": "MercDevs_ej2\\Models\\Usuario.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAgwCUAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T00:26:54.968Z"
+              "Title": "FichaToPdf.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\FichaToPdf.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Datosfichatecnicas\\FichaToPdf.cshtml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\FichaToPdf.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Datosfichatecnicas\\FichaToPdf.cshtml",
+              "ViewState": "AQIAAH0AAAAAAAAAAAAEwJAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-02T22:24:17.564Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Usuarios\\Delete.cshtml",
-              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Usuarios\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Usuarios\\Delete.cshtml",
-              "RelativeToolTip": "MercDevs_ej2\\Views\\Usuarios\\Delete.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Edit.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Datosfichatecnicas\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Edit.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Datosfichatecnicas\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-14T00:26:54.951Z"
->>>>>>> 3817443c6be41757f8bdd9417253d5e58af15849
+              "WhenOpened": "2024-12-02T22:24:17.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IndexId.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\IndexId.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Recepcionequipoes\\IndexId.cshtml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\IndexId.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Recepcionequipoes\\IndexId.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADgAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-02T22:24:17.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Index.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Recepcionequipoes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Index.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Recepcionequipoes\\Index.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-02T22:24:17.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Recepcionequipo.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Models\\Recepcionequipo.cs",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Models\\Recepcionequipo.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Models\\Recepcionequipo.cs",
+              "RelativeToolTip": "MercDevs_ej2\\Models\\Recepcionequipo.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T22:24:17.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Edit.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Recepcionequipoes\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Edit.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Recepcionequipoes\\Edit.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEsAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-02T22:24:17.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Details.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Recepcionequipoes\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\Details.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Recepcionequipoes\\Details.cshtml",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAUwJYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-02T22:24:17.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DetailsId.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\DetailsId.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Recepcionequipoes\\DetailsId.cshtml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Recepcionequipoes\\DetailsId.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Recepcionequipoes\\DetailsId.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAJYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-02T22:24:17.579Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         },
@@ -273,11 +210,7 @@
           "Children": [
             {
               "$type": "Bookmark",
-<<<<<<< HEAD
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-=======
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
->>>>>>> 3817443c6be41757f8bdd9417253d5e58af15849
             },
             {
               "$type": "Bookmark",

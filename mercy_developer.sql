@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-11-2024 a las 03:25:53
+-- Tiempo de generación: 03-12-2024 a las 00:00:52
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -118,6 +118,7 @@ CREATE TABLE `recepcionequipo` (
   `IdServicio` int(11) NOT NULL,
   `Fecha` datetime DEFAULT NULL,
   `TipoPc` int(11) DEFAULT NULL COMMENT '0: PC torre; 1: Notebook ; 2: all-in-one; 3: Desconocido;',
+  `CPU` varchar(50) NOT NULL,
   `Accesorio` varchar(45) DEFAULT NULL,
   `MarcaPc` varchar(45) DEFAULT NULL COMMENT 'is String',
   `ModeloPc` varchar(45) DEFAULT NULL COMMENT 'is String',
@@ -134,11 +135,11 @@ CREATE TABLE `recepcionequipo` (
 -- Volcado de datos para la tabla `recepcionequipo`
 --
 
-INSERT INTO `recepcionequipo` (`id`, `IdCliente`, `IdServicio`, `Fecha`, `TipoPc`, `Accesorio`, `MarcaPc`, `ModeloPc`, `NSerie`, `CapacidadRam`, `TipoAlmacenamiento`, `CapacidadAlmacenamiento`, `TipoGpu`, `Grafico`, `Estado`) VALUES
-(7, 1, 8, '2024-10-03 22:42:00', 1, '1', '1', '1', '1', 1, 1, '1', 1, '1', 1),
-(8, 1, 8, '2024-11-06 20:09:00', 1, '1', '1', '1', '1', 1, 1, '1', 1, '1', 1),
-(16, 2, 8, '2024-10-21 22:39:00', 1, '1', '1', '1', '1', 1, 1, '1', 1, '1', 1),
-(17, 7, 8, '2024-12-21 23:02:00', 1, 'teclado', 'lenovo', 'cq43', '4235423423523', 1, 1, '1', 1, '1', 1);
+INSERT INTO `recepcionequipo` (`id`, `IdCliente`, `IdServicio`, `Fecha`, `TipoPc`, `CPU`, `Accesorio`, `MarcaPc`, `ModeloPc`, `NSerie`, `CapacidadRam`, `TipoAlmacenamiento`, `CapacidadAlmacenamiento`, `TipoGpu`, `Grafico`, `Estado`) VALUES
+(7, 1, 8, '2024-10-03 22:42:00', 1, '', '1', '1', '1', '1', 1, 1, '1', 1, '1', 1),
+(8, 1, 8, '2024-11-06 20:09:00', 1, '', '1', '1', '1', '1', 1, 1, '1', 1, '1', 1),
+(16, 2, 8, '2024-10-21 22:39:00', 1, '', '1', '1', '1', '1', 1, 1, '1', 1, '1', 1),
+(17, 7, 8, '2024-12-21 23:02:00', 1, '', 'teclado', 'lenovo', 'cq43', '4235423423523', 1, 1, '1', 1, '1', 1);
 
 -- --------------------------------------------------------
 
