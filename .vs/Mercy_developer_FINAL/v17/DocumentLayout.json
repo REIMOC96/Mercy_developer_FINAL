@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "A:\\REIMOC96\\Mercy_developer_FINAL\\",
+  "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\",
   "Documents": [],
   "DocumentGroupContainers": [
     {
@@ -21,11 +21,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -44,16 +40,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }

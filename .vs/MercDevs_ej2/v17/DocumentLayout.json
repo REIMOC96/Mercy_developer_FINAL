@@ -1,8 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "A:\\REIMOC96\\Mercy_developer_FINAL\\",
+  "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\views\\datosfichatecnicas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\datosfichatecnicas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -41,6 +42,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|a:\\reimoc96\\mercy_developer_final\\mercdevs_ej2\\controllers\\datosfichatecnicascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\controllers\\datosfichatecnicascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercdevs_ej2\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercdevs_ej2\\views\\usuarios\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\views\\usuarios\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|c:\\users\\alumno\\documents\\repos_reinaldo\\mercy_developer_final\\mercdevs_ej2\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD3F8B83-F583-42C9-8F0B-E39CD8378A12}|MercDevs_ej2\\MercDevs_ej2.csproj|solutionrelative:mercdevs_ej2\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 3817443c6be41757f8bdd9417253d5e58af15849
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +63,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 473,
+<<<<<<< HEAD
           "SelectedChildIndex": 1,
+=======
+          "SelectedChildIndex": 3,
+>>>>>>> 3817443c6be41757f8bdd9417253d5e58af15849
           "Children": [
             {
               "$type": "Document",
@@ -193,6 +210,7 @@
             },
             {
               "$type": "Bookmark",
+<<<<<<< HEAD
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
@@ -206,6 +224,46 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+=======
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "MercDevs_ej2\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAuwHIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T00:26:54.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Models\\Usuario.cs",
+              "RelativeToolTip": "MercDevs_ej2\\Models\\Usuario.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAgwCUAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T00:26:54.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Usuarios\\Delete.cshtml",
+              "RelativeDocumentMoniker": "MercDevs_ej2\\Views\\Usuarios\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\Repos_Reinaldo\\Mercy_developer_FINAL\\MercDevs_ej2\\Views\\Usuarios\\Delete.cshtml",
+              "RelativeToolTip": "MercDevs_ej2\\Views\\Usuarios\\Delete.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T00:26:54.951Z"
+>>>>>>> 3817443c6be41757f8bdd9417253d5e58af15849
             }
           ]
         },
@@ -215,7 +273,11 @@
           "Children": [
             {
               "$type": "Bookmark",
+<<<<<<< HEAD
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+=======
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+>>>>>>> 3817443c6be41757f8bdd9417253d5e58af15849
             },
             {
               "$type": "Bookmark",

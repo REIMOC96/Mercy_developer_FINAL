@@ -10,6 +10,10 @@
     "\\MercDevs_ej2\\Views\\Servicios",
     "\\MercDevs_ej2\\Views\\Usuarios"
   ],
+<<<<<<< HEAD
   "SelectedNode": "\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Inicio.cshtml",
+=======
+  "SelectedNode": "\\MercDevs_ej2\\Views\\Usuarios\\Delete.cshtml",
+>>>>>>> 3817443c6be41757f8bdd9417253d5e58af15849
   "PreviewInSolutionExplorer": false
 }
