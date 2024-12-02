@@ -1,135 +1,104 @@
 ﻿@model MercDevs_ej2.Models.Datosfichatecnica
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles de la Ficha Técnica";
 }
 
-<h1>Detalles</h1>
+<div class="container mt-6" style="max-width: 800px;">
+    <h1 class="text-center mb-4">Detalles de la Ficha Técnica</h1>
 
-<div>
-    <h4>Datos ficha tecnica</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            FechaInicio
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaInicio)
-        </dd>
-        <dt class = "col-sm-2">
-            Fecha Termino
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaFinalizacion)
-        </dd>
-        <dt class = "col-sm-2">
-            Observaciones || Recomendaciones
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PobservacionesRecomendaciones)
-        </dd>
-        <dt class = "col-sm-2">
-            Sistema Operativo
-        </dt>
-        <dd class = "col-sm-10">
-            @{
-                string soinstalado = "";
-                switch (Model.Soinstalado)
-                {
-                    case 0:
-                        soinstalado = "Windows 10";
-                        break;
-                    case 1:
-                        soinstalado = "Windows 11";
-                        break;
-                    case 2:
-                        soinstalado = "Linux";
-                        break;
-                }
-                @soinstalado
-            }
-        </dd>
-        <dt class = "col-sm-2">
-            Sistema Office instalado
-        </dt>
-        <dd class = "col-sm-10">
-            @{
-                string suiteofficeinstalada = "";
-                switch (Model.Soinstalado)
-                {
-                    case 0:
-                        suiteofficeinstalada = "Microsoft Office 2013";
-                        break;
-                    case 1:
-                        suiteofficeinstalada = "Microsoft Office 2019";
-                        break;
-                    case 2:
-                        suiteofficeinstalada = "Microsoft Office 365";
-                        break;
-                    case 3:
-                        suiteofficeinstalada = "OpenOffice";
-                        break;
-                }
-                @suiteofficeinstalada
-            }
-        </dd>
-        <dt class = "col-sm-2">
-            Lector PDF
-        </dt>
-        <dd class = "col-sm-10">
-            @{
-                string lectorpdfinstalado = "";
-                switch (Model.Soinstalado)
-                {
-                    case 0:
-                        lectorpdfinstalado = "No Instalado";
-                        break;
-                    case 1:
-                        lectorpdfinstalado = "Instalado";
-                        break;
-                    case 2:
-                        lectorpdfinstalado = "No Aplica";
-                        break;
-                }
-                @lectorpdfinstalado
-            }
-        </dd>
-        <dt class = "col-sm-2">
-           Navegador Web
-        </dt>
-        <dd class = "col-sm-10">
-            @{
-                string navegadorwebinstalado = "";
-                switch (Model.NavegadorWebInstalado)
-                {
-                    case 0:
-                        navegadorwebinstalado = "No Instalado";
-                        break;
-                    case 1:
-                        navegadorwebinstalado = "Chrome";
-                        break;
-                    case 2:
-                        navegadorwebinstalado = "Chrome y Firefox";
-                        break;
-                }
-                @navegadorwebinstalado
-            }
-        </dd>
-        <dt class = "col-sm-2">
-        Antivirus
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AntivirusInstalado)
-        </dd>
-        <dt class = "col-sm-2">
-           Id Recepcion De equipo
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.RecepcionEquipo.Id)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdDatosFichaTecnica">Editar</a> |
-    <button class="btn btn-secondary" onclick="window.history.back();">Volver a la lista</button>
+    <h3 class="mb-4 text-black text-center">
+        Cliente: @Model.RecepcionEquipo.IdClienteNavigation.Nombre @Model.RecepcionEquipo.IdClienteNavigation.Apellido
+    </h3>
+
+    <table class="table table-bordered table-m">
+        <tbody>
+            <tr>
+                <th scope="row" class="text-start">Fecha de Inicio</th>
+                <td class="text-center">@Html.DisplayFor(model => model.FechaInicio)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Fecha de Término</th>
+                <td class="text-center">@Html.DisplayFor(model => model.FechaFinalizacion)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Observaciones || Recomendaciones</th>
+                <td class="text-center">@Html.DisplayFor(model => model.PobservacionesRecomendaciones)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Sistema Operativo</th>
+                <td class="text-center">
+                    @{
+                        string soinstalado = Model.Soinstalado switch
+                        {
+                            0 => "Windows 10",
+                            1 => "Windows 11",
+                            2 => "Linux",
+                            _ => "Desconocido"
+                        };
+                        @soinstalado
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Sistema Office Instalado</th>
+                <td class="text-center">
+                    @{
+                        string suiteofficeinstalada = Model.Soinstalado switch
+                        {
+                            0 => "Microsoft Office 2013",
+                            1 => "Microsoft Office 2019",
+                            2 => "Microsoft Office 365",
+                            3 => "OpenOffice",
+                            _ => "Desconocido"
+                        };
+                        @suiteofficeinstalada
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Lector PDF</th>
+                <td class="text-center">
+                    @{
+                        string lectorpdfinstalado = Model.Soinstalado switch
+                        {
+                            0 => "No Instalado",
+                            1 => "Instalado",
+                            2 => "No Aplica",
+                            _ => "Desconocido"
+                        };
+                        @lectorpdfinstalado
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Navegador Web</th>
+                <td class="text-center">
+                    @{
+                        string navegadorwebinstalado = Model.NavegadorWebInstalado switch
+                        {
+                            0 => "No Instalado",
+                            1 => "Chrome",
+                            2 => "Chrome y Firefox",
+                            _ => "Desconocido"
+                        };
+                        @navegadorwebinstalado
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Antivirus</th>
+                <td class="text-center">@Html.DisplayFor(model => model.AntivirusInstalado)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="mt-4 d-flex justify-content-between">
+        <a asp-action="Edit" asp-route-id="@Model?.IdDatosFichaTecnica" class="btn btn-warning btn-sm">
+            <i class="bi bi-pencil-square"></i> Editar
+        </a>
+        <a asp-action="Inicio" class="btn btn-secondary btn-sm">
+            <i class="bi bi-arrow-left-circle"></i> Volver
+        </a>
+    </div>
 </div>

@@ -17,7 +17,13 @@
                     @Html.DisplayNameFor(model => model.Fecha)
                 </th>
                 <th>
+                    Id Recepcion
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.TipoPc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(Model => Model.CPU)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.MarcaPc)
@@ -32,6 +38,9 @@
                 <th>
                     Nombre Servicio
                 </th>
+                <th>
+                    &nbsp &nbsp Estado
+                </th>
                 <th style="text-align:center">Acciones</th>
             </tr>
         </thead>
@@ -43,6 +52,10 @@
                     <td style="white-space: nowrap;">
                         @Html.DisplayFor(modelItem => item.Fecha)
                     </td>
+                    <td>
+                        @Html.DisplayFor(ModelItem => item.Id)
+                    </td>
+
                     <td>
                         @{
                             string tipoEquipo = "";
@@ -65,6 +78,9 @@
                         @tipoEquipo
                     </td>
                     <td>
+                        @Html.DisplayFor(ModelItem => item.CPU)
+                    </td>
+                    <td>
                         @Html.DisplayFor(modelItem => item.MarcaPc)
                     </td>
                     <td>
@@ -73,6 +89,7 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Grafico)
                     </td>
+
                     <td>
                         @Html.DisplayFor(modelItem => item.IdClienteNavigation.Nombre)
                     </td>
@@ -80,47 +97,39 @@
                         @Html.DisplayFor(modelItem => item.IdServicioNavigation.Nombre)
                     </td>
 
+                    <td class="text-center">
+                            @{
+                                string estado = item.Estado switch
+                                {
+                                    0 => "Finalizado",
+                                    1 => "Recepcionado",
+                                    2 => "En espera",
+                                    _ => "Desconocido"
+                                };
+                                @estado
+                            }
+                    </td>
 
                         
                 <td>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            &nbsp <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Acciones
                         </button>
                         <div class="dropdown-menu">
                                 <a asp-action="Edit" asp-route-id="@item.Id" class="dropdown-item">Editar</a>
                                 <a asp-action="Details" asp-route-id="@item.Id" class="dropdown-item"> Detalles</a>
                                 <a asp-action="Delete" asp-route-id="@item.Id" class="dropdown-item">Borrar</a>
-                                <a asp-action="IndexId" asp-route-id="@item.Id" class="dropdown-item">R. de Equipo</a>
+                                <a asp-action="IndexId" asp-route-id="@item.Id" class="dropdown-item">R. Por Cliente</a>
                                 <a asp-controller="Datosfichatecnicas" asp-action="Index" asp-route-id="@item.Id" class="dropdown-item">Ficha tecnica</a>
                                 <form method="post" asp-action="Finalizar" asp-route-id="@item?.Id">
-                                    <a asp-action="Finalizar" class="dropdown-item">Finalizar recepcion</a>
+                                    <button type="submit" class="dropdown-item">Finalizar recepcion</button>
                                 </form>
+
                         
                             </div>
                     </div>
                 </td>
-
-                    @*  <div class="d-flex justify-content-around">
-                            <button class="btn btn-info">
-                                @Html.ActionLink("Ficha Técnica", "Index", "Datosfichatecnicas", new { id = item.Id }, null)
-                            
-                            </button
-                            <a asp-action="Edit" asp-route-id="@item.Id">
-                                <button type="button" class="btn btn-primary" style="width:100%">Editar</button>
-                            </a>
-                            <a asp-action="Details" asp-route-id="@item.Id">
-                                <button type="button" class="btn btn-info" style="width:100%">Detalles</button>
-                            </a>
-                            <a asp-action="Delete" asp-route-id="@item.Id">
-                                <button type="button" class="btn btn-danger" style="width:100%">Borrar</button>
-                            </a>
-                            <form method="post" asp-action="Finalizar" asp-route-id="@item?.Id">
-                                <button type="submit" class="btn btn-warning">Finalizar Recepción</button>
-                            </form>
-                        </div>
-               
-                    </td>*@
                 </tr> 
             }
         </tbody>

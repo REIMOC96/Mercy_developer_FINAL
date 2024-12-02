@@ -11,15 +11,23 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <div class="form-group">
-                <label asp-for="IdCliente" class="control-label">Nombre del Cliente</label>
-                <select asp-for="IdCliente" class="form-control" asp-items="ViewBag.IdCliente"></select>
-            </div>
+            @* selector de nombre cliente*@
 
             <div class="form-group">
-                <label asp-for="IdServicio" class="control-label">Nombre del Servicio</label>
-                <select asp-for="IdServicio" class="form-control" asp-items="ViewBag.IdServicio"></select>
+                <label asp-for="IdCliente" class="control-label">Nombre del Cliente</label>
+                <select asp-for="IdCliente" class="form-control" asp-items="@ViewBag.IdCliente"></select>
+                <span asp-validation-for="IdCliente" class="text-danger"></span>
             </div>
+
+            @* selector de nombre Servicio*@
+            <div class="form-group">
+                <label asp-for="IdServicio" class="control-label">Nombre del Servicio</label>
+                <select asp-for="IdServicio" class="form-control" asp-items="@ViewBag.IdServicio"></select>
+                <span asp-validation-for="IdServicio" class="text-danger"></span>
+            </div>
+
+
+            @* selector de Fecha*@
 
             <div class="form-group">
                 <label asp-for="Fecha" class="control-label"></label>
@@ -27,8 +35,10 @@
                 <span asp-validation-for="Fecha" class="text-danger"></span>
             </div>
 
+            @* selector  tipo de equipo*@
+
             <div class="form-group">
-                <label asp-for="TipoPc" class="control-label"></label>
+                <label asp-for="TipoPc" class="control-label">Tipo de PC</label>
                 <select asp-for="TipoPc" class="form-control">
                     <option value="" disabled selected>-- Seleccione el tipo de pc --</option>
                     <option value="0">Torre</option>
@@ -38,59 +48,122 @@
                 </select>
                 <span asp-validation-for="TipoPc" class="text-danger"></span>
             </div>
+            
+            @*CPU es string*@
+
+            <div class="form-group">
+                <label asp-for="CPU" class="control-label">CPU</label>
+                <input asp-for="CPU" class="form-control" placeholder="Ingrese el modelo del CPU" />
+                <span asp-validation-for="CPU" class="text-danger"></span>
+            </div>
+            @* selector Igngresar accesorios*@
+
+
             <div class="form-group">
                 <label asp-for="Accesorio" class="control-label" >Accesorios</label>
                 <input asp-for="Accesorio" class="form-control" placeholder="Ingrese accesorios si existen" />
                 <span asp-validation-for="Accesorio" class="text-danger"></span>
             </div>
+
+            @* selector Marca Pc es string*@
+
             <div class="form-group">
                 <label asp-for="MarcaPc" class="control-label">Marca del Pc</label>
-                <input asp-for="MarcaPc" class="form-control" />
+                <input asp-for="MarcaPc" placeholder="Porfavor ingrese la marca del Pc" class="form-control" />
                 <span asp-validation-for="MarcaPc" class="text-danger"></span>
             </div>
 
+
+            @* selector Modelo del pc // modelo de placa String*@
+
             <div class="form-group">
-                <label asp-for="ModeloPc" class="control-label">Modelo del Pc</label>
-                <input asp-for="ModeloPc" class="form-control" />
+                <label asp-for="ModeloPc" class="control-label">Modelo del Pc // Modelo de placa</label>
+                <input asp-for="ModeloPc" placeholder="Ingrese el modelo" class="form-control" />
                 <span asp-validation-for="ModeloPc" class="text-danger"></span>
             </div>
 
+            @*  N de serie del pc String*@
 
             <div class="form-group">
                 <label asp-for="Nserie" class="control-label"> N° Serie del Pc</label>
-                <input asp-for="Nserie" class="form-control" />
+                <input asp-for="Nserie" placeholder="Esctiba el N de Serie" class="form-control" />
                 <span asp-validation-for="Nserie" class="text-danger"></span>
             </div>
+
+            @* Selector de ram*@
+
             <div class="form-group">
                 <label asp-for="CapacidadRam" class="control-label">Capacidad de Ram</label>
-                <input asp-for="CapacidadRam" class="form-control" />
+                <select asp-for="CapacidadRam" class="form-control">
+                    <option value="" disabled selected>-- Seleccione la capacidad de ram --</option>
+                    <option value="0">4 GB</option>
+                    <option value="1">8 GB</option>
+                    <option value="2">16 GB</option>
+                    <option value="4">32 GB</option>
+                    <option value="5">64 GB</option>
+                    <option value="6">128 GB</option>
+                </select>
                 <span asp-validation-for="CapacidadRam" class="text-danger"></span>
             </div>
+
+            @*Selector de tipo almacenamiento*@
             <div class="form-group">
-                <label asp-for="TipoAlmacenamiento" class="control-label">Tipo de almacenamieto</label>
-                <input asp-for="TipoAlmacenamiento" class="form-control" />
+                <label asp-for="TipoAlmacenamiento" class="control-label">Tipo de Almacenamiento</label>
+                <select asp-for="TipoAlmacenamiento" class="form-control">
+                    <option value="" disabled selected>-- Seleccione el Tipo de Almacenamiento --</option>
+                    <option value="0">HDD</option>
+                    <option value="1">SSD </option>
+                    <option value="2"> SSD M.2 </option>
+                    <option value="3"> SSD M.2 NVME </option>
+                </select>
                 <span asp-validation-for="TipoAlmacenamiento" class="text-danger"></span>
             </div>
+
+            @* selector de Capacidad Almacenamiento*@
+
             <div class="form-group">
                 <label asp-for="CapacidadAlmacenamiento" class="control-label">Capacidad de Almacenamiento</label>
-                <input asp-for="CapacidadAlmacenamiento" class="form-control" />
+                <input asp-for="CapacidadAlmacenamiento" placeholder="Ingrese la Capacidad de almacenamiento" class="form-control" />
                 <span asp-validation-for="CapacidadAlmacenamiento" class="text-danger"></span>
             </div>
+
+            @* selector de tipo GPU *@
+
+
             <div class="form-group">
-                <label asp-for="TipoGpu" class="control-label">Tipo de Gpu</label>
-                <input asp-for="TipoGpu" class="form-control" />
-                <span asp-validation-for="TipoGpu" class="text-danger"></span>
+                <label asp-for="TipoGpu" class="control-label">Tipo de GPU</label>
+                <select asp-for="TipoGpu" class="form-control">
+                    <option value="" disabled selected>-- Seleccione el Tipo de GPU --</option>
+                    <option value="0">Chip Integrado</option>
+                    <option value="1">Tarjeta dedicada </option>
+                    <option value="2"> Otros... </option>
+                </select>
+                <span asp-validation-for="TipoAlmacenamiento" class="text-danger"></span>
             </div>
+
+            @* Modelo Grafica*@
+
             <div class="form-group">
-                <label asp-for="Grafico" class="control-label">Graficos</label>
-                <input asp-for="Grafico" class="form-control" />
+                <label asp-for="Grafico" class="control-label">Modelo de Grafica</label>
+                <input asp-for="Grafico"placeholder="Ingrese el modelo de la grafica" class="form-control" />
                 <span asp-validation-for="Grafico" class="text-danger"></span>
             </div>
+
+            @* selector de Estados *@
+
             <div class="form-group">
-                <label asp-for="Estado" class="control-label">Estado</label>
-                <input asp-for="Estado" class="form-control" />
+                <label asp-for="Estado" class="control-label"></label>
+                <select asp-for="Estado" class="form-control">
+                    <option value="" disabled selected>-- Seleccione el Estado--</option>
+                    <option value="0">Finalizado</option>
+                    <option value="1">Recepcionado</option>
+                    <option value="2">En espera</option>
+                </select>
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
+
+            @* fin fomulario, inicio de botones *@
+
             <div class="form-group">
                 <input type="submit" value="crear Recepcion" class="btn btn-success" />
             </div>
@@ -101,7 +174,9 @@
 <div>
     <a asp-action="Index"><button class="btn btn-secondary">Volver a la lista</button></a>
 </div>
-
+<br />
+<br />
+<br />
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

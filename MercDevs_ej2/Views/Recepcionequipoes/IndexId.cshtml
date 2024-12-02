@@ -20,6 +20,9 @@
                     @Html.DisplayNameFor(model => model.TipoPc)
                 </th>
                 <th>
+                    @Html.DisplayNameFor(Model => Model.CPU)
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.MarcaPc)
                 </th>
                 <th>
@@ -62,6 +65,9 @@
                             }
                             @tipoEquipo
                         }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CPU)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.MarcaPc)

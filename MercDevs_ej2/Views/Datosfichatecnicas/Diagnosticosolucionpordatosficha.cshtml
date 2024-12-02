@@ -1,7 +1,49 @@
 ﻿@model MercDevs_ej2.Models.Datosfichatecnica
 
-<h2>Datos de la Ficha Tecnica</h2>
-<div>
+<h2>Diagnóstico y Soluciones de la Ficha Técnica</h2>
+
+@if (Model.Diagnosticosolucions == null || !Model.Diagnosticosolucions.Any())
+{
+    <h1>No hay registros para mostrar</h1>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Descripción Diagnóstico</th>
+                <th>Descripción Solución</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var diagnostico in Model.Diagnosticosolucions)
+            {
+                <tr>
+                    <td>@diagnostico.DescripcionDiagnostico</td>
+                    <td>@diagnostico.DescripcionSolucion</td>
+                    <td>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Acciones
+                            </button>
+                            <div class="dropdown-menu">
+                                <a asp-action="Edit" asp-controller="Diagnosticosolucions" asp-route-id="@diagnostico.IdDiagnosticoSolucion" class="dropdown-item">Editar</a>
+                                <a asp-action="Details" asp-controller="Diagnosticosolucions" asp-route-id="@diagnostico.IdDiagnosticoSolucion" class="dropdown-item">Detalles</a>
+                                <a asp-action="Delete" asp-controller="Diagnosticosolucions" asp-route-id="@diagnostico.IdDiagnosticoSolucion" class="dropdown-item">Borrar</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+
+                    @*
+                        <div>
     <p>ID Ficha: @Model.IdDatosFichaTecnica</p>
     <p>ID Recepcion: @Model.RecepcionEquipo.Id</p>
     <p>Fecha Inicio: @Model.FechaInicio</p>
@@ -179,28 +221,4 @@
     </p>
     <p>Antivirus Instalado: @Model.AntivirusInstalado</p>
 </div>
-
-<h2>Diagnóstico y Soluciones</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Descripcion Diagnostico</th>
-            <th>Descripcion Solucion</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var diagnostico in Model.Diagnosticosolucions)
-        {
-            <tr>
-                <td>@diagnostico.DescripcionDiagnostico</td>
-                <td>@diagnostico.DescripcionSolucion</td>
-                <td>
-                    <a asp-action="Edit" asp-controller="Diagnosticosolucions" asp-route-id="@diagnostico.IdDiagnosticoSolucion"><button class="btn-primary">Editar</button></a> |
-                    <a asp-action="Details" asp-controller="Diagnosticosolucions" asp-route-id="@diagnostico.IdDiagnosticoSolucion"><button class="btn-info">Detalles</button></a> |
-                    <a asp-action="Delete" asp-controller="Diagnosticosolucions" asp-route-id="@diagnostico.IdDiagnosticoSolucion"><button class="btn-danger">Borrar</button></a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+                    *@

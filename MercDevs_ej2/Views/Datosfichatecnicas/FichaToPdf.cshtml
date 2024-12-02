@@ -137,8 +137,9 @@
         </tr>
         <tr>
             <th class="border-end">CPU:</th>
-            <th class="border-end">Intel</th>
-            <th class="border-end">AMD</th>
+                <th class="border-end">
+                    @Html.DisplayFor(model => model.RecepcionEquipo.CPU)
+                </th>
             <th class="border-end">Velocidad</th>
             <th class="border-end">Ram(GB):</th>
             <th class="border-end">
@@ -216,28 +217,6 @@
 </table>
 
 
-<table class="table table-dark table-striped border border-light-subtle border border-3">
-    <thead style="text-align:center">
-        <tr>
-            <th class="border-end" colspan="5">Datos Software Inicial</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <tr>
-            <th class="border-end">Sistema Operativo</th>
-            <th class="border-end" colspan="2">Windows: </th>
-            <th class="border-end" colspan="2">Linux: </th>
-        </tr>
-        <tr>
-            <th class="border-end">Software Instalado</th>
-            <th class="border-end">M. Office</th>
-            <th class="border-end">Navegador</th>
-            <th class="border-end">Lector PDF</th>
-            <th class="border-end">Compresor</th>
-        </tr>
-    </tbody>
-</table>
 
 <table class="table table-dark table-striped border border-light-subtle border border-3">
     <thead style="text-align:center">

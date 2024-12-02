@@ -25,17 +25,20 @@ namespace MercDevs_ej2.Controllers
         // GET: Recepcionequipoes
         public async Task<IActionResult> Index()
         {
-            var mercydevsEjercicio2Context = _context.Recepcionequipos.Include(r => r.IdClienteNavigation).Include(r => r.IdServicioNavigation);
+            var mercydevsEjercicio2Context = _context.Recepcionequipos
+                .Include(r => r.IdClienteNavigation)
+                .Include(r => r.IdServicioNavigation);
+
             return View(await mercydevsEjercicio2Context.ToListAsync());
         }
 
         public async Task<IActionResult> IndexId(int id)
         {
             var mercydevsEjercicio2Context = _context.Recepcionequipos
-                                                            .Where(r => r.IdCliente == id)
-                                                          .Include(r => r.IdServicioNavigation)
-                                                          .Include(r => r.IdClienteNavigation)
-                                                          ;
+                .Where(r => r.IdCliente == id)
+                .Include(r => r.IdServicioNavigation)
+                .Include(r => r.IdClienteNavigation);
+
             return View (await mercydevsEjercicio2Context.ToListAsync());
         }
 
@@ -51,6 +54,7 @@ namespace MercDevs_ej2.Controllers
                 .Include(r => r.IdClienteNavigation)
                 .Include(r => r.IdServicioNavigation)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (recepcionequipo == null)
             {
                 return NotFound();
@@ -93,12 +97,7 @@ namespace MercDevs_ej2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-
-
-
-
-
-        public async Task<IActionResult> Create([Bind("Id,IdCliente,IdServicio,Fecha,TipoPc,Accesorio,MarcaPc,ModeloPc,Nserie,CapacidadRam,TipoAlmacenamiento,CapacidadAlmacenamiento,TipoGpu,Grafico,Estado")] Recepcionequipo recepcionequipo)
+        public async Task<IActionResult> Create([Bind("Id,IdCliente,IdServicio,Fecha,TipoPc,CPU,Accesorio,MarcaPc,ModeloPc,Nserie,CapacidadRam,TipoAlmacenamiento,CapacidadAlmacenamiento,TipoGpu,Grafico,Estado")] Recepcionequipo recepcionequipo)
         {
             // Asignar la fecha actual si no se ha proporcionado una
             if (recepcionequipo.Fecha == default(DateTime))
@@ -162,13 +161,23 @@ namespace MercDevs_ej2.Controllers
                 return NotFound();
             }
 
-            var recepcionequipo = await _context.Recepcionequipos.FindAsync(id);
+            var recepcionequipo = await _context.Recepcionequipos
+                .Include(r => r.IdClienteNavigation) // Carga los datos del cliente
+                .Include(r => r.IdServicioNavigation) // Carga los datos del servicio
+                .FirstOrDefaultAsync(r => r.Id == id); // Busca por el ID
+
             if (recepcionequipo == null)
             {
                 return NotFound();
             }
-            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente", recepcionequipo.IdCliente);
-            ViewData["IdServicio"] = new SelectList(_context.Servicios, "IdServicio", "IdServicio", recepcionequipo.IdServicio);
+
+            // Crea las listas para los dropdowns
+            ViewData["IdCliente"] = new SelectList(
+                _context.Clientes, "IdCliente", "Nombre", recepcionequipo.IdCliente);
+
+            ViewData["IdServicio"] = new SelectList(
+                _context.Servicios, "IdServicio", "Nombre", recepcionequipo.IdServicio);
+
             return View(recepcionequipo);
         }
 
@@ -177,7 +186,7 @@ namespace MercDevs_ej2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,IdCliente,IdServicio,Fecha,TipoPc,Accesorio,MarcaPc,ModeloPc," +
+        public async Task<IActionResult> Edit(int id, [Bind("Id,IdCliente,IdServicio,Fecha,TipoPc,CPU,Accesorio,MarcaPc,ModeloPc," +
 "Nserie,CapacidadRam,TipoAlmacenamiento,CapacidadAlmacenamiento,TipoGpu,Grafico,Estado")] Recepcionequipo recepcionequipo)
         {
             if (id != recepcionequipo.Id)
@@ -271,7 +280,7 @@ namespace MercDevs_ej2.Controllers
         // POST: Recepcionequipoes/Finalizar/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Finalizar(int id)
+        public async Task<IActionResult>Finalizar(int id)
         {
             var recepcionEquipo = await _context.Recepcionequipos.FindAsync(id);
             if (recepcionEquipo == null)

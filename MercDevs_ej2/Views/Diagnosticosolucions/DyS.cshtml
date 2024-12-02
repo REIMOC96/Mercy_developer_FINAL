@@ -3,42 +3,57 @@
 @{
     ViewData["Title"] = "Index";
 }
+@if (!Model.Any())
+{
+<h1>Diagnóstico y Solución por Ficha Técnica</h1>
 
-<h1>Diagnóstico y Solución por Datos de Ficha Técnica</h1>
 
-<p>
+    <div style="text-align:center; margin-top: 50px;">
+        <h1>Ups, no hay ningún registro para mostrar</h1>
+        <a asp-action="CrearPorDatos" asp-route-id="@ViewBag.DatosFichaTecnicaId">
+            <button type="button" class="btn btn-success">Crear Diagnóstico-Solución</button>
+        </a>
+        <a asp-action="Inicio" asp-controller="Datosfichatecnicas">
+            <button type="button" class="btn btn-info">Volver a Listado</button>
+            </a>
+    </div>
+}
+else
+{
+    <h1>Diagnóstico y Solución por Ficha Técnica</h1>
     <a asp-action="CrearPorDatos" asp-route-id="@ViewBag.DatosFichaTecnicaId">
         <button type="button" class="btn btn-success">Crear Diagnóstico-Solución</button>
     </a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Descripción Diagnóstico</th>
-            <th>Descripción Solución</th>
-            <th>Id Ficha Técnica</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+    <table class="table">
+        <thead>
             <tr>
-                <td>@Html.DisplayFor(modelItem => item.DescripcionDiagnostico)</td>
-                <td>@Html.DisplayFor(modelItem => item.DescripcionSolucion)</td>
-                <td>@item.DatosFichaTecnicaId</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.IdDiagnosticoSolucion">
-                        <button type="button" class="btn btn-primary">Editar</button>
-                    </a>
-                    <a asp-action="Details" asp-route-id="@item.IdDiagnosticoSolucion">
-                        <button type="button" class="btn btn-info">Detalles</button>
-                    </a>
-                    <a asp-action="Delete" asp-route-id="@item.IdDiagnosticoSolucion">
-                        <button type="button" class="btn btn-danger">Borrar</button>
-                    </a>
-                </td>
+                <th>Descripción Diagnóstico</th>
+                <th>Descripción Solución</th>
+                <th>Id Ficha Técnica</th>
+                <th>Acciones</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.DescripcionDiagnostico</td>
+                    <td>@item.DescripcionSolucion</td>
+                    <td>@item.DatosFichaTecnicaId</td>
+                    <td>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Acciones
+                            </button>
+                            <div class="dropdown-menu">
+                                <a asp-action="Edit" asp-controller="Diagnosticosolucions" asp-route-id="@item.IdDiagnosticoSolucion" class="dropdown-item">Editar</a>
+                                <a asp-action="Details" asp-controller="Diagnosticosolucions" asp-route-id="@item.IdDiagnosticoSolucion" class="dropdown-item">Detalles</a>
+                                <a asp-action="Delete" asp-controller="Diagnosticosolucions" asp-route-id="@item.IdDiagnosticoSolucion" class="dropdown-item">Borrar</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -30,7 +30,7 @@
             @* Grupo de validación y entrada de Correo *@
             <div class="form-group">
                 <label asp-for="Correo" class="control-label"></label>
-                <input asp-for="Correo" maxlength="10" placeholder="Maximo de 10 N°" class="form-control" />
+                <input asp-for="Correo" maxlength="80" placeholder="Maximo de 80 chars" class="form-control" />
                 <span asp-validation-for="Correo" class="text-danger"></span>
             </div>
 

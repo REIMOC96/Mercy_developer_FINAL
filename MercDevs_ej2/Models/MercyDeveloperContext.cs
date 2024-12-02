@@ -189,6 +189,7 @@ public partial class MercyDeveloperContext : DbContext
             entity.Property(e => e.Nserie)
                 .HasMaxLength(45)
                 .HasColumnName("NSerie");
+            entity.Property(e => e.CPU).HasMaxLength(50).HasComment("String modelo CPU");
             entity.Property(e => e.TipoAlmacenamiento).HasColumnType("int(11)");
             entity.Property(e => e.TipoGpu).HasColumnType("int(11)");
             entity.Property(e => e.TipoPc).HasColumnType("int(11)").HasComment("0: Intel ; 1: Amd; 2: Otros;");

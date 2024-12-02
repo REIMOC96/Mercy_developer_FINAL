@@ -1,176 +1,107 @@
 ﻿@model IEnumerable<MercDevs_ej2.Models.Datosfichatecnica>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Ficha Técnica";
 }
 
-<h1>Datos Ficha Tecnica</h1>
+<h1>Datos Ficha Técnica</h1>
 
-<p>
-    <a asp-action="Create"><button type="button" class="btn btn-success">Crear Ficha Tecnica</button></a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                ID Ficha
-            </th>
-            <th>
-                Fecha de Inicio
-            </th>
-            <th>
-                Fecha de Termino
-            </th>
-            <th>
-                Observaciones || Recomendaciones 
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Soinstalado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SuiteOfficeInstalada)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LectorPdfinstalado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NavegadorWebInstalado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AntivirusInstalado)
-            </th>
-            <th>
-                Id Recepcion
-            </th>
-            <th>Marca</th>
-            <th>Modelo</th>
-            <th>N° Serie</th>
-            <th>Estado</th>
-            <th>
-                Acciones
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<body style="align-content:center">
+    <p>
+        <a asp-action="Create" class="btn btn-success">
+            Crear Ficha Técnica
+        </a>
+    </p>
+
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IdDatosFichaTecnica)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FechaInicio)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FechaFinalizacion)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PobservacionesRecomendaciones)
-                </td>
-                <td>
-                    @{
-                        string soinstalado = "";
-                        switch (item.Soinstalado)
-                        {
-                            case 0:
-                                soinstalado = "Windows 10";
-                                break;
-                            case 1:
-                                soinstalado = "Windows 11";
-                                break;
-                            case 2:
-                                soinstalado = "Linux";
-                                break;
-                        }
-                        @soinstalado
-                    }
-                </td>
-                <td>
-                    @{
-                        string suiteofficeinstalada = "";
-                        switch (item.SuiteOfficeInstalada)
-                        {
-                            case 0:
-                                suiteofficeinstalada = "Microsoft Office 2013";
-                                break;
-                            case 1:
-                                suiteofficeinstalada = "Microsoft Office 2019";
-                                break;
-                            case 2:
-                                suiteofficeinstalada = "Microsoft Office 365";
-                                break;
-                            case 3:
-                                suiteofficeinstalada = "OpenOffice";
-                                break;
-                        }
-                        @suiteofficeinstalada
-                    }
-                </td>
-                <td> 
-                    @{
-                        string lectorpdfinstalado = "";
-                        switch (item.LectorPdfinstalado)
-                        {
-                            case 0:
-                                lectorpdfinstalado = "Adobe Acrobat";
-                                break;
-                            case 1:
-                                lectorpdfinstalado = "Foxit Reader";
-                                break;
-                            case 2:
-                                lectorpdfinstalado = "Sumatra PDF";
-                                break;
-                        }
-                        @lectorpdfinstalado
-                    }
-                </td>
-                <td>
-                    @{
-                        string navegadorwebinstalado = "";
-                        switch (item.NavegadorWebInstalado)
-                        {
-                            case 0:
-                                navegadorwebinstalado = "No Instalado";
-                                break;
-                            case 1:
-                                navegadorwebinstalado = "Chrome";
-                                break;
-                            case 2:
-                                navegadorwebinstalado = "Chrome y Firefox";
-                                break;
-                        }
-                        @navegadorwebinstalado
-                    }
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AntivirusInstalado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RecepcionEquipo.Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RecepcionEquipo.MarcaPc)
+                <th>
+                    @Html.DisplayNameFor(model => model.IdDatosFichaTecnica)
+                </th>
 
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RecepcionEquipo.ModeloPc)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RecepcionEquipo.Nserie)
+                <th>
+                    Id Recepción
+                </th>
 
-                </td>
-                <td>
-                    @Html.DisplayFor(ModelItem => item.Estado)
-                </td>
-                <td>
-                    <a asp-action="Diagnosticosolucionpordatosficha" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-warning">Ver&nbsp;Diagnostico</button></a>
-                    <a asp-action="Edit" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-outline-primary">Editar</button></a>
-                    <a asp-action="Details" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-outline-warning">Detalles</button></a>
-                    <a asp-action="Delete" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-outline-danger">Borrar</button></a>
-                    <a asp-action="DyS" asp-route-id="@item.IdDatosFichaTecnica"><button type="button" class="btn btn-outline-info">D&nbsp;y&nbsp;Solucion</button></a>
-                    
-                </td>
+                <th>
+                    Observaciones || Recomendaciones
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Soinstalado)
+                </th>
+
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>N° Serie</th>
+                <th>Estado</th>
+                <th style="text-align:center">Acciones</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody style="text-align:center;">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdDatosFichaTecnica)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RecepcionEquipo.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PobservacionesRecomendaciones)
+                    </td>
+                    <td>
+                        @{
+                            string soinstalado = item.Soinstalado switch
+                            {
+                                0 => "Windows 10",
+                                1 => "Windows 11",
+                                2 => "Linux",
+                                _ => "Desconocido"
+                            };
+                            @soinstalado
+                        }
+                    </td>
+                   
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RecepcionEquipo.MarcaPc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RecepcionEquipo.ModeloPc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RecepcionEquipo.Nserie)
+                    </td>
+                    <td class="text-center">
+                        @{
+                            string estado = item.Estado switch
+                            {
+                                0 => "Finalizado",
+                                1 => "Recepcionado",
+                                2 => "En espera",
+                                _ => "Desconocido"
+                            };
+                            @estado
+                        }
+                    </td>
+                    <td>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Acciones
+                            </button>
+                            <div class="dropdown-menu">
+                                <a asp-action="Edit" asp-route-id="@item.IdDatosFichaTecnica" class="dropdown-item">Editar</a>
+                                <a asp-action="Details" asp-route-id="@item.IdDatosFichaTecnica" class="dropdown-item">Detalles</a>
+                                <a asp-action="Delete" asp-route-id="@item.IdDatosFichaTecnica" class="dropdown-item">Borrar</a>
+                                <a asp-action="Index" asp-route-id="@item.RecepcionEquipoId" class="dropdown-item">Ver Ficha</a>
+                                <a asp-action="DyS" asp-controller="Diagnosticosolucions" asp-route-id="@item.IdDatosFichaTecnica" class="dropdown-item">Diag y Solución</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>

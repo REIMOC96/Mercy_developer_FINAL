@@ -1,150 +1,150 @@
 ﻿@model MercDevs_ej2.Models.Recepcionequipo
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles de Recepción";
 }
 
-<h1>Detalles de recepcion</h1>
+<div class="container mt-6" style="max-width: 800px;">
+    <h1 class="text-center mb-4">Detalles de Recepción</h1>
 
-<div>
+    <h3 class="mb-4 text-primary text-center">
+        Cliente: @Model.IdClienteNavigation.Nombre @Model.IdClienteNavigation.Apellido
+    </h3>
 
-    <hr />
-    <dl class="row ">
-        <dt class="col-sm-2">
-            Nombre Servicio
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.IdServicioNavigation.Nombre)
-        </dd>
-        <hr style="background-color:black" />
+    <table class="table table-bordered table-m">
+        <tbody>
+            <tr>
+                <th scope="row" class="text-start">Fecha</th>
+                <td class="text-center">@Html.DisplayFor(model => model.Fecha)</td>
+            </tr>
+            <tr>
+                <th scoope="row" class="text-start"> Id recepcion</th>
+                <td class="text-center">@Html.DisplayFor(model => model.Id)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Tipo de PC</th>
+                <td class="text-center">
+                    @{
+                        string tipoEquipo = Model.TipoPc switch
+                        {
+                            0 => "PC Torre",
+                            1 => "Notebook",
+                            2 => "All-In-One",
+                            _ => "Desconocido"
+                        };
+                        @tipoEquipo
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">CPU</th>
+                <td class="text-center">@Html.DisplayFor(model => model.CPU)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Accesorios</th>
+                <td class="text-center">@Html.DisplayFor(model => model.Accesorio)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Marca de PC</th>
+                <td class="text-center">@Html.DisplayFor(model => model.MarcaPc)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Modelo de PC</th>
+                <td class="text-center">@Html.DisplayFor(model => model.ModeloPc)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">N° Serie</th>
+                <td class="text-center">@Html.DisplayFor(model => model.Nserie)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Capacidad de RAM</th>
+                <td class="text-center">
+                    @{
+                        string memoriaRam = Model.CapacidadRam switch
+                        {
+                            0 => "4 GB",
+                            1 => "6 GB",
+                            2 => "8 GB",
+                            3 => "16 GB",
+                            4 => "Otro",
+                            _ => "Desconocido"
+                        };
+                        @memoriaRam
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Tipo de almacenamiento</th>
+                <td class="text-center">
+                    @{
+                        string almacenamiento = Model.TipoAlmacenamiento switch
+                        {
+                            0 => "HDD",
+                            1 => "SDD Sata",
+                            2 => "SDD M.2",
+                            3 => "SSD NVMe M.2",
+                            _ => "Desconocido"
+                        };
+                        @almacenamiento
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Capacidad de Almacenamiento</th>
+                <td class="text-center">@Html.DisplayFor(model => model.CapacidadAlmacenamiento)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Tipo de GPU</th>
+                <td class="text-center">
+                    @{
+                        string gpu = Model.TipoGpu switch
+                        {
+                            0 => "Chip Integrado",
+                            1 => "Tarjeta",
+                            2 => "Otro",
+                            _ => "Desconocido"
+                        };
+                        @gpu
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Gráficos</th>
+                <td class="text-center">@Html.DisplayFor(model => model.Grafico)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Estado</th>
+                <td class="text-center">
+                    @{
+                        string estado = Model.Estado switch
+                        {
+                            0 => "Finalizado",
+                            1 => "Recepcionado",
+                            2 => "En espera",
+                            _ => "Desconocido"
+                        };
+                        @estado
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Servicio</th>
+                <td class="text-center">@Html.DisplayFor(model => model.IdServicioNavigation.Nombre)</td>
+            </tr>
+        </tbody>
+    </table>
 
-        <dt class="col-sm-2">
-            Sku
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.IdServicioNavigation.Sku)
-        </dd>
-        <hr style="background-color:black" />
-
-        <dt class="col-sm-2">
-            Estado
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
-        <hr style="background-color:black" />
-
-        <dt class="col-sm-2">
-            Fecha:
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Fecha)
-        </dd>
-        <hr style="background-color:black" />
-        <dt class="col-sm-2">
-            Tipo de PC
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.TipoPc)
-        </dd>
-        <hr style="background-color:black" />
-
-        <dt class="col-sm-2">
-            AccesoriosS
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Accesorio)
-        </dd>
-        <hr style="background-color:black" />
-
-
-        <dt class="col-sm-2">
-            Marca de Pc
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.MarcaPc)
-        </dd>
-        <hr style="background-color:black" />
-
-
-        <dt class="col-sm-2">
-            modelo de Pc
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ModeloPc)
-        </dd>
-        <hr style="background-color:black" />
-
-
-        <dt class="col-sm-2">
-            N° Serie
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Nserie)
-        </dd>
-        <hr style="background-color:black" />
-
-
-        <dt class="col-sm-2">
-            Capacidad de Ram
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.CapacidadRam)
-        </dd>
-        <hr style="background-color:black" />
-
-
-        <dt class="col-sm-2">
-            Tipo almacenamiento
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.TipoAlmacenamiento)
-        </dd>
-        <hr style="background-color:black" />
-
-
-        <dt class="col-sm-2">
-            Cap Almacenamiento
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.CapacidadAlmacenamiento)
-        </dd>
-        <hr style="background-color:black" />
-
-
-        <dt class="col-sm-2">
-            Tipo Gpu
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.TipoGpu)
-        </dd>
-        <hr style="background-color:black" />
-
-
-        <dt class="col-sm-2">
-            Graficos
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Grafico)
-        </dd>
-        <hr style="background-color:black" />
-
-
-        <dt class="col-sm-2">
-            Id cliente
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.IdClienteNavigation.IdCliente)
-        </dd>
-        <hr style="background-color:black" />
-
-
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id"><button class="btn btn-warning">editar</button></a>
-    <a asp-action="Index"><button class="btn btn-secondary">volver a listado</button></a>
-    <form method="post" asp-action="Finalizar" asp-route-id="@Model?.Id">
-        <button type="submit" class="btn btn-info">Finalizar Recepción</button>
-    </form>
+    <div class="mt-4 d-flex justify-content-between">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning btn-sm">
+            <i class="bi bi-pencil-square"></i> Editar
+        </a>
+        <a asp-action="Index" class="btn btn-secondary btn-sm">
+            <i class="bi bi-arrow-left-circle"></i> Volver
+        </a>
+        <form method="post" asp-action="Finalizar" asp-route-id="@Model?.Id" class="d-inline">
+            <button type="submit" class="btn btn-danger btn-sm">
+                <i class="bi bi-x-circle"></i> Finalizar
+            </button>
+        </form>
+    </div>
 </div>

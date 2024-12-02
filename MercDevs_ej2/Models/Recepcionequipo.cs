@@ -24,6 +24,11 @@ public partial class Recepcionequipo
     [Required(ErrorMessage ="Se requiere que ingrese el tipo de pc")]
     public int? TipoPc { get; set; } = null!;
 
+
+    //validadores tipo CPU
+    //admite string para ingresar el modelo del cpu
+    public string? CPU { get; set; } = null!;
+
     //validadores de Accesorios
     //este si puede ser nulo, puede que llegue solamente la torre incluso sin cable power
     [StringLength(70, ErrorMessage ="los accesorios no pueden tener mas de 70 caracteres")]
@@ -34,7 +39,7 @@ public partial class Recepcionequipo
 
     [StringLength(50, ErrorMessage = "La marca del pc no puede tener 50 caracteres.")]
     [Required(ErrorMessage = "La marca es Requerida")]
-    [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Por favor ingrese un Apellido válido")]
+    [RegularExpression(@"^[a-zA-Z0-9\s\-]+$", ErrorMessage = "Por favor ingrese una Marca válida")]
     public string? MarcaPc { get; set; } = null!;
 
     // Validadores de Modelo pc

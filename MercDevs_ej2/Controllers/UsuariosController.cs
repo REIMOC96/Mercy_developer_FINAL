@@ -107,59 +107,60 @@ namespace MercDevs_ej2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id,string CurrentPassword, [Bind("IdUsuario,Nombre,Apellido,Correo,Password,CurrentPassword")] Usuario? usuario)
+        public async Task<IActionResult> Edit(int id, string CurrentPassword, [Bind("IdUsuario,Nombre,Apellido,Correo,Password,CurrentPassword")] Usuario usuario)
         {
             if (id != usuario.IdUsuario)
             {
                 return NotFound();
             }
 
-            if (usuario.Nombre !=null && usuario.Apellido !=null && usuario.Correo != null)
+            if (usuario.Nombre != null && usuario.Apellido != null && usuario.Correo != null)
             {
-
                 var userExists = await _context.Usuarios.FindAsync(id);
 
                 if (userExists != null)
                 {
-
                     // Verificar la contraseña actual
-                    if (BCrypt.Net.BCrypt.Verify(currentPassword, userExists.Password))
+                    if (!BCrypt.Net.BCrypt.Verify(CurrentPassword, userExists.Password))
                     {
                         ModelState.AddModelError("CurrentPassword", "Contraseña incorrecta.");
                         return View(usuario);
                     }
                 }
-                else {
-                    Console.WriteLine("no se encontro el registro en la bdd");
-                        return NotFound();
+                else
+                {
+                    Console.WriteLine("No se encontró el registro en la base de datos.");
+                    return NotFound();
                 }
-                // No se cambia la contraseña en este formulario, solo los otros campos
-                // se plantea la idea de ina vista aparte para modificar la contraseña del usuario requerira la contraseña de mercy Root                if ()
-                usuario.Nombre = usuario.Nombre ;
-                usuario.Apellido = usuario.Apellido;
-                usuario.Correo = usuario.Correo;
+
+                // Actualizar solo las propiedades específicas sin cambiar el objeto "userExists" en el contexto
+                userExists.Nombre = usuario.Nombre;
+                userExists.Apellido = usuario.Apellido;
+                userExists.Correo = usuario.Correo;
 
                 try
                 {
-                    _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!UsuarioExists(usuario.IdUsuario))
                     {
-                        return NotFound(); // console log aqui
+                        Console.WriteLine("No se encontró el usuario durante la concurrencia.");
+                        return NotFound();
                     }
                     else
                     {
+                        Console.WriteLine("Error de concurrencia durante la actualización.");
                         throw;
-    // hacer console log aqui 
                     }
                 }
                 return RedirectToAction(nameof(Index));
             }
             return View(usuario);
         }
+
+
 
         // GET: Usuarios/Delete/5
         public async Task<IActionResult> Delete(int? id)

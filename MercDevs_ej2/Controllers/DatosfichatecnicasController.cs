@@ -126,6 +126,8 @@ namespace MercDevs_ej2.Controllers
 
             var datosfichatecnica = await _context.Datosfichatecnicas
                 .Include(d => d.RecepcionEquipo)
+                .Include(c => c.RecepcionEquipo.IdClienteNavigation)
+                .Include(c => c.RecepcionEquipo.IdServicioNavigation)
                 .FirstOrDefaultAsync(m => m.IdDatosFichaTecnica == id);
             if (datosfichatecnica == null)
             {
@@ -146,17 +148,37 @@ namespace MercDevs_ej2.Controllers
         // POST: Datosfichatecnicas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Datosfichatecnicas/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(int? id,[Bind("IdDatosFichaTecnica,FechaInicio,FechaFinalizacion,PobservacionesRecomendaciones,Soinstalado,SuiteOfficeInstalada,LectorPdfinstalado,NavegadorWebInstalado,AntivirusInstalado,RecepcionEquipoId,Estado")] Datosfichatecnica datosfichatecnica)
+        public async Task<IActionResult> Create(int? id, [Bind("IdDatosFichaTecnica,FechaInicio,FechaFinalizacion,PobservacionesRecomendaciones,Soinstalado,SuiteOfficeInstalada,LectorPdfinstalado,NavegadorWebInstalado,AntivirusInstalado,RecepcionEquipoId,Estado")] Datosfichatecnica datosfichatecnica)
         {
-            if (datosfichatecnica.FechaInicio != null)
+            // Verificamos que el id recibido no sea nulo
+            if (id == null)
             {
-                datosfichatecnica.RecepcionEquipoId = Convert.ToInt32(id);
+                return NotFound();
+            }
+
+            // Asignamos el RecepcionEquipoId al nuevo registro
+            datosfichatecnica.RecepcionEquipoId = Convert.ToInt32(id);
+
+            // Verificamos si el RecepcionEquipoId es válido
+            if (!_context.Recepcionequipos.Any(r => r.Id == datosfichatecnica.RecepcionEquipoId))
+            {
+                ModelState.AddModelError("RecepcionEquipoId", "El id del equipo no es válido.");
+                ViewData["RecepcionEquipoId"] = new SelectList(_context.Recepcionequipos, "Id", "Id", datosfichatecnica.RecepcionEquipoId);
+                return View(datosfichatecnica);
+            }
+
+            if (ModelState.IsValid)
+            {
+                // Guardamos los cambios
                 _context.Add(datosfichatecnica);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index", "Recepcionequipoes");
+                return RedirectToAction("Inicio", "Datosfichatecnicas");
             }
+
+            // Si hay errores, recargamos el SelectList
             ViewData["RecepcionEquipoId"] = new SelectList(_context.Recepcionequipos, "Id", "Id", datosfichatecnica.RecepcionEquipoId);
             return View(datosfichatecnica);
         }
@@ -183,7 +205,7 @@ namespace MercDevs_ej2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdDatosFichaTecnica,FechaInicio,FechaFinalizacion,PobservacionesRecomendaciones,Soinstalado,SuiteOfficeInstalada,LectorPdfinstalado,NavegadorWebInstalado,AntivirusInstalado,RecepcionEquipoId")] Datosfichatecnica datosfichatecnica)
+        public async Task<IActionResult> Edit(int id, [Bind("IdDatosFichaTecnica,FechaInicio,FechaFinalizacion,PobservacionesRecomendaciones,Soinstalado,SuiteOfficeInstalada,LectorPdfinstalado,NavegadorWebInstalado,AntivirusInstalado,RecepcionEquipoId,Estado")] Datosfichatecnica datosfichatecnica)
         {
             if (id != datosfichatecnica.IdDatosFichaTecnica)
             {
@@ -224,6 +246,8 @@ namespace MercDevs_ej2.Controllers
 
             var datosfichatecnica = await _context.Datosfichatecnicas
                 .Include(d => d.RecepcionEquipo)
+                .Include(s => s.RecepcionEquipo.IdServicioNavigation)
+                .Include(s => s.RecepcionEquipo.IdClienteNavigation)
                 .FirstOrDefaultAsync(m => m.IdDatosFichaTecnica == id);
             if (datosfichatecnica == null)
             {
@@ -239,14 +263,30 @@ namespace MercDevs_ej2.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var datosfichatecnica = await _context.Datosfichatecnicas.FindAsync(id);
+
             if (datosfichatecnica != null)
             {
+                // Verificar si el registro está siendo referenciado en la tabla DiagnosticoSolucion
+                bool isReferencedInDiagnosticoSolucion = await _context.Diagnosticosolucions
+                    .AnyAsync(d => d.DatosFichaTecnicaId == id); // Verifica si la ficha técnica está en DiagnosticoSolucion
+
+                if (isReferencedInDiagnosticoSolucion)
+                {
+                    // Si está referenciado, mostrar un mensaje de error y evitar la eliminación
+                    TempData["ErrorMessage"] = "No se puede eliminar el registro porque está relacionado con un diagnóstico y solución.";
+
+                    // Redirigir al detalle de la ficha técnica para que el usuario vea la alerta
+                    return RedirectToAction("Details", new { id = id });
+                }
+
+                // Si no está referenciado, proceder con la eliminación
                 _context.Datosfichatecnicas.Remove(datosfichatecnica);
+                await _context.SaveChangesAsync();
             }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index)); // Redirige al listado de las fichas técnicas
         }
+
 
 
         public IActionResult FichaToPdf(int id)
