@@ -104,17 +104,19 @@
 
                     <!-- Campo para Navegador Web Instalado -->
                     <tr>
-                        <td><label asp-for="NavegadorWebInstalado" class="control-label">Suite office instalada</label></td>
+                        <td><label asp-for="NavegadorWebInstalado" class="control-label">Navegador Web Instalado</label></td>
                         <td>
-                            <select asp-for="LectorPdfinstalado" class="form-control">
+                            <select asp-for="NavegadorWebInstalado" class="form-control">
                                 <option value="" disabled selected>-- Seleccione el Navegador Web Instalado --</option>
                                 <option value="0">no instalado</option>
                                 <option value="1">Chrome</option>
-                                <option value="2">No aplica</option>
+                                <option value="2">Fire Fox</option>
+                                <option value="3">Opera</option>
+                                <option value="4">otros o varios..</option>
 
 
                             </select>
-                            <span asp-validation-for="LectorPdfinstalado" class="text-danger"></span>
+                            <span asp-validation-for="NavegadorWebInstalado" class="text-danger"></span>
                         </td>
                     </tr>
 

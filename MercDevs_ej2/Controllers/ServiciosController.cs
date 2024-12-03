@@ -61,6 +61,7 @@ namespace MercDevs_ej2.Controllers
 
             var servicio = await _context.Servicios
                 .Include(s => s.UsuarioIdUsuarioNavigation)
+                .Include(d => d.Descripcionservicios)
                 .FirstOrDefaultAsync(m => m.IdServicio == id);
             if (servicio == null)
             {
@@ -74,6 +75,7 @@ namespace MercDevs_ej2.Controllers
         public IActionResult Create()
         {
             ViewData["UsuarioIdUsuario"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario");
+            ViewData["Descripcionservicio"] = new SelectList(_context.Descripcionservicios, "IdDescServ", "IdDescServ");
             return View();
         }
 
@@ -82,7 +84,7 @@ namespace MercDevs_ej2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdServicio,Nombre,Precio,Sku")] Servicio servicio)
+        public async Task<IActionResult> Create([Bind("IdServicio,Nombre,Precio,Sku,Descripcionservicios")] Servicio servicio)
         {
             // Obtén el ID del usuario autenticado desde las claims
             var userId = User.FindFirst("Id")?.Value;
@@ -96,17 +98,53 @@ namespace MercDevs_ej2.Controllers
 
             if (servicio.Nombre != null && servicio.Precio != 0)
             {
-                // Agrega el servicio al contexto y guarda
+                // Guarda el servicio primero para que tenga un ID generado
                 _context.Servicios.Add(servicio);
                 await _context.SaveChangesAsync();
+
+                // Guarda las descripciones asociadas al servicio
+                foreach (var descripcion in servicio.Descripcionservicios)
+                {
+                    descripcion.ServicioIdServicio = servicio.IdServicio; // Asociar la descripción con el servicio
+                    _context.Descripcionservicios.Add(descripcion);
+                }
+
+                // Guarda las descripciones
+                await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
 
+            // Si hay algún error, se vuelve a cargar la vista con los datos actuales
             ViewData["UsuarioIdUsuario"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", servicio.UsuarioIdUsuario);
             return View(servicio);
         }
 
         //Agregar metodo Get: de editar
+        // GET: Servicios
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            // Obtener el servicio con sus descripciones relacionadas
+            var servicio = await _context.Servicios
+                .Include(s => s.Descripcionservicios)
+                .FirstOrDefaultAsync(s => s.IdServicio == id); // Asegúrate de obtener un solo objeto
+
+            if (servicio == null)
+            {
+                return NotFound();
+            }
+
+            // Opcional: Si necesitas enviar datos adicionales, como un ViewBag, aquí lo harías
+            ViewBag.UsuarioIdUsuario = new SelectList(_context.Usuarios, "IdUsuario", "Nombre");
+
+            return View(servicio);
+        }
 
         // POST: Servicios/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.

@@ -28,11 +28,44 @@
             @Html.DisplayFor(model => model.Sku)
         </dd>
         <dt class = "col-sm-2">
-            Id Uuario
+            Nombre Usuario
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UsuarioIdUsuarioNavigation.IdUsuario)
+            @Html.DisplayFor(model => model.UsuarioIdUsuarioNavigation.Nombre)
         </dd>
+
+        <br />
+        
+        <br />
+        @*area de Descripciones del servicio*@
+        <h4 class="mt-5 mb-3 text-secondary">Descripciones</h4>
+
+        @if (Model.Descripcionservicios != null && Model.Descripcionservicios.Any())
+        {
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="col-sm-1">N°</th>
+                        <th class="col-sm-10">Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var descripcion in Model.Descripcionservicios.Select((value, index) => new { value, index }))
+                    {
+                        <tr>
+                            <td class=" col-sm-1">@(descripcion.index + 1)</td> <!-- Contador -->
+                            <td class="col-sm-10">@descripcion.value.Nombre</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No hay descripciones disponibles.</p>
+        }
+
+
     </dl>
 </div>
 <div>

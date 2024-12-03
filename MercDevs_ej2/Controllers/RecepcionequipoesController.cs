@@ -267,15 +267,33 @@ namespace MercDevs_ej2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            // Buscar el registro en Recepcionequipos por su ID
             var recepcionequipo = await _context.Recepcionequipos.FindAsync(id);
-            if (recepcionequipo != null)
+
+            if (recepcionequipo == null)
             {
-                _context.Recepcionequipos.Remove(recepcionequipo);
+                return NotFound();
             }
 
+            // Verificar si el registro tiene relaciones en Datosfichatecnicas
+            bool tieneForanea = await _context.Datosfichatecnicas.AnyAsync(d => d.RecepcionEquipoId == id);
+
+            if (tieneForanea)
+            {
+                // Agregar el error al ModelState
+                ModelState.AddModelError("", "No se puede eliminar este registro porque está relacionado con datos técnicos.");
+
+                // Devolver la vista con el objeto recepcionequipo para evitar NullReferenceException
+                return View(recepcionequipo);
+            }
+
+            // Si no hay registros relacionados, eliminar el registro
+            _context.Recepcionequipos.Remove(recepcionequipo);
             await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
+
 
         // POST: Recepcionequipoes/Finalizar/5
         [HttpPost]

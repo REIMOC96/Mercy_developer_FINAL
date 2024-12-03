@@ -1,7 +1,7 @@
 ﻿@model MercDevs_ej2.Models.Servicio
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar servicio";
 }
 
 <h1>Editar servicio</h1>
@@ -28,23 +28,17 @@
                 <span asp-validation-for="Sku" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="UsuarioIdUsuarioNavigation.Nombre" class="control-label">Usuario</label>
-
-                <label asp-for="UsuarioIdUsuarioNavigation.Nombre" class="control-label">Seleccione </label>
-                <select asp-for="UsuarioIdUsuarioNavigation.Nombre " class="form-control" asp-items="ViewBag.UsuarioIdUsuario"></select>
-                <span asp-validation-for="UsuarioIdUsuarioNavigation.Nombre" class="text-danger"></span>
+                <label asp-for="UsuarioIdUsuario" class="control-label">Usuario</label>
+                <select asp-for="UsuarioIdUsuario" class="form-control" asp-items="ViewBag.UsuarioIdUsuario"></select>
+                <span asp-validation-for="UsuarioIdUsuario" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="guardar" class="btn btn-warning" />
+                <input type="submit" value="Guardar" class="btn btn-warning" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index"><button class="btn btn-secondary">volver a la lista</button></a>
+    <a asp-action="Index"><button class="btn btn-secondary">Volver a la lista</button></a>
 </div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

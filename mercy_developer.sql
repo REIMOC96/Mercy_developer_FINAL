@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-12-2024 a las 00:00:52
+-- Tiempo de generación: 03-12-2024 a las 03:33:47
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -71,7 +71,7 @@ CREATE TABLE `datosfichatecnica` (
 --
 
 INSERT INTO `datosfichatecnica` (`idDatosFichaTecnica`, `FechaInicio`, `FechaFinalizacion`, `PObservacionesRecomendaciones`, `SOInstalado`, `SuiteOfficeInstalada`, `LectorPDFInstalado`, `NavegadorWebInstalado`, `Antivirus Instalado`, `RecepcionEquipoId`, `Estado`) VALUES
-(5, '2024-10-15 22:42:00', '2024-10-15 22:42:00', '1', 1, 1, 1, 1, '1', 7, 1),
+(5, '2024-10-15 22:42:00', '2024-12-02 22:42:00', 'pc sucio', 2, 4, 2, 2, 'Eset', 8, 2),
 (6, '2024-11-30 23:03:00', '2024-11-30 23:03:00', '1', 1, 1, 1, 1, '1', 17, 1);
 
 -- --------------------------------------------------------
@@ -91,7 +91,8 @@ CREATE TABLE `descripcionservicio` (
 --
 
 INSERT INTO `descripcionservicio` (`idDescServ`, `Nombre`, `Servicio_idServicio`) VALUES
-(10, 'descripcion de test', 8);
+(11, 'se limpio elpc :DDD', 8),
+(12, 'nueva descripcion 3', 8);
 
 -- --------------------------------------------------------
 
@@ -105,6 +106,13 @@ CREATE TABLE `diagnosticosolucion` (
   `DescripcionSolucion` varchar(1000) DEFAULT NULL,
   `DatosFichaTecnicaId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `diagnosticosolucion`
+--
+
+INSERT INTO `diagnosticosolucion` (`idDiagnosticoSolucion`, `DescripcionDiagnostico`, `DescripcionSolucion`, `DatosFichaTecnicaId`) VALUES
+(1, 'xcd', 'as', 5);
 
 -- --------------------------------------------------------
 
@@ -136,9 +144,9 @@ CREATE TABLE `recepcionequipo` (
 --
 
 INSERT INTO `recepcionequipo` (`id`, `IdCliente`, `IdServicio`, `Fecha`, `TipoPc`, `CPU`, `Accesorio`, `MarcaPc`, `ModeloPc`, `NSerie`, `CapacidadRam`, `TipoAlmacenamiento`, `CapacidadAlmacenamiento`, `TipoGpu`, `Grafico`, `Estado`) VALUES
-(7, 1, 8, '2024-10-03 22:42:00', 1, '', '1', '1', '1', '1', 1, 1, '1', 1, '1', 1),
+(7, 1, 8, '2024-10-03 22:42:00', 1, 'intel XD 100198283', 'audifonos', 'ROg', 'BM-450H', '32213sA123', 5, 2, '1TB', 1, 'RX580 8GB', 2),
 (8, 1, 8, '2024-11-06 20:09:00', 1, '', '1', '1', '1', '1', 1, 1, '1', 1, '1', 1),
-(16, 2, 8, '2024-10-21 22:39:00', 1, '', '1', '1', '1', '1', 1, 1, '1', 1, '1', 1),
+(16, 2, 8, '2024-10-21 22:39:00', 1, '', '1', '1', '1', '1', 1, 1, '1', 1, '1', 0),
 (17, 7, 8, '2024-12-21 23:02:00', 1, '', 'teclado', 'lenovo', 'cq43', '4235423423523', 1, 1, '1', 1, '1', 1);
 
 -- --------------------------------------------------------
@@ -160,7 +168,10 @@ CREATE TABLE `servicio` (
 --
 
 INSERT INTO `servicio` (`idServicio`, `Nombre`, `Precio`, `Sku`, `Usuario_idUsuario`) VALUES
-(8, 'servicio test', 99999, 'FO001', 12);
+(8, 'servicio test', 99999, 'FO001', 25),
+(16, 'servicio test 2 ', 99000000, 'F002', 25),
+(17, 'servicio con muchas descripciones', 123, 'B01N', 12),
+(18, '312321', 3123123, '123', 12);
 
 -- --------------------------------------------------------
 
@@ -182,7 +193,7 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`idUsuario`, `Nombre`, `Apellido`, `Correo`, `password`) VALUES
 (12, 'Reinaldo', 'Ordoñez', 'el.papayas15@gmail.cl', '$2a$11$06VYZTLp8AE0zNwfro0vruBdyFuGHj1ppkdhvNJFNJ4nxehC6Ta3a'),
-(21, 'Mercy', 'Root', 'mercy.Developer@mail.cl', '$2a$11$hn3hdQm/WxOLH5E3NPKt5uFOvJVAWQ04DTdc5pqlTl78J6BknhI6.');
+(25, 'Mercy Devs', 'Root', 'mercy.developer@gmail.com', '$2a$11$bL/hbgVmAwxXkdRwgjDebOct1/cxrLQyTYI7fm202QZyv5YdzPmHm');
 
 --
 -- Índices para tablas volcadas
@@ -256,13 +267,13 @@ ALTER TABLE `datosfichatecnica`
 -- AUTO_INCREMENT de la tabla `descripcionservicio`
 --
 ALTER TABLE `descripcionservicio`
-  MODIFY `idDescServ` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idDescServ` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `diagnosticosolucion`
 --
 ALTER TABLE `diagnosticosolucion`
-  MODIFY `idDiagnosticoSolucion` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idDiagnosticoSolucion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `recepcionequipo`
@@ -274,13 +285,13 @@ ALTER TABLE `recepcionequipo`
 -- AUTO_INCREMENT de la tabla `servicio`
 --
 ALTER TABLE `servicio`
-  MODIFY `idServicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idServicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Restricciones para tablas volcadas

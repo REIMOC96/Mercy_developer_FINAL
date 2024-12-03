@@ -42,11 +42,19 @@
             <td>
                 @Html.DisplayFor(modelItem => item.UsuarioIdUsuarioNavigation.Nombre)
             </td>
+
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.IdServicio"><button type="button" class="btn btn-primary">Editar</button></a>
-                    <a asp-action="Details" asp-route-id="@item.IdServicio"><button type="button" class="btn btn-info">Detalles</button></a>
-                    <a asp-action="Delete" asp-route-id="@item.IdServicio"><button type="button" class="btn btn-danger">Borrar</button></a>
-                    <a asp-action="Verdescripcion" asp-route-id="@item.IdServicio"><button type="button" class="btn btn-warning">Ver Descripcion</button></a>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Acciones
+                        </button>
+                        <div class="dropdown-menu">
+                            <a asp-action="Edit" asp-route-id="@item.IdServicio" class="dropdown-item">Editar</a>
+                            <a asp-action="Details" asp-route-id="@item.IdServicio" class="dropdown-item"> Detalles</a>
+                            <a asp-action="Delete" asp-route-id="@item.IdServicio" class="dropdown-item">Borrar</a>
+                            <a asp-action="Verdescripcion" asp-route-id="@item.IdServicio" class="dropdown-item">Ver Descripciones</a>
+                        </div>
+                    </div>
                 </td>
         </tr>
 }

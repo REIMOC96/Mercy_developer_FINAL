@@ -2,18 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\MercDevs_ej2",
-    "\\MercDevs_ej2\\Controllers",
-    "\\MercDevs_ej2\\Models",
     "\\MercDevs_ej2\\Views",
-    "\\MercDevs_ej2\\Views\\Datosfichatecnicas",
-    "\\MercDevs_ej2\\Views\\Recepcionequipoes",
-    "\\MercDevs_ej2\\Views\\Servicios",
-    "\\MercDevs_ej2\\Views\\Usuarios"
+    "\\MercDevs_ej2\\Views\\Datosfichatecnicas"
   ],
-<<<<<<< HEAD
-  "SelectedNode": "\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Inicio.cshtml",
-=======
-  "SelectedNode": "\\MercDevs_ej2\\Views\\Usuarios\\Delete.cshtml",
->>>>>>> 3817443c6be41757f8bdd9417253d5e58af15849
+  "SelectedNode": "\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
