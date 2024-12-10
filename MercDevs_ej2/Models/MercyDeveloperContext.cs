@@ -124,7 +124,8 @@ public partial class MercyDeveloperContext : DbContext
 
             entity.Property(e => e.IdDescServ)
                 .HasColumnType("int(11)")
-                .HasColumnName("idDescServ");
+                .HasColumnName("idDescServ")
+                .ValueGeneratedOnAdd();
             entity.Property(e => e.Nombre).HasMaxLength(45);
             entity.Property(e => e.ServicioIdServicio)
                 .HasColumnType("int(11)")
@@ -134,6 +135,7 @@ public partial class MercyDeveloperContext : DbContext
                 .HasForeignKey(d => d.ServicioIdServicio)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("fk_DescripcionServicio_Servicio1");
+            base.OnModelCreating(modelBuilder);
         });
 
         modelBuilder.Entity<Diagnosticosolucion>(entity =>

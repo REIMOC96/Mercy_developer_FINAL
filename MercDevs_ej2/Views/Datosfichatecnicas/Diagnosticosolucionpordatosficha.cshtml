@@ -4,7 +4,16 @@
 
 @if (Model.Diagnosticosolucions == null || !Model.Diagnosticosolucions.Any())
 {
-    <h1>No hay registros para mostrar</h1>
+    <h1>Descripción del Servicio</h1>
+    <div style="text-align:center; margin-top: 50px;">
+        <h1>Ups, no hay ninguna descripción para mostrar</h1>
+        <a asp-action="Create" asp-route-id="@ViewBag.servicio.IdServicio">
+            <button type="button" class="btn btn-success">Agregar Descripción Servicio</button>
+        </a>
+        <a asp-action="Index" asp-controller="Servicios">
+            <button type="button" class="btn btn-info">Volver a Listado</button>
+        </a>
+    </div>
 }
 else
 {

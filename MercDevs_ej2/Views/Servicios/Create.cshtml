@@ -31,16 +31,6 @@
             </div>
 
             <!-- Campos para Descripciones del Servicio -->
-            <h4 class="mt-3">Descripciones del Servicio</h4>
-            <div id="descripcionContainer">
-                <div class="form-group">
-                    <label for="Descripcion">Descripción</label>
-                    <input type="text" class="form-control" name="Descripcionservicios[0].TextoDescripcion" />
-                </div>
-            </div>
-
-            <!-- Botón para agregar más descripciones -->
-            <button type="button" id="addDescriptionBtn" class="btn btn-primary">Agregar Descripción</button>
 
             <!-- Botón para enviar el formulario -->
             <div class="form-group mt-3">
@@ -54,28 +44,3 @@
     <a asp-action="Index"><button class="btn btn-secondary">Volver a la lista</button></a>
 </div>
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-
-    <script>
-        // Contador para las descripciones
-        let descripcionCount = 1;
-
-        // Función para agregar un nuevo campo de descripción
-        document.getElementById("addDescriptionBtn").onclick = function() {
-            const descripcionContainer = document.getElementById("descripcionContainer");
-
-            const newDescription = document.createElement("div");
-            newDescription.classList.add("form-group");
-            newDescription.innerHTML = `
-                <label for="Descripcion">Descripción</label>
-                <input type="text" class="form-control" name="Descripcionservicios[${descripcionCount}].TextoDescripcion" />
-            `;
-
-            descripcionContainer.appendChild(newDescription);
-            descripcionCount++;
-        };
-    </script>
-}

@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\MercDevs_ej2",
+    "\\MercDevs_ej2\\Controllers",
     "\\MercDevs_ej2\\Views",
     "\\MercDevs_ej2\\Views\\Datosfichatecnicas"
   ],
-  "SelectedNode": "\\MercDevs_ej2\\Views\\Datosfichatecnicas\\Index.cshtml",
+  "SelectedNode": "\\MercDevs_ej2\\Controllers\\ServiciosController.cs",
   "PreviewInSolutionExplorer": false
 }

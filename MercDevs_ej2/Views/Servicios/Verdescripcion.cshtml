@@ -1,64 +1,60 @@
 ﻿@model IEnumerable<MercDevs_ej2.Models.Descripcionservicio>
 
 @{
-    ViewData["Title"] = "Ver Descripcion Servicio";
+    ViewData["Title"] = "Descripcion Servicio";
 }
 
-<h1>Descripcion del Servicio: @ViewBag.servicio.Nombre </h1>
-
-<p>
-    <a asp-controller="Descripcionservicios" asp-action="Create" asp-route-id="@ViewBag.servicio.IdServicio"><button type="button" class="btn btn-success">Agregar Descripcion Servicio</button></a>
-</p>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre)
-            </th>
-            <th>
-                Nombre Servicio
-            </th>
-            <th>
-                Precio
-            </th>
-            <th>
-                SKU
-            </th>
-
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+@if (!Model.Any())
+{
+    <h1>Descripción del Servicio</h1>
+    <div style="text-align:center; margin-top: 50px;">
+        <h1>Ups, no hay ninguna descripción para mostrar</h1>
+        <a asp-action="Create" asp-controller="Descripcionservicios" asp-route-id="@ViewBag.servicio.IdServicio">
+            <button type="button" class="btn btn-success">Agregar Descripción Servicio</button>
+        </a>
+        <a asp-action="Index" asp-controller="Servicios">
+            <button type="button" class="btn btn-info">Volver a Listado</button>
+        </a>
+    </div>
+}
+else
+{
+    <h1>Descripción del Servicio: @ViewBag.servicio.Nombre</h1>
+    <a asp-action="Create" asp-route-id="@ViewBag.servicio.IdServicio">
+        <button type="button" class="btn btn-success">Agregar Descripción Servicio</button>
+    </a>
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nombre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ServicioIdServicioNavigation.Nombre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ServicioIdServicioNavigation.Precio)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ServicioIdServicioNavigation.Sku)
-                </td>
-
-                <td>
-                    <a asp-controller="Descripcionservicios" asp-action="Edit" asp-route-id="@item.IdDescServ"><button type="button" class="btn btn-primary">Editar</button></a> |
-                    <a asp-controller="Descripcionservicios" asp-action="Details" asp-route-id="@item.IdDescServ"><button type="button" class="btn btn-info">Detalles</button></a> |
-                    <a asp-controller="Descripcionservicios" asp-action="Delete" asp-route-id="@item.IdDescServ"><button type="button" class="btn btn-danger">Borrar</button></a>
-                </td>
+                <th>Nombre Descripción</th>
+                <th>Nombre Servicio</th>
+                <th>Precio</th>
+                <th>SKU</th>
+                <th>Acciones</th>
             </tr>
-        }
-    </tbody>
-</table>
-
-
-
-
-
-
-
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Nombre</td>
+                    <td>@item.ServicioIdServicioNavigation.Nombre</td>
+                    <td>@item.ServicioIdServicioNavigation.Precio</td>
+                    <td>@item.ServicioIdServicioNavigation.Sku</td>
+                    <td>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Acciones
+                            </button>
+                            <div class="dropdown-menu">
+                                <a asp-action="Edit" asp-controller="Descripcionservicios" asp-route-id="@item.IdDescServ" class="dropdown-item">Editar</a>
+                                <a asp-action="Details" asp-controller="Descripcionservicios" asp-route-id="@item.IdDescServ" class="dropdown-item">Detalles</a>
+                                <a asp-action="Delete" asp-controller="Descripcionservicios" asp-route-id="@item.IdDescServ" class="dropdown-item">Borrar</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

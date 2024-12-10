@@ -32,7 +32,7 @@ public partial class Recepcionequipo
     //validadores de Accesorios
     //este si puede ser nulo, puede que llegue solamente la torre incluso sin cable power
     [StringLength(70, ErrorMessage ="los accesorios no pueden tener mas de 70 caracteres")]
-    public string? Accesorio { get; set; }
+    public string? Accesorio { get; set; } = null!;
 
 
     //validadores de MarcaPc
@@ -46,7 +46,7 @@ public partial class Recepcionequipo
     // modelo pc depende de si es notebook o all in one princilalmente VV
     [StringLength(50, ErrorMessage = "El nombre no puede tener más de 50 caracteres.")]
     [Required(ErrorMessage = "La marca es Requerida")]
-    public string? ModeloPc { get; set; }
+    public string? ModeloPc { get; set; } = null!;
 
 
     //Validadores de N serie
@@ -54,24 +54,24 @@ public partial class Recepcionequipo
     //ya que si es pc custom no tendria, pero si tomamos el de la placa madre...
     //nose no me gusta la idea
     [StringLength (20,  ErrorMessage ="El N° de serie no puede tener mas de 20 caracteres ")]
-    public string? Nserie { get; set; }
+    public string? Nserie { get; set; } = null!;
 
 
     // Validadores de Capacidad Ram
     // Igual que en el caso del estado, este se maneja con un listado de cosas definidas
     [Required(ErrorMessage ="Capacidad de Ram es obligatorio")]
     [Range(0,5, ErrorMessage ="Ingrese una capacidad dentro de los rangos definidos")]
-    public int? CapacidadRam { get; set; }
+    public int? CapacidadRam { get; set; } = null!;
 
-    public int? TipoAlmacenamiento { get; set; }
+    public int? TipoAlmacenamiento { get; set; } = null!;
 
-    public string? CapacidadAlmacenamiento { get; set; }
+    public string? CapacidadAlmacenamiento { get; set; } = null!;
 
-    public int? TipoGpu { get; set; }
+    public int? TipoGpu { get; set; } = null!;
 
-    public string? Grafico { get; set; }
+    public string? Grafico { get; set; } = null!;
 
-    public int? Estado { get; set; }
+    public int? Estado { get; set; } = null!;
 
     public virtual ICollection<Datosfichatecnica> Datosfichatecnicas { get; set; } = new List<Datosfichatecnica>();
 

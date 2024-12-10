@@ -174,13 +174,13 @@ namespace MercDevs_ej2.Controllers
             bool tieneForanea = await _context.Recepcionequipos.AnyAsync(r => r.IdCliente == id);
 
             if (tieneForanea)
-            {
-                // Agregar el error al ModelState
-                ModelState.AddModelError("", "No se puede borrar el cliente, ya que tiene una recepción de equipo registrada.");
 
-                // Devolver la vista con el objeto cliente para evitar NullReferenceException
-                return View(cliente);
-            }
+                if (tieneForanea)
+                {
+                    TempData["ErrorMessage"] = "No se puede eliminar este registro porque está relacionado con otros datos tecnicos.";
+                    return RedirectToAction(nameof(Delete), new { id });
+                }
+
 
             // Si no hay registros relacionados, eliminar el cliente
             _context.Clientes.Remove(cliente);

@@ -254,6 +254,7 @@ namespace MercDevs_ej2.Controllers
                 .Include(r => r.IdClienteNavigation)
                 .Include(r => r.IdServicioNavigation)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (recepcionequipo == null)
             {
                 return NotFound();
@@ -261,6 +262,9 @@ namespace MercDevs_ej2.Controllers
 
             return View(recepcionequipo);
         }
+
+
+
 
         // POST: Recepcionequipoes/Delete/5
         [HttpPost, ActionName("Delete")]
@@ -280,12 +284,10 @@ namespace MercDevs_ej2.Controllers
 
             if (tieneForanea)
             {
-                // Agregar el error al ModelState
-                ModelState.AddModelError("", "No se puede eliminar este registro porque está relacionado con datos técnicos.");
-
-                // Devolver la vista con el objeto recepcionequipo para evitar NullReferenceException
-                return View(recepcionequipo);
+                TempData["ErrorMessage"] = "No se puede eliminar este registro porque está relacionado con otros datos tecnicos.";
+                return RedirectToAction(nameof(Delete), new { id });
             }
+
 
             // Si no hay registros relacionados, eliminar el registro
             _context.Recepcionequipos.Remove(recepcionequipo);
@@ -293,6 +295,7 @@ namespace MercDevs_ej2.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
 
 
         // POST: Recepcionequipoes/Finalizar/5

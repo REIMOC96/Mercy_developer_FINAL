@@ -51,7 +51,7 @@ namespace MercDevs_ej2.Controllers
         // GET: Descripcionservicios/Create
         public IActionResult Create(int? id)
         {
-            ViewData["ServicioIdServicio"] = new SelectList(_context.Servicios, "IdServicio", "IdServicio");
+            ViewData["ServicioIdServicio"] = new SelectList(_context.Servicios, "IdServicio", "Nombre");
             ViewData["IdServicio"] = id;
             return View();
         }

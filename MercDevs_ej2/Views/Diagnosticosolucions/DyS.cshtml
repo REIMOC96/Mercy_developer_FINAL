@@ -1,35 +1,35 @@
-﻿@model IEnumerable<MercDevs_ej2.Models.Diagnosticosolucion>
+﻿@model IEnumerable<MercDevs_ej2.Models.Descripcionservicio>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Descripcion Servicio";
 }
+
 @if (!Model.Any())
 {
-<h1>Diagnóstico y Solución por Ficha Técnica</h1>
-
-
+    <h1>Descripción del Servicio</h1>
     <div style="text-align:center; margin-top: 50px;">
-        <h1>Ups, no hay ningún registro para mostrar</h1>
-        <a asp-action="CrearPorDatos" asp-route-id="@ViewBag.DatosFichaTecnicaId">
-            <button type="button" class="btn btn-success">Crear Diagnóstico-Solución</button>
+        <h1>Ups, no hay ninguna descripción para mostrar</h1>
+        <a asp-action="Create" asp-route-id="@ViewBag.servicio.IdServicio">
+            <button type="button" class="btn btn-success">Agregar Descripción Servicio</button>
         </a>
-        <a asp-action="Inicio" asp-controller="Datosfichatecnicas">
+        <a asp-action="Index" asp-controller="Servicios">
             <button type="button" class="btn btn-info">Volver a Listado</button>
-            </a>
+        </a>
     </div>
 }
 else
 {
-    <h1>Diagnóstico y Solución por Ficha Técnica</h1>
-    <a asp-action="CrearPorDatos" asp-route-id="@ViewBag.DatosFichaTecnicaId">
-        <button type="button" class="btn btn-success">Crear Diagnóstico-Solución</button>
+    <h1>Descripción del Servicio: @ViewBag.servicio.Nombre</h1>
+    <a asp-action="Create" asp-route-id="@ViewBag.servicio.IdServicio">
+        <button type="button" class="btn btn-success">Agregar Descripción Servicio</button>
     </a>
     <table class="table">
         <thead>
             <tr>
-                <th>Descripción Diagnóstico</th>
-                <th>Descripción Solución</th>
-                <th>Id Ficha Técnica</th>
+                <th>Nombre Descripción</th>
+                <th>Nombre Servicio</th>
+                <th>Precio</th>
+                <th>SKU</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -37,18 +37,19 @@ else
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>@item.DescripcionDiagnostico</td>
-                    <td>@item.DescripcionSolucion</td>
-                    <td>@item.DatosFichaTecnicaId</td>
+                    <td>@item.Nombre</td>
+                    <td>@item.ServicioIdServicioNavigation.Nombre</td>
+                    <td>@item.ServicioIdServicioNavigation.Precio</td>
+                    <td>@item.ServicioIdServicioNavigation.Sku</td>
                     <td>
                         <div class="btn-group">
                             <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Acciones
                             </button>
                             <div class="dropdown-menu">
-                                <a asp-action="Edit" asp-controller="Diagnosticosolucions" asp-route-id="@item.IdDiagnosticoSolucion" class="dropdown-item">Editar</a>
-                                <a asp-action="Details" asp-controller="Diagnosticosolucions" asp-route-id="@item.IdDiagnosticoSolucion" class="dropdown-item">Detalles</a>
-                                <a asp-action="Delete" asp-controller="Diagnosticosolucions" asp-route-id="@item.IdDiagnosticoSolucion" class="dropdown-item">Borrar</a>
+                                <a asp-action="Edit" asp-controller="Descripcionservicios" asp-route-id="@item.IdDescServ" class="dropdown-item">Editar</a>
+                                <a asp-action="Details" asp-controller="Descripcionservicios" asp-route-id="@item.IdDescServ" class="dropdown-item">Detalles</a>
+                                <a asp-action="Delete" asp-controller="Descripcionservicios" asp-route-id="@item.IdDescServ" class="dropdown-item">Borrar</a>
                             </div>
                         </div>
                     </td>

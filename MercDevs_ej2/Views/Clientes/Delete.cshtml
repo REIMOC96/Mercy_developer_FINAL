@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Eliminar";
 }
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <h1>Eliminar</h1>
 
@@ -57,12 +58,28 @@
             </tr>
         </tbody>
     </table>
+    @{
+        var errorMessage = TempData["ErrorMessage"] as string;
+        var successMessage = TempData["SuccessMessage"] as string;
+    }
 
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <script>
+            Swal.fire("Error", "@errorMessage", "error");
+        </script>
+    }
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="IdCliente" />
-        <input type="submit" value="Borrar" class="btn btn-danger" />
-    </form>
-    <a asp-action="Index"><button class="btn btn-secondary">volver a la lista</button></a>
+    <div class="mt-4 d-flex justify-content-between">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="IdCliente" />
+            <button type="submit" class="btn btn-danger btn-sm">
+                <i class="bi bi-x-circle"></i> Confirmar Eliminación
+            </button>
+        </form>
+        <a asp-action="Index" class="btn btn-secondary btn-sm">
+            <i class="bi bi-arrow-left-circle"></i> Volver a la lista
+        </a>
+    </div>
 </div>

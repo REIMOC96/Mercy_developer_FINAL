@@ -84,7 +84,7 @@ namespace MercDevs_ej2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdServicio,Nombre,Precio,Sku,Descripcionservicios")] Servicio servicio)
+        public async Task<IActionResult> Create([Bind("IdServicio,Nombre,Precio,Sku")] Servicio servicio)
         {
             // Obtén el ID del usuario autenticado desde las claims
             var userId = User.FindFirst("Id")?.Value;
@@ -100,18 +100,11 @@ namespace MercDevs_ej2.Controllers
             {
                 // Guarda el servicio primero para que tenga un ID generado
                 _context.Servicios.Add(servicio);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(); // Guarda el servicio para obtener su ID
 
-                // Guarda las descripciones asociadas al servicio
-                foreach (var descripcion in servicio.Descripcionservicios)
-                {
-                    descripcion.ServicioIdServicio = servicio.IdServicio; // Asociar la descripción con el servicio
-                    _context.Descripcionservicios.Add(descripcion);
-                }
 
-                // Guarda las descripciones
-                await _context.SaveChangesAsync();
 
+                // Redirige a la lista de servicios
                 return RedirectToAction(nameof(Index));
             }
 

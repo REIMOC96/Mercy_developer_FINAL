@@ -21,21 +21,22 @@
                 <th scope="row" class="text-start">Tipo de PC</th>
                 <td class="text-center">
                     @{
-                        string tipoPc = Model.TipoPc switch
+                        string tipoPc = Model?.TipoPc switch
                         {
                             0 => "PC Torre",
                             1 => "Notebook",
                             2 => "All-In-One",
                             _ => "Desconocido"
-                        };
+                        } ?? "No especificado";
                         @tipoPc
                     }
+
                 </td>
             </tr>
             <tr>
                 <th scope="row" class="text-start">modelo CPU</th>
                 <td class="text-center">@Html.DisplayFor(model => model.CPU)</td>
-            </tr
+            </tr>
             <tr>
                 <th scope="row" class="text-start">Accesorios</th>
                 <td class="text-center">@Html.DisplayFor(model => model.Accesorio)</td>
@@ -64,7 +65,7 @@
                             3 => "16 GB",
                             4 => "Otro",
                             _ => "Desconocido"
-                        };
+                        } ?? "No especificado"; ;
                         @capacidadRam
                     }
                 </td>
@@ -80,7 +81,7 @@
                             2 => "SDD M.2",
                             3 => "SSD NVMe M.2",
                             _ => "Desconocido"
-                        };
+                        } ?? "No especificado"; ;
                         @tipoAlmacenamiento
                     }
                 </td>
@@ -99,7 +100,7 @@
                             1 => "Tarjeta",
                             2 => "Otro",
                             _ => "Desconocido"
-                        };
+                        } ?? "No especificado"; ;
                         @tipoGpu
                     }
                 </td>
@@ -112,24 +113,24 @@
                 <th scope="row" class="text-start">Estado</th>
                 <td class="text-center">
                     @{
-                        string estado = Model.Estado switch
+                        string estado = Model?.Estado switch
                         {
                             0 => "Finalizado",
                             1 => "Recepcionado",
                             2 => "En espera",
                             _ => "Desconocido"
-                        };
+                        } ?? "No especificado"; ;
                         @estado
                     }
                 </td>
             </tr>
             <tr>
                 <th scope="row" class="text-start">Cliente</th>
-                <td class="text-center">@Model.IdClienteNavigation.Nombre</td>
+                <td class="text-center">@Model?.IdClienteNavigation.Nombre</td>
             </tr>
             <tr>
                 <th scope="row" class="text-start">Servicio</th>
-                <td class="text-center">@Model.IdServicioNavigation.Nombre</td>
+                <td class="text-center">@Model?.IdServicioNavigation.Nombre</td>
             </tr>
         </tbody>
     </table>
@@ -138,19 +139,12 @@
     var successMessage = TempData["SuccessMessage"] as string;
 }
 
-@if (!string.IsNullOrEmpty(errorMessage))
-{
-    <script>
-        alert("@errorMessage");
-    </script>
-}
-
-@if (!string.IsNullOrEmpty(successMessage))
-{
-    <script>
-        alert("@successMessage");
-    </script>
-}
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <script>
+            Swal.fire("Error", "@errorMessage", "error");
+        </script>
+    }
 
 
     <div class="mt-4 d-flex justify-content-between">

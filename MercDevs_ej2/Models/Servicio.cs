@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MercDevs_ej2.Models;
 
-public partial class Servicio
+public partial class Servicio 
 {
     public int IdServicio { get; set; }
 

@@ -109,7 +109,7 @@
             <th class="border-end" colspan="2">
                 @{
                     string tipoEquipo = "";
-                    switch (Model.RecepcionEquipo.TipoPc)
+                    switch (Model.RecepcionEquipo?.TipoPc)
                     {
                         case 0:
                             tipoEquipo = "PC Torre";
@@ -128,7 +128,7 @@
                 }
             </th>
             <th class="border-end" colspan="2">Accesorios:</th>
-            <th class="border-end">@Model.RecepcionEquipo.Accesorio</th>
+            <th class="border-end">@Model.RecepcionEquipo?.Accesorio</th>
         </tr>
         <tr>
             <th class="border-end" colspan="2">Marca: @Model.RecepcionEquipo.MarcaPc</th>
