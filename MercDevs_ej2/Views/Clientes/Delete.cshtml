@@ -1,43 +1,49 @@
 ﻿@model MercDevs_ej2.Models.Cliente
 
 @{
-    ViewData["Title"] = "Eliminar";
+    ViewData["Title"] = "Eliminar Cliente";
 }
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<div class="container mt-6" style="max-width: 800px;">
+    <h1 class="text-center text-danger mb-4">Eliminar Cliente</h1>
 
-<h1>Eliminar</h1>
+    <h3 class="text-center text-black">¿Estás seguro de que deseas eliminar este cliente?</h3>
 
-<h3>¿Estás seguro de que quieres eliminar esto?</h3>
-<div>
-    <hr />
-    <table class="table">
+    <table class="table table-bordered">
         <thead>
-            <h5>Recuerde leer detenidamente antes de eliminar algo.</h5>
+            <tr>
+                <th colspan="2">
+                    <h5 class="text-center text-danger mb-2">Recuerde leer detenidamente antes de eliminar algo.</h5>
+                </th>
+            </tr>
         </thead>
         <tbody>
             <tr>
-                <td>@Html.DisplayNameFor(model => model.Nombre)</td>
-                <td>@Html.DisplayFor(model => model.Nombre)</td>
+                <th scope="row" class="text-start">Nombre</th>
+                <td class="text-center">@Html.DisplayFor(model => model.Nombre)</td>
             </tr>
             <tr>
-                <td>@Html.DisplayNameFor(model => model.Apellido)</td>
-                <td>@Html.DisplayFor(model => model.Apellido)</td>
+                <th scope="row" class="text-start">Apellido</th>
+                <td class="text-center">@Html.DisplayFor(model => model.Apellido)</td>
             </tr>
             <tr>
-                <td>@Html.DisplayNameFor(model => model.Correo)</td>
-                <td>@Html.DisplayFor(model => model.Correo)</td>
+                <th scope="row" class="text-start">Correo</th>
+                <td class="text-center">@Html.DisplayFor(model => model.Correo)</td>
             </tr>
             <tr>
-                <td>@Html.DisplayNameFor(model => model.Telefono)</td>
-                <td>@Html.DisplayFor(model => model.Telefono)</td>
+                <th scope="row" class="text-start">Teléfono</th>
+                <td class="text-center">@Html.DisplayFor(model => model.Telefono)</td>
             </tr>
             <tr>
-                <td>@Html.DisplayNameFor(model => model.Direccion)</td>
-                <td>@Html.DisplayFor(model => model.Direccion)</td>
+                <th scope="row" class="text-start">Dirección</th>
+                <td class="text-center">@Html.DisplayFor(model => model.Direccion)</td>
             </tr>
             <tr>
-                <td>@Html.DisplayNameFor(model => model.Estado)</td>
-                <td>
+                <th scope="row" class="text-start">Estado</th>
+                <td class="text-center">
                     @{
                         string Estado = "";
                         switch (Model.Estado)
@@ -58,28 +64,39 @@
             </tr>
         </tbody>
     </table>
-    @{
-        var errorMessage = TempData["ErrorMessage"] as string;
-        var successMessage = TempData["SuccessMessage"] as string;
-    }
 
-    @if (!string.IsNullOrEmpty(errorMessage))
+    @if (!string.IsNullOrEmpty(TempData["ErrorMessage"] as string))
     {
         <script>
-            Swal.fire("Error", "@errorMessage", "error");
+            Swal.fire("Error", "@TempData["ErrorMessage"]", "error");
         </script>
     }
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-    <div class="mt-4 d-flex justify-content-between">
-        <form asp-action="Delete">
-            <input type="hidden" asp-for="IdCliente" />
-            <button type="submit" class="btn btn-danger btn-sm">
-                <i class="bi bi-x-circle"></i> Confirmar Eliminación
-            </button>
+    <div class="mt-4">
+        <form asp-action="Delete" method="post">
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-danger btn-sm">
+                    <i class="bi bi-trash"></i> Eliminar
+                </button>
+                <a asp-action="Index" class="btn btn-secondary btn-sm">
+                    <i class="bi bi-arrow-left-circle"></i> Volver a la lista
+                </a>
+            </div>
         </form>
-        <a asp-action="Index" class="btn btn-secondary btn-sm">
-            <i class="bi bi-arrow-left-circle"></i> Volver a la lista
-        </a>
     </div>
 </div>
+
+<script>
+    document.getElementById('togglePassword').addEventListener('click', function () {
+        const passwordInput = document.getElementById('passwordInput');
+        const passwordIcon = this.querySelector('i');
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            passwordIcon.classList.replace('bi-eye', 'bi-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            passwordIcon.classList.replace('bi-eye-slash', 'bi-eye');
+        }
+    });
+</script>

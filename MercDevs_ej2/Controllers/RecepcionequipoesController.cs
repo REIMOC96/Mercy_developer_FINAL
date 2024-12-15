@@ -117,7 +117,6 @@ namespace MercDevs_ej2.Controllers
         { nameof(recepcionequipo.CapacidadRam), recepcionequipo.CapacidadRam },
         { nameof(recepcionequipo.TipoAlmacenamiento), recepcionequipo.TipoAlmacenamiento },
         { nameof(recepcionequipo.CapacidadAlmacenamiento), recepcionequipo.CapacidadAlmacenamiento },
-        { nameof(recepcionequipo.TipoGpu), recepcionequipo.TipoGpu },
         { nameof(recepcionequipo.Grafico), recepcionequipo.Grafico }
     };
 
@@ -129,6 +128,7 @@ namespace MercDevs_ej2.Controllers
                     // Si un valor es nulo o cero, devolver la vista con los select lists nuevamente
                     ViewData["IdCliente"] = new SelectList(await _context.Clientes.ToListAsync(), "IdCliente", "Nombre", recepcionequipo.IdCliente);
                     ViewData["IdServicio"] = new SelectList(await _context.Servicios.ToListAsync(), "IdServicio", "Nombre", recepcionequipo.IdServicio);
+                    Console.WriteLine(dato);
                     return View(recepcionequipo);
                 }
 

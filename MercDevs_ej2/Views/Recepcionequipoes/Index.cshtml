@@ -120,7 +120,7 @@
                                 <a asp-action="Edit" asp-route-id="@item.Id" class="dropdown-item">Editar</a>
                                 <a asp-action="Details" asp-route-id="@item.Id" class="dropdown-item"> Detalles</a>
                                 <a asp-action="Delete" asp-route-id="@item.Id" class="dropdown-item">Borrar</a>
-                                <a asp-action="IndexId" asp-route-id="@item.Id" class="dropdown-item">R. Por Cliente</a>
+                                <a asp-action="IndexId" asp-route-id="@item.IdCliente" class="dropdown-item">R. Por Cliente</a>
                                 <a asp-controller="Datosfichatecnicas" asp-action="Index" asp-route-id="@item.Id" class="dropdown-item">Ficha tecnica</a>
                                 <form method="post" asp-action="Finalizar" asp-route-id="@item?.Id">
                                     <button type="submit" class="dropdown-item">Finalizar recepcion</button>

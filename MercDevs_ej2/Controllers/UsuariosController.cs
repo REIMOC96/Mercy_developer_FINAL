@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.AspNetCore.Authorization;
 using System.Linq.Expressions;
 using Microsoft.AspNetCore.Identity;
+using System.Drawing.Text;
 
 namespace MercDevs_ej2.Controllers
 {
@@ -68,15 +69,24 @@ namespace MercDevs_ej2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdUsuario,Nombre,Apellido,Correo,Password,ConfirmPassword")] Usuario usuario)
         {
-            if (usuario.Nombre != null && usuario.Apellido !=null && usuario.Correo !=null)
+            // Verificar que el correo electronico no existe
+            bool emailExists = await _context.Usuarios.AnyAsync(u => u.Correo == usuario.Correo);
+
+            if (emailExists && usuario.Nombre != null && usuario.Apellido != null)
+            {
+                ModelState.AddModelError("Correo", "El correo electronico ya  existe");
+            }
+
+            else if (usuario.Password != usuario.ConfirmPassword)
             {
                 // Verifica que las contraseñas coincidan
-                if (usuario.Password != usuario.ConfirmPassword)
-                {
-                    ModelState.AddModelError("ConfirmPassword", "Las contraseñas no coinciden.");
-                    return View(usuario);
-                }
+                ModelState.AddModelError("ConfirmPassword", "Las contraseñas no coinciden.");
+                return View(usuario);
 
+
+
+            }
+            else {
                 usuario.Password = BCrypt.Net.BCrypt.HashPassword(usuario.Password); // Encripta la contraseña
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
@@ -110,7 +120,6 @@ namespace MercDevs_ej2.Controllers
         public async Task<IActionResult> Edit(int id, string CurrentPassword, [Bind("IdUsuario,Nombre,Apellido,Correo,Password,CurrentPassword")] Usuario usuario)
 
         {
-
 
             if (usuario == null && id != usuario.IdUsuario )
             {
@@ -190,6 +199,15 @@ namespace MercDevs_ej2.Controllers
         {
             // Buscar el usuario en la base de datos
             var ExistUser = await _context.Usuarios.FindAsync(id);
+
+            //verificar que no tenga una llave foranea registrada pa q no explote
+            bool tieneForanea = await _context.Servicios.AnyAsync(d => d.UsuarioIdUsuario == id);
+
+            if (tieneForanea)
+            {
+                TempData["ErrorMessage"] = "No se puede eliminar este registro porque está relacionado con otros datos tecnicos.";
+                return RedirectToAction(nameof(Delete), new { id });
+            }
 
             if (ExistUser != null && BCrypt.Net.BCrypt.Verify(usuario.CurrentPassword, ExistUser.Password))
             {

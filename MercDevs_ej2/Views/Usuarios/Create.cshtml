@@ -28,7 +28,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="Password" class="control-label">Contraseña</label>
-                <input asp-for="Password" class="form-control" type="password" />
+                <div class="input-group">
+                    <input asp-for="Password" class="form-control" type="password" id="passwordInput" />
+                    <button type="button" class="btn btn-outline-secondary" id="togglePassword">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -47,6 +52,24 @@
 <div>
     <a asp-action="Index"><button class="btn btn-secondary">volver a la lista</button></a>
 </div>
+
+<script>
+    document.getElementById('togglePassword').addEventListener('click', function () {
+        const passwordInput = document.getElementById('passwordInput');
+        const passwordIcon = this.querySelector('i');
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            passwordIcon.classList.replace('bi-eye', 'bi-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            passwordIcon.classList.replace('bi-eye-slash', 'bi-eye');
+        }
+    });
+</script>
+
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

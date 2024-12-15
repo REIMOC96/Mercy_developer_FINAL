@@ -59,6 +59,7 @@ namespace MercDevs_ej2.Controllers
        
 
 
+        //este reemplaza el index por la actualizacion del felipe de aquella vez xd
         public async Task<IActionResult> Inicio()
         {
             var mercydevsEjercicio2Context = _context.Datosfichatecnicas.Include(d => d.RecepcionEquipo);
@@ -77,7 +78,8 @@ namespace MercDevs_ej2.Controllers
 
             if (fichaTecnica == null)
             {
-                return RedirectToAction("Create", new { id });
+               fichaTecnica.RecepcionEquipoId = id;
+                return RedirectToAction("Create", new { fichaTecnica });
             }
 
             return View(fichaTecnica);

@@ -1,61 +1,79 @@
 ﻿@model MercDevs_ej2.Models.Servicio
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Eliminar Servicio";
 }
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<div class="container mt-6" style="max-width: 800px;">
+    <h1 class="text-center text-danger mb-4">Eliminar Servicio</h1>
 
-<h1>Eliminar</h1>
+    <h3 class="text-center text-black">¿Estás seguro de que deseas eliminar este servicio?</h3>
 
-<h3>¿estas seguro de que quieres eliminar esto?</h3>
-<div>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Precio)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Precio)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Sku)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Sku)
-        </dd>
-        <dt class = "col-sm-2">
-            ID usuario
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UsuarioIdUsuarioNavigation.IdUsuario)
-        </dd>
-    </dl>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th colspan="2">
+                    <h5 class="text-center text-danger mb-2">Recuerde leer detenidamente antes de eliminar algo.</h5>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row" class="text-start">Nombre</th>
+                <td class="text-center">@Html.DisplayFor(model => model.Nombre)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Precio</th>
+                <td class="text-center">@Html.DisplayFor(model => model.Precio)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">SKU</th>
+                <td class="text-center">@Html.DisplayFor(model => model.Sku)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">ID Usuario</th>
+                <td class="text-center">@Html.DisplayFor(model => model.UsuarioIdUsuarioNavigation.IdUsuario)</td>
+            </tr>
+        </tbody>
+    </table>
 
-    @{
-        var errorMessage = TempData["ErrorMessage"] as string;
-        var successMessage = TempData["SuccessMessage"] as string;
-    }
-
-    @if (!string.IsNullOrEmpty(errorMessage))
+    @if (!string.IsNullOrEmpty(TempData["ErrorMessage"] as string))
     {
         <script>
-            Swal.fire("Error", "@errorMessage", "error");
+            Swal.fire("Error", "@TempData["ErrorMessage"]", "error");
         </script>
     }
+
     <div class="mt-4 d-flex justify-content-between">
-        <form asp-action="Delete">
+        <form asp-action="Delete" method="post">
             <input type="hidden" asp-for="IdServicio" />
-            <button type="submit" class="btn btn-danger btn-sm">
-                <i class="bi bi-x-circle"></i> Confirmar Eliminación
-            </button>
+
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-danger btn-sm">
+                    <i class="bi bi-trash"></i> Eliminar
+                </button>
+                <a asp-action="Index" class="btn btn-secondary btn-sm">
+                    <i class="bi bi-arrow-left-circle"></i> Volver a la lista
+                </a>
+            </div>
         </form>
-        <a asp-action="Index" class="btn btn-secondary btn-sm">
-            <i class="bi bi-arrow-left-circle"></i> Volver a la lista
-        </a>
     </div>
+</div>
+
+<script>
+    document.getElementById('togglePassword').addEventListener('click', function () {
+        const passwordInput = document.getElementById('passwordInput');
+        const passwordIcon = this.querySelector('i');
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            passwordIcon.classList.replace('bi-eye', 'bi-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            passwordIcon.classList.replace('bi-eye-slash', 'bi-eye');
+        }
+    });
+</script>

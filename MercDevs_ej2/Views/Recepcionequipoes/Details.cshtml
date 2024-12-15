@@ -30,8 +30,8 @@
                             0 => "PC Torre",
                             1 => "Notebook",
                             2 => "All-In-One",
-                            _ => "Desconocido"
-                        };
+                            3=> "Otros..."
+                        }?? "Desconocido";
                         @tipoEquipo
                     }
                 </td>
@@ -66,9 +66,10 @@
                             1 => "6 GB",
                             2 => "8 GB",
                             3 => "16 GB",
-                            4 => "Otro",
-                            _ => "Desconocido"
-                        };
+                            4 => "32 GB",
+                            5 => "64 GB",
+                            6 =>"128 Gb o mas" 
+                        }?? "desconocido";
                         @memoriaRam
                     }
                 </td>
@@ -83,8 +84,8 @@
                             1 => "SDD Sata",
                             2 => "SDD M.2",
                             3 => "SSD NVMe M.2",
-                            _ => "Desconocido"
-                        };
+                            
+                        }?? "Desconocido";
                         @almacenamiento
                     }
                 </td>
@@ -102,8 +103,7 @@
                             0 => "Chip Integrado",
                             1 => "Tarjeta",
                             2 => "Otro",
-                            _ => "Desconocido"
-                        };
+                        }?? "Desconocido";
                         @gpu
                     }
                 </td>
@@ -121,8 +121,7 @@
                             0 => "Finalizado",
                             1 => "Recepcionado",
                             2 => "En espera",
-                            _ => "Desconocido"
-                        };
+                        }?? "deconocido";
                         @estado
                     }
                 </td>

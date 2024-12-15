@@ -12,6 +12,9 @@
     <h3 class="text-center text-black">¿Estás seguro de que deseas eliminar este registro?</h3>
 
     <table class="table table-bordered ">
+        <thead>
+            <h5>Recuerde leer detenidamente antes de eliminar algo.</h5>
+        </thead>
         <tbody>
             <tr>
                 <th scope="row" class="text-start">Fecha</th>
@@ -151,7 +154,7 @@
         <form asp-action="Delete">
             <input type="hidden" asp-for="Id" />
             <button type="submit" class="btn btn-danger btn-sm">
-                <i class="bi bi-x-circle"></i> Confirmar Eliminación
+                <i class="bi bi-trash"></i> Eliminar
             </button>
         </form>
         <a asp-action="Index" class="btn btn-secondary btn-sm">
